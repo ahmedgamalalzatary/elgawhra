@@ -22,15 +22,13 @@
       background-color: var(--header-bg);
     }
     header {
-    display: flex;
+      display: flex;
       justify-content: space-between;
     }
     .list-menu {
-    display: flex;
+      display: flex;
       gap: 1rem;
       list-style: none;
-      padding: 0;
-      margin: 0;
     }
     .h2, .header__inline-menu ul li a, .svg-wrapper {
       color: white;
@@ -46,6 +44,9 @@
       justify-self: start;
       margin-left: -1.2rem;
     }
+    header-drawer span {
+      color: white;
+  }
 
     {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
       .scrolled-past-header .header__heading-logo-wrapper {
