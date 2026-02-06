@@ -130,10 +130,6 @@
       font-size: 1.4rem;
       padding: 0.6rem 1.5rem;
     }
-    #HeaderMenu-MenuList-Collections .header__menu-item:hover {
-      color: #000 !important;
-      background-color: #f5f5f5;
-    }
     #Details-HeaderMenu-Collections {
       position: relative;
     }
@@ -144,6 +140,9 @@
     }
     #HeaderMenu-collections span {
       color: white;
+    }
+    #Details-HeaderMenu-Collections[open]>#HeaderMenu-collections {
+      text-decoration: none !important;
     }
     /* Show Collections dropdown on hover */
     #Details-HeaderMenu-Collections:hover > .header__submenu,
