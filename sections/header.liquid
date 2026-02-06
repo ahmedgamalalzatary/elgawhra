@@ -145,6 +145,21 @@
     #HeaderMenu-collections span {
       color: white;
     }
+    /* Show Collections dropdown on hover */
+    #Details-HeaderMenu-Collections:hover > .header__submenu,
+    #Details-HeaderMenu-Collections[open] > .header__submenu {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+      pointer-events: auto;
+    }
+    #Details-HeaderMenu-Collections > .header__submenu {
+      opacity: 0;
+      transform: translateY(-1.5rem);
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity var(--duration-default) ease, transform var(--duration-default) ease, visibility var(--duration-default) ease;
+    }
 </style>
 
 {%- style -%}
@@ -496,6 +511,32 @@
 
   customElements.define('sticky-header', StickyHeader);
 {% endjavascript %}
+
+<script>
+  // Collections dropdown hover behavior
+  document.addEventListener('DOMContentLoaded', function() {
+    const collectionsDetails = document.getElementById('Details-HeaderMenu-Collections');
+    if (collectionsDetails) {
+      const summary = collectionsDetails.querySelector('summary');
+      let closeTimeout;
+      
+      summary.addEventListener('mouseenter', function() {
+        clearTimeout(closeTimeout);
+        collectionsDetails.setAttribute('open', '');
+      });
+      
+      collectionsDetails.addEventListener('mouseenter', function() {
+        clearTimeout(closeTimeout);
+      });
+      
+      collectionsDetails.addEventListener('mouseleave', function() {
+        closeTimeout = setTimeout(function() {
+          collectionsDetails.removeAttribute('open');
+        }, 200);
+      });
+    }
+  });
+</script>
 
 <script type="application/ld+json">
   {

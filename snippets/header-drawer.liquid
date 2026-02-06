@@ -142,11 +142,89 @@
                         {{ link.title | escape }}
                       {%- endif -%}
                     </a>
-                  {%- endif -%}
+                {%- endif -%}
+              </li>
+              {%- if link.title == 'Catalog' -%}
+                <li>
+                  <details id="Details-menu-drawer-collections">
+                    <summary
+                      id="HeaderDrawer-collections"
+                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
+                    >
+                      Collections
+                      <span class="svg-wrapper">
+                        {{- 'icon-arrow.svg' | inline_asset_content -}}
+                      </span>
+                      <span class="svg-wrapper">
+                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                      </span>
+                    </summary>
+                    <div
+                      id="link-collections"
+                      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                      tabindex="-1"
+                    >
+                      <div class="menu-drawer__inner-submenu">
+                        <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                          <span class="svg-wrapper">
+                            {{- 'icon-arrow.svg' | inline_asset_content -}}
+                          </span>
+                          Back to Menu
+                        </button>
+                        <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                          {%- assign has_collections = false -%}
+                          {%- for collection in collections -%}
+                            {%- unless collection.handle == 'frontpage' -%}
+                              {%- assign has_collections = true -%}
+                              <li>
+                                <a
+                                  id="HeaderDrawer-collection-{{ collection.handle }}"
+                                  href="{{ collection.url }}"
+                                  class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                                >
+                                  {{ collection.title | escape }}
+                                </a>
+                              </li>
+                            {%- endunless -%}
+                          {%- endfor -%}
+                          {%- unless has_collections -%}
+                            <li>
+                              <a
+                                id="HeaderDrawer-collection-placeholder"
+                                href="/collections/all"
+                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                              >
+                                All Products
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                id="HeaderDrawer-collection-placeholder-2"
+                                href="/collections/new-arrivals"
+                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                              >
+                                New Arrivals
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                id="HeaderDrawer-collection-placeholder-3"
+                                href="/collections/best-sellers"
+                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                              >
+                                Best Sellers
+                              </a>
+                            </li>
+                          {%- endunless -%}
+                        </ul>
+                      </div>
+                    </div>
+                  </details>
                 </li>
-              {%- endfor -%}
-            </ul>
-          </nav>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </nav>
           <div class="menu-drawer__utility-links">
             {%- if shop.customer_accounts_enabled -%}
               <a
