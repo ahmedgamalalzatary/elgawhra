@@ -106,6 +106,54 @@
           </a>
         {%- endif -%}
       </li>
+      {%- if link.title == 'Catalog' -%}
+        <li>
+          <header-menu>
+            <details id="Details-HeaderMenu-Collections">
+              <summary
+                id="HeaderMenu-collections"
+                class="header__menu-item list-menu__item link focus-inset"
+              >
+                <span>Collections</span>
+                {{- 'icon-caret.svg' | inline_asset_content -}}
+              </summary>
+              <ul
+                id="HeaderMenu-MenuList-Collections"
+                class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
+                role="list"
+                tabindex="-1"
+              >
+                {%- assign has_collections = false -%}
+                {%- for collection in collections -%}
+                  {%- unless collection.handle == 'frontpage' -%}
+                    {%- assign has_collections = true -%}
+                    <li>
+                      <a
+                        id="HeaderMenu-collection-{{ collection.handle }}"
+                        href="{{ collection.url }}"
+                        class="header__menu-item list-menu__item link link--text focus-inset caption-large"
+                      >
+                        {{ collection.title | escape }}
+                      </a>
+                    </li>
+                  {%- endunless -%}
+                {%- endfor -%}
+                {%- unless has_collections -%}
+                  <li>
+                    <a
+                      id="HeaderMenu-collection-placeholder"
+                      href="/collections/all"
+                      class="header__menu-item list-menu__item link link--text focus-inset caption-large"
+                    >
+                      All Products
+                    </a>
+                  </li>
+                {%- endunless -%}
+              </ul>
+            </details>
+          </header-menu>
+        </li>
+      {%- endif -%}
     {%- endfor -%}
   </ul>
 </nav>
