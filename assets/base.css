@@ -495,13 +495,6 @@ h6:empty {
   font-family: inherit;
 }
 
-.link--text {
-  color: rgb(var(--color-foreground));
-}
-
-.link--text:hover {
-  color: rgba(var(--color-foreground), 0.75);
-}
 
 .link-with-icon {
   display: inline-flex;
@@ -2441,14 +2434,6 @@ input[type='checkbox'] {
   word-break: break-word;
 }
 
-.header__heading-link:hover .h2 {
-  color: rgb(var(--color-foreground));
-}
-
-.header__heading-link .h2 {
-  line-height: 1;
-  color: rgba(var(--color-foreground), 0.75);
-}
 
 .header__heading-logo {
   height: auto;
@@ -2797,18 +2782,7 @@ details[open] > .header__submenu {
   color: rgba(var(--color-foreground), 0.75);
 }
 
-.header__menu-item:hover {
-  color: rgb(var(--color-foreground));
-}
 
-.header__menu-item span {
-  transition: text-decoration var(--duration-short) ease;
-}
-
-.header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-}
 
 details[open] > .header__menu-item {
   text-decoration: underline;
@@ -2822,16 +2796,9 @@ details[open] > .header__menu-item .icon-caret {
   transform: rotate(180deg);
 }
 
-.header__active-menu-item {
-  transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-}
 
-.header__menu-item:hover .header__active-menu-item {
-  text-decoration-thickness: 0.2rem;
-}
+
+
 
 .header__submenu {
   transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;
@@ -2867,9 +2834,7 @@ details[open] > .header__menu-item .icon-caret {
   padding: 0.8rem 2rem;
 }
 
-.header__submenu .header__menu-item:hover {
-  text-decoration-line: underline;
-}
+
 
 .header__menu-item .icon-caret {
   right: 0.8rem;
