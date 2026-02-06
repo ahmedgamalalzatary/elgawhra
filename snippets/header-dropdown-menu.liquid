@@ -21,7 +21,11 @@
                     class="header__active-menu-item"
                   {% endif %}
                 >
-                  {{- link.title | escape -}}
+                  {%- if link.title == 'Catalog' -%}
+                    Shop
+                  {%- else -%}
+                    {{- link.title | escape -}}
+                  {%- endif -%}
                 </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
@@ -93,7 +97,11 @@
                 class="header__active-menu-item"
               {% endif %}
             >
-              {{- link.title | escape -}}
+              {%- if link.title == 'Catalog' -%}
+                Shop
+              {%- else -%}
+                {{- link.title | escape -}}
+              {%- endif -%}
             </span>
           </a>
         {%- endif -%}
