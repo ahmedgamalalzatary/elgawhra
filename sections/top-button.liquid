@@ -1,0 +1,187 @@
+{% comment %}
+  Back to Top Button Section
+  Fixed position button that appears after scrolling
+{% endcomment %}
+
+<style>
+  .back-to-top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.6s ease, background-color 0.6s ease,
+      color 0.6s ease;
+    z-index: 9999;
+  }
+  .back-to-top svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .back-to-top:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .back-to-top:focus-visible {
+    outline: 2px solid rgb(var(--color-foreground));
+    outline-offset: 2px;
+  }
+
+  /* Mobile adjustments */
+  @media screen and (max-width: 749px) {
+    .back-to-top {
+      width: 44px;
+      height: 44px;
+      bottom: 5%;
+      right: 5%;
+    }
+
+    .back-to-top svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+</style>
+
+<button
+  type="button"
+  class="back-to-top"
+  id="BackToTop"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="size-6"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+  </svg>
+</button>
+
+<script>
+  (function() {
+    'use strict';
+
+    var backToTopBtn = document.getElementById('BackToTop');
+    var scrollThreshold = {{ section.settings.scroll_threshold | default: 300 }};
+    var scrollDuration = {{ section.settings.scroll_duration | default: 500 }};
+
+    if (!backToTopBtn) return;
+
+    // Show/hide button based on scroll position
+    function toggleBackToTop() {
+      if (window.pageYOffset > scrollThreshold) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+
+    // Smooth scroll to top
+    function scrollToTop() {
+      var startPosition = window.pageYOffset;
+      var startTime = null;
+
+      function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+        var run = easeInOutQuad(timeElapsed, startPosition, -startPosition, scrollDuration);
+
+        window.scrollTo(0, run);
+
+        if (timeElapsed < scrollDuration) {
+          requestAnimationFrame(animation);
+        }
+      }
+
+      // Easing function for smooth animation
+      function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      requestAnimationFrame(animation);
+    }
+
+    // Throttle scroll events for performance
+    var ticking = false;
+    function handleScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          toggleBackToTop();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+
+    // Event listeners
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    backToTopBtn.addEventListener('click', scrollToTop);
+
+    // Initial check
+    toggleBackToTop();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Back to Top Button",
+  "tag": "section",
+  "class": "section-back-to-top",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme_1"
+    },
+    {
+      "type": "range",
+      "id": "scroll_threshold",
+      "min": 100,
+      "max": 1000,
+      "step": 50,
+      "unit": "px",
+      "label": "Show button after scrolling",
+      "default": 300,
+      "info": "Button will appear after user scrolls this many pixels down the page"
+    },
+    {
+      "type": "range",
+      "id": "scroll_duration",
+      "min": 200,
+      "max": 1500,
+      "step": 100,
+      "unit": "ms",
+      "label": "Scroll animation duration",
+      "default": 500,
+      "info": "Time it takes to scroll back to top"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Back to Top Button"
+    }
+  ]
+}
+{% endschema %}
