@@ -5,34 +5,18 @@ Guidelines for AI agents working on this Shopify Dawn theme (v15.4.1) for El Gaw
 ## Build & Development Commands
 
 ```bash
-# Start local development server with hot reload
-shopify theme dev
-
-# Connect to specific store
-shopify theme dev --store=your-store.myshopify.com
-
-# Push theme to store (use --theme=THEME_ID to avoid overwriting live)
-shopify theme push
-shopify theme push --theme=THEME_ID
-
-# Pull latest theme from store
-shopify theme pull
-
-# Lint theme for Liquid/JSON errors and best practices
-shopify theme check
-
-# Lint a single file
-shopify theme check sections/header.liquid
-
-# Open theme preview in browser
-shopify theme open
-
-# List all themes / Package as zip
-shopify theme list
-shopify theme package
+shopify theme dev                              # Start local dev server with hot reload
+shopify theme dev --store=store.myshopify.com  # Connect to specific store
+shopify theme check                            # Lint all files for Liquid/JSON errors
+shopify theme check sections/header.liquid     # Lint a single file
+shopify theme push                             # Push theme to store
+shopify theme push --theme=THEME_ID            # Push to specific theme (avoids overwriting live)
+shopify theme pull                             # Pull latest theme from store
+shopify theme open                             # Open theme preview in browser
+shopify theme package                          # Package as zip
 ```
 
-> **Note:** There are no unit tests in this project. Use `shopify theme check` for validation.
+> **Note:** No unit tests exist. Use `shopify theme check` for validation.
 
 ## Project Structure
 
@@ -50,19 +34,17 @@ shopify theme package
 
 ### Liquid Templates
 
-**File Naming:**
-- Sections: `kebab-case.liquid` (e.g., `main-product.liquid`, `featured-collection.liquid`)
-- Snippets: `kebab-case.liquid` (e.g., `card-product.liquid`)
+**File Naming:** `kebab-case.liquid` (e.g., `main-product.liquid`, `card-product.liquid`)
 
 **Syntax Rules:**
-- Always use `{% render 'snippet-name' %}` — never `{% include %}` (deprecated)
+- Use `{% render 'snippet-name' %}` — never `{% include %}` (deprecated)
 - Use `{%- -%}` (with hyphens) to strip whitespace when formatting matters
 - Use `{% liquid %}` tag for multi-line logic blocks
 - Apply `| escape` filter for user-generated content
 - Translations: `{{ 'key.path' | t }}` for UI strings
 - Schema labels: use `t:` prefix (e.g., `"label": "t:sections.header.name"`)
 
-**Required Snippet Documentation:**
+**Snippet Documentation (Required):**
 ```liquid
 {% comment %}
   Renders a product card
@@ -82,32 +64,39 @@ shopify theme package
 - Use `| default:` filter for fallback values
 - Wrap optional features in `{%- if setting -%}` blocks
 
+
+### JavaScript (Web Components)
+
 **Naming Conventions:**
-- Classes: `PascalCase` (e.g., `CartDrawer`, `HTMLUpdateUtility`)
+- Classes: `PascalCase` (e.g., `CartDrawer`, `HTMLUpdateUtility`, `SectionId`)
 - Functions/methods: `camelCase` (e.g., `getFocusableElements`, `trapFocus`)
 - Private fields: `#` prefix (e.g., `static #separator = '__'`)
-- Custom element tags: `kebab-case` (e.g., `<cart-drawer>`, `<header-drawer>`)
+- Custom element tags: `kebab-case` (e.g., `<cart-drawer>`, `<product-info>`)
+
 
 **Best Practices:**
 - Use ES6+: arrow functions, template literals, destructuring, optional chaining (`?.`), nullish coalescing (`??`)
 - Prefer `const` over `let`; never use `var`
-- DOM queries: use `querySelector`/`querySelectorAll` over `getElementById`
-- Guard clauses for early returns: `if (!element) return;`
+- DOM queries: `querySelector`/`querySelectorAll` over `getElementById`
+- Guard clauses: `if (!element) return;`
 
 **Accessibility (Required):**
-- Set ARIA attributes: `role`, `aria-expanded`, `aria-controls`, `aria-label`
+- Set ARIA attributes: `role`, `aria-expanded`, `aria-controls`, `aria-label`, `aria-haspopup`
 - Implement keyboard navigation (Escape to close, Tab trapping in modals)
 - Use `focus-inset` class for focus indicators
+- Use `trapFocus(container, element)` and `removeTrapFocus(element)` utilities from `global.js`
+
+### CSS
 
 **Organization:**
 - Component styles: `assets/component-*.css`
 - Section-specific styles: inline `<style>` within section file
-- Conditional CSS loading:
-```html
-<link rel="stylesheet" href="{{ 'component.css' | asset_url }}" media="print" onload="this.media='all'">
-```
+- Conditional CSS loading with media print trick for async loading
 
-**IDs:** PascalCase with hyphens for dynamic parts (e.g., `Details-HeaderMenu-{{ handle }}`)
+**RTL Rules:**
+- Use CSS logical properties: `margin-inline-start` instead of `margin-left`
+- Use `[dir="rtl"]` selector for RTL-specific overrides
+- Flip directional icons: `transform: scaleX(-1)` in RTL
 
 ### JSON Templates & Schemas
 
@@ -141,8 +130,6 @@ shopify theme package
 
 ## RTL/Localization
 
-This theme supports Arabic (primary, RTL) and English (secondary, LTR):
-
 | Language | URL | Direction |
 |----------|-----|-----------|
 | Arabic | `/` (root) | RTL |
@@ -150,15 +137,26 @@ This theme supports Arabic (primary, RTL) and English (secondary, LTR):
 
 **Detection:** `request.locale.iso_code == 'ar'`
 
-**RTL CSS Rules:**
-- Use CSS logical properties: `margin-inline-start` instead of `margin-left`
-- Use `[dir="rtl"]` selector for RTL-specific overrides
-- Flip directional icons: `transform: scaleX(-1)` in RTL
-- Cart drawer slides from left in RTL mode
-
-**Implementation:** See `docs/localization.md` for full roadmap.
-
 ## Git Conventions
 
 - **DO NOT** commit or push changes unless explicitly instructed
 - Follow existing commit message styles when requested
+
+## RTL Implementation Status
+
+**Adding `dir="rtl"` to `theme.liquid` is sufficient for a functional RTL layout.** A git audit of all custom code confirmed that no edited/created files have physical CSS properties that cause UI problems in RTL. The browser's native `dir="rtl"` handling (flexbox/grid flipping, text direction, inline flow) covers all custom components.
+
+Key points for future sessions:
+- All custom CSS (footer, header drawer, dropdown menus, etc.) is already direction-neutral
+- `sections/header.liquid` dropdown uses centering logic (`left: 50%` + `translateX(-50%)`) which works in both directions
+- `sections/top-button.liquid` uses `right: 5%` which is acceptable in both RTL and LTR
+- **Dawn's original CSS** (`base.css`, `component-*.css`) still has physical properties that need logical property conversion — but that's a polish task, not a blocker
+- See `docs/localization.md` for the full RTL implementation plan and detailed audit results
+
+## Key Utilities (global.js)
+
+- `getFocusableElements(container)` - Returns array of focusable elements
+- `trapFocus(container, element)` - Traps focus within container
+- `removeTrapFocus(element)` - Removes focus trap and returns focus
+- `SectionId` class - Parses/builds qualified section IDs
+- `HTMLUpdateUtility` class - Safe HTML swapping with script reinjection
