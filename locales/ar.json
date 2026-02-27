@@ -41,7 +41,14 @@
         "back": "خلف",
         "address_form": {
           "save": "يحفظ"
-        }
+        },
+        "delivery": "موعد التسليم}",
+        "subscription_delivery_description": {
+          "first_n_order_free": {
+            "one": "الطلب الأول مجاني"
+          }
+        },
+        "duties_and_taxes_title": "الرسوم والضرائب"
       },
       "localized_fields": {
         "additional_information": {
@@ -973,7 +980,9 @@
           "change_billing_address_link_label": "تغيير عنوان الفواتير",
           "change_company_location_link_label": "تغيير موقع الشركة",
           "change_shipping_address_link_label": "تغيير عنوان الشحن",
-          "change_shipping_method_link_label": "تغيير طريقة الشحن"
+          "change_shipping_method_link_label": "تغيير طريقة الشحن",
+          "change_purchase_order_number_label": "تغيير رقم أمر الشراء",
+          "company_location": "موقع الشركة"
         }
       },
       "taxes": {
@@ -1054,7 +1063,8 @@
               "service_unavailable": "تعذر التحقق من الإعفاء من ضريبة القيمة المضافة",
               "service_error": "تعذر التحقق من الإعفاء من ضريبة القيمة المضافة"
             }
-          }
+          },
+          "add": "أضف رقم ضريبة القيمة المضافة"
         }
       },
       "general": {
@@ -1448,7 +1458,9 @@
           "description": "هذه المنتجات لم تعد متوفرة وتمت إزالتها من سلة التسوق الخاصة بك.",
           "items_unavailable": "بعض المنتجات لم تعد متوفرة وتمت إزالتها من سلة التسوق الخاصة بك."
         },
-        "out_of_stock_in_context_label": "هذا المنتج غير متوفر في بلدك/منطقتك."
+        "out_of_stock_in_context_label": "هذا المنتج غير متوفر في بلدك/منطقتك.",
+        "page_title": "مشاكل المخزون",
+        "remove_from_cart_button_label": "إزالة من سلة التسوق"
       },
       "contextual_availability": {
         "title": {
@@ -1557,19 +1569,30 @@
         "total_already_paid_label": "مدفوع",
         "unit_price": {
           "accessible_separator": "لكل"
-        }
+        },
+        "price_after_discount_aria_text": "سعر مخفض",
+        "deferred_payment_info": {
+          "paid_today": "إجمالي المبلغ المدفوع اليوم"
+        },
+        "duties_and_taxes_label": "الرسوم والضرائب"
       },
       "contact": {
         "ward_label": "وارد",
         "area_label": "منطقة",
-        "city_label": "مدينة"
+        "city_label": "مدينة",
+        "optional_block_label": "كتلة (اختياري)",
+        "optional_phone_label": "الهاتف (اختياري)"
       },
       "delivery_options": {
         "free_total_label": "حر",
-        "ship": "سفينة"
+        "ship": "سفينة",
+        "shipping_address": "عنوان الشحن",
+        "pick_up_locations": "مواقع الاستلام",
+        "pickup_point_map_title": "خريطة نقاط الاستلام"
       },
       "alternative_payment_method_banner": {
-        "or": "أو"
+        "or": "أو",
+        "express_checkout": "إتمام عملية الدفع السريع"
       },
       "tips": {
         "no_tip_label": "لا أحد"
@@ -1593,7 +1616,10 @@
         "selector_tab_list": "قائمة"
       },
       "local_pickup": {
-        "or": "أو"
+        "or": "أو",
+        "pickup_unavailable_banner_body": {
+          "search_elsewhere": "ابحث في مكان آخر"
+        }
       },
       "units": {
         "milligram": "ملغ",
@@ -1613,6 +1639,49 @@
         "yard": "يارد",
         "square_foot": "قدم مربع",
         "item": "غرض"
+      },
+      "customer_account": {
+        "have_an_account_label": "هل لديك حساب؟"
+      },
+      "processing": {
+        "page_title": "معالجة الطلب",
+        "title": "معالجة الطلب"
+      },
+      "marketing": {
+        "disclaimer": {
+          "terms_of_service": "شروط الخدمة"
+        },
+        "sms": {
+          "disclaimer": {
+            "terms_of_service": "شروط الخدمة"
+          }
+        }
+      },
+      "shop_policies": {
+        "terms_of_service": "شروط الخدمة"
+      },
+      "order_payment_collection": {
+        "changes_summary": {
+          "subtracted": "تمت إزالة %{count}"
+        }
+      },
+      "no_address_location": {
+        "email_us_button_label": "أرسل لنا بريدًا إلكترونيًا"
+      },
+      "notice_banner": {
+        "individual_violations_title": {
+          "DeliveryViolations": "عنوان الشحن"
+        }
+      },
+      "split_delivery": {
+        "items_for_pickup": "الأغراض المراد استلامها"
+      },
+      "wallets": {
+        "errors": {
+          "missing": {
+            "address1": "أدخل عنوانًا"
+          }
+        }
       }
     },
     "pagination": {
@@ -1802,6 +1871,10 @@
         "transaction_status": {
           "success": "نجاح",
           "pending": "قيد الانتظار"
+        },
+        "cancel_reason": {
+          "declined": "تم رفض الدفع",
+          "fraud": "طلب احتيالي"
         }
       }
     },
@@ -1810,6 +1883,9 @@
         "true_label": "نعم",
         "false_label": "لا"
       }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "خطأ - %{title}"
     }
   },
   "customer_accounts": {
@@ -1980,7 +2056,11 @@
       "title": "العناوين",
       "billing_address_dropdown_placeholder": "عنوان الفواتير",
       "add_button_text": "يضيف",
-      "back_button": "خلف"
+      "back_button": "خلف",
+      "address_deleted_notification": "تم حذف العنوان",
+      "default_address": {
+        "title": "العنوان الافتراضي"
+      }
     },
     "address_form": {
       "attention": "انتباه",
@@ -2079,17 +2159,29 @@
         "description": "إذا كانت لديك بالفعل عناصر في سلة التسوق الخاصة بك، فقد يؤثر تغيير المواقع على أسعار وكميات سلة التسوق.",
         "description_switch_later": "يمكنك التبديل لاحقًا",
         "list_accessibility_label": "قائمة المواقع",
-        "list_item_without_address_accessibility_label": "{{name}} : لا يوجد عنوان"
+        "list_item_without_address_accessibility_label": "{{name}} : لا يوجد عنوان",
+        "search": "ابحث عن المواقع",
+        "selection_confirmation_button": "اختر الموقع",
+        "try_new_search": "جرب بحثًا جديدًا"
       },
       "draft_order_details": {
         "payment_status": {
           "paid": {
             "title": "مدفوع"
+          },
+          "canceled": {
+            "title": "تم إلغاء الدفع"
           }
         }
       },
       "purchase_order_number": {
-        "save": "يحفظ"
+        "save": "يحفظ",
+        "discard_changes_modal_title": "هل تريد تجاهل التغييرات؟",
+        "title": "رقم أمر الشراء {{poNumber}}"
+      },
+      "addresses": {
+        "billing_address_card_title": "عنوان الفواتير",
+        "shipping_address_card_title": "عنوان الشحن"
       }
     },
     "account_information": {
@@ -2097,7 +2189,12 @@
         "edit": "يحرر",
         "save": "يحفظ"
       },
-      "add_button": "يضيف"
+      "add_button": "يضيف",
+      "people": {
+        "pagination": {
+          "load_more_accessibility_label": "حمل المزيد من الناس"
+        }
+      }
     },
     "orders": {
       "order_list": {
@@ -2106,7 +2203,8 @@
         },
         "pagination": {
           "next": "التالي",
-          "previous": "السابق"
+          "previous": "السابق",
+          "load_more_accessibility_label": "تحميل المزيد من الطلبات"
         },
         "payment_status": {
           "list_view": {
@@ -2114,7 +2212,44 @@
             "due_without_date": "حق"
           }
         },
-        "sort_title": "نوع"
+        "sort_title": "نوع",
+        "sort": {
+          "date": {
+            "newest": "من الأحدث إلى الأقدم",
+            "oldest": "من الأقدم إلى الأحدث"
+          }
+        },
+        "location_filter_picker": {
+          "current_location": "الموقع الحالي"
+        }
+      },
+      "order_status": {
+        "ready_for_pickup_label": "جاهز للاستلام",
+        "gift_card_resend_button": {
+          "one": "إعادة إرسال بطاقة الهدية"
+        },
+        "gift_resend_success": {
+          "one": "إعادة إرسال بطاقة الهدية"
+        },
+        "status_timestamp": "تم التحديث في {{date}}",
+        "delivered": "وصل في {{date}}",
+        "tracking_number": {
+          "other": "أرقام التتبع"
+        },
+        "out_for_delivery_label": "في طريقها للتسليم",
+        "resume_tracking": "متابعة استئناف العمل",
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "إدارة حسابك على أمازون"
+        },
+        "delivery_promise_v2": {
+          "promise_line": {
+            "track_with_shop_button_label": "تتبع مع المتجر",
+            "claim_shop_cash_button_label": "استلام النقود من المتجر"
+          },
+          "details_modal": {
+            "claim_shop_cash_button_label": "استلام النقود من المتجر"
+          }
+        }
       }
     },
     "order_details": {
@@ -2127,12 +2262,36 @@
       "payment": {
         "emv_details": {
           "aid": "يساعد:"
+        },
+        "transactions": {
+          "payment_details": "تفاصيل الدفع"
         }
       },
       "shipping": {
-        "free": "حر"
+        "free": "حر",
+        "address": "عنوان الشحن",
+        "address_map_marker": "عنوان الشحن",
+        "method": "طريقة الشحن"
       },
-      "tip": "نصيحة"
+      "tip": "نصيحة",
+      "billing_address": "عنوان الفواتير",
+      "image_gallery": {
+        "next": "عرض العناصر التالية"
+      },
+      "marketing_section_title": "أخبار وعروض",
+      "returns": {
+        "tracking_number": "عدد تتبع:"
+      },
+      "pickup": {
+        "pickup_location": "موقع الاستلام"
+      },
+      "pagination": {
+        "load_more_accessibility_label": "تحميل المزيد من العناصر"
+      },
+      "fees": {
+        "return_shipping_fee": "شحن الإرجاع"
+      },
+      "adjusted_payment": "الدفعة المعدلة"
     },
     "payment_methods": {
       "back_button": "خلف",
@@ -2141,22 +2300,49 @@
       "store_credit": {
         "details_modal": {
           "date_label": "تاريخ",
-          "expirable_amounts_button": "منظر"
+          "expirable_amounts_button": "منظر",
+          "expiration_date_label": "تاريخ انتهاء الصلاحية",
+          "events": {
+            "payment_failure": "فشل الدفع",
+            "payment_returned": "تم إرجاع المبلغ المدفوع",
+            "tax_finalization": "إتمام إجراءات الضرائب"
+          }
         }
       },
       "payment_details": {
-        "edit_payment_method_button": "يحرر"
+        "edit_payment_method_button": "يحرر",
+        "billing_title": "عنوان الفواتير"
       },
       "edit_payment_method": {
-        "save_payment_method_button": "يحفظ"
+        "save_payment_method_button": "يحفظ",
+        "billing_address": "عنوان الفواتير"
       },
       "add_payment_method": {
-        "button_title": "يضيف"
+        "button_title": "يضيف",
+        "billing_address": {
+          "title": "عنوان الفواتير"
+        },
+        "subscription_contracts": {
+          "product_details": "تفاصيل المنتج"
+        }
+      },
+      "title": "طرق الدفع",
+      "update_payment_method": {
+        "billing_address": "عنوان الفواتير"
       }
     },
     "payment_method_brands": {
       "visa": "فيزا",
       "elo": "إيلو"
+    },
+    "navigation_and_structure": {
+      "try_new_search": "جرب بحثًا جديدًا",
+      "company_location": "موقع الشركة"
+    },
+    "errors": {
+      "order_not_found": {
+        "title": "لم يتم العثور على الطلب"
+      }
     }
   },
   "sections": {
@@ -2169,22 +2355,40 @@
     },
     "header": {
       "announcement": "إعلان"
+    },
+    "cart": {
+      "estimated_total": "الإجمالي المُقدّر"
+    },
+    "footer": {
+      "payment": "طرق الدفع"
+    },
+    "slideshow": {
+      "pause_slideshow": "إيقاف عرض الشرائح مؤقتًا"
     }
   },
   "general": {
     "slider": {
       "of": "ل"
+    },
+    "password_page": {
+      "login_form_error": "كلمة مرور خاطئة!"
     }
   },
   "accessibility": {
-    "unit_price_separator": "لكل"
+    "unit_price_separator": "لكل",
+    "skip_to_text": "انتقل إلى المحتوى"
   },
   "products": {
     "product": {
-      "sku": "رمز المنتج"
+      "sku": "رمز المنتج",
+      "volume_pricing": {
+        "minimum": "{{ quantity }} +"
+      },
+      "taxes_included": "الضرائب مشمولة."
     },
     "facets": {
-      "to": "ل"
+      "to": "ل",
+      "filter_and_sort": "تصفية وفرز"
     }
   },
   "customer": {
@@ -2193,7 +2397,28 @@
     },
     "order": {
       "tax": "ضريبة",
-      "sku": "رمز المنتج"
+      "sku": "رمز المنتج",
+      "billing_address": "عنوان الفواتير",
+      "tracking_number": "عدد تتبع"
+    },
+    "account": {
+      "details": "تفاصيل الحساب"
+    },
+    "addresses": {
+      "zip": "الرمز البريدي"
+    }
+  },
+  "blogs": {
+    "article": {
+      "comment_form_title": "اترك تعليقًا"
+    }
+  },
+  "localization": {
+    "update_language": "تحديث اللغة"
+  },
+  "recipient": {
+    "form": {
+      "email_label": "البريد الإلكتروني للمستلم"
     }
   }
 }
