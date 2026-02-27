@@ -35,7 +35,13 @@
         "split_shipping_option_recommended": "مُستَحسَن",
         "split_shipping_option_custom": "مخصص",
         "add_shipping_address": "أضف عنوان الشحن",
-        "choose_new_address": "اختر عنوانًا جديدًا"
+        "choose_new_address": "اختر عنوانًا جديدًا",
+        "free_rate_label": "حر",
+        "edit": "يحرر",
+        "back": "خلف",
+        "address_form": {
+          "save": "يحفظ"
+        }
       },
       "localized_fields": {
         "additional_information": {
@@ -1283,7 +1289,23 @@
         "continue_to_payment_plans_button_label": "انتقل إلى خطط الدفع",
         "back_button_label": "يعود",
         "choose_delivery_strategy": "اختر طريقة التوصيل",
-        "autocomplete_zero_item": "لا توجد منتجات متاحة"
+        "autocomplete_zero_item": "لا توجد منتجات متاحة",
+        "dates": {
+          "weekdays_abbreviation": {
+            "monday": "شهر",
+            "tuesday": "تو",
+            "wednesday": "نحن",
+            "thursday": "ذ",
+            "friday": "الأب",
+            "saturday": "سا",
+            "sunday": "سو"
+          },
+          "months": {
+            "may": "يمكن",
+            "june": "يونيو",
+            "july": "يوليو"
+          }
+        }
       },
       "payment_gateway": {
         "order_deposit_due_on_fulfillment": "{{depositAmount}} مستحق الدفع اليوم. أما المبلغ المتبقي فسيكون مستحق الدفع بمجرد إتمام طلبك.",
@@ -1524,7 +1546,73 @@
         "gift_card_and_discount_title": "رمز خصم أو بطاقة هدية",
         "gift_card_and_discount_label": "رمز خصم أو بطاقة هدية",
         "gift_card_and_discount_placeholder": "رمز خصم أو بطاقة هدية",
-        "gift_cards_apply_to_local_shop": "لا تُقبل بطاقات الهدايا إلا على المنتجات من %{shop_name}"
+        "gift_cards_apply_to_local_shop": "لا تُقبل بطاقات الهدايا إلا على المنتجات من %{shop_name}",
+        "tip_label": "نصيحة",
+        "free_total_label": "حر",
+        "free_shipping_total_label": "حر",
+        "paid_label": "مدفوع",
+        "cost_table_item_column_header": "غرض",
+        "expand_order_summary_short": "يعرض",
+        "collapse_order_summary_short": "يخفي",
+        "total_already_paid_label": "مدفوع",
+        "unit_price": {
+          "accessible_separator": "لكل"
+        }
+      },
+      "contact": {
+        "ward_label": "وارد",
+        "area_label": "منطقة",
+        "city_label": "مدينة"
+      },
+      "delivery_options": {
+        "free_total_label": "حر",
+        "ship": "سفينة"
+      },
+      "alternative_payment_method_banner": {
+        "or": "أو"
+      },
+      "tips": {
+        "no_tip_label": "لا أحد"
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": "يوم"
+          },
+          "week": {
+            "one": "أسبوع"
+          },
+          "year": {
+            "one": "سنة"
+          }
+        }
+      },
+      "pickup_point": {
+        "or": "أو",
+        "selector_tab_map": "رسم خريطة",
+        "selector_tab_list": "قائمة"
+      },
+      "local_pickup": {
+        "or": "أو"
+      },
+      "units": {
+        "milligram": "ملغ",
+        "kilogram": "كيلوغرام",
+        "milliliter": "مل",
+        "cubic_meter": "م³",
+        "millimeter": "مم",
+        "centimeter": "سم",
+        "square_meter": "م²",
+        "ounce": "أونصة",
+        "pound": "رطل",
+        "pint": "نقطة",
+        "quart": "كيو تي",
+        "gallon": "غال",
+        "inch": "في",
+        "foot": "قدم",
+        "yard": "يارد",
+        "square_foot": "قدم مربع",
+        "item": "غرض"
       }
     },
     "pagination": {
@@ -1716,6 +1804,12 @@
           "pending": "قيد الانتظار"
         }
       }
+    },
+    "filters": {
+      "boolean": {
+        "true_label": "نعم",
+        "false_label": "لا"
+      }
     }
   },
   "customer_accounts": {
@@ -1750,7 +1844,8 @@
       "qrCode": "رمز الاستجابة السريعة",
       "addFile": "إضافة ملف",
       "dropzoneInvalidFileType": "نوع الملف غير مدعوم",
-      "dropzoneDraggedOver": "قم بإسقاط الملف لتحميله"
+      "dropzoneDraggedOver": "قم بإسقاط الملف لتحميله",
+      "may": "يمكن"
     },
     "profile_preview_bar": {
       "customize_button": "تخصيص",
@@ -1883,7 +1978,9 @@
       },
       "save_new_address_accessibility_label": "حفظ العنوان",
       "title": "العناوين",
-      "billing_address_dropdown_placeholder": "عنوان الفواتير"
+      "billing_address_dropdown_placeholder": "عنوان الفواتير",
+      "add_button_text": "يضيف",
+      "back_button": "خلف"
     },
     "address_form": {
       "attention": "انتباه",
@@ -1983,7 +2080,83 @@
         "description_switch_later": "يمكنك التبديل لاحقًا",
         "list_accessibility_label": "قائمة المواقع",
         "list_item_without_address_accessibility_label": "{{name}} : لا يوجد عنوان"
+      },
+      "draft_order_details": {
+        "payment_status": {
+          "paid": {
+            "title": "مدفوع"
+          }
+        }
+      },
+      "purchase_order_number": {
+        "save": "يحفظ"
       }
+    },
+    "account_information": {
+      "profile_card": {
+        "edit": "يحرر",
+        "save": "يحفظ"
+      },
+      "add_button": "يضيف"
+    },
+    "orders": {
+      "order_list": {
+        "carousel": {
+          "next": "التالي"
+        },
+        "pagination": {
+          "next": "التالي",
+          "previous": "السابق"
+        },
+        "payment_status": {
+          "list_view": {
+            "paid": "مدفوع",
+            "due_without_date": "حق"
+          }
+        },
+        "sort_title": "نوع"
+      }
+    },
+    "order_details": {
+      "view_controls": {
+        "list": "قائمة"
+      },
+      "no_data": "لا أحد",
+      "not_applicable": "غير متوفر",
+      "paid_amount": "مدفوع",
+      "payment": {
+        "emv_details": {
+          "aid": "يساعد:"
+        }
+      },
+      "shipping": {
+        "free": "حر"
+      },
+      "tip": "نصيحة"
+    },
+    "payment_methods": {
+      "back_button": "خلف",
+      "generic_card": "بطاقة",
+      "or": "أو",
+      "store_credit": {
+        "details_modal": {
+          "date_label": "تاريخ",
+          "expirable_amounts_button": "منظر"
+        }
+      },
+      "payment_details": {
+        "edit_payment_method_button": "يحرر"
+      },
+      "edit_payment_method": {
+        "save_payment_method_button": "يحفظ"
+      },
+      "add_payment_method": {
+        "button_title": "يضيف"
+      }
+    },
+    "payment_method_brands": {
+      "visa": "فيزا",
+      "elo": "إيلو"
     }
   },
   "sections": {
@@ -1996,6 +2169,31 @@
     },
     "header": {
       "announcement": "إعلان"
+    }
+  },
+  "general": {
+    "slider": {
+      "of": "ل"
+    }
+  },
+  "accessibility": {
+    "unit_price_separator": "لكل"
+  },
+  "products": {
+    "product": {
+      "sku": "رمز المنتج"
+    },
+    "facets": {
+      "to": "ل"
+    }
+  },
+  "customer": {
+    "login_page": {
+      "alternate_provider_separator": "أو"
+    },
+    "order": {
+      "tax": "ضريبة",
+      "sku": "رمز المنتج"
     }
   }
 }
