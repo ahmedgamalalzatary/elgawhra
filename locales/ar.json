@@ -7,4 +7,234 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{}
+{
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "missing_shipping_address": "عنوان الشحن مفقود",
+        "split_shipping_merchandise_quantity_label_standard": "%{الكمية} عنصرًا",
+        "split_shipping_merchandise_quantity_label_additional": "+%{الكمية} أكثر",
+        "split_shipping_merchandise_shipment_number": "الشحنة رقم %{number} من إجمالي %{total}",
+        "pre_order_ships_now": "الشحن متاح الآن",
+        "pre_order_ships_later": "يتم الشحن لاحقاً",
+        "pre_order_ships_date": "السفن %{date}",
+        "split_shipping_shipped_by_shop": "تم الشحن بواسطة %{shop_name}",
+        "split_shipping_multiple_shipment_label": "شحنات متعددة",
+        "split_shipping_shipping_label": "طريقة",
+        "split_shipping_shipment_notice": "سيصل طلبك خلال %{quantity_shipments}",
+        "split_shipping_first_shipment_notice": "سيصل طلبك الأول خلال %{quantity_shipments}",
+        "split_shipping_multiple_shipment_quantity_label": "شحنات بقيمة %{quantity}",
+        "split_shipping_multiple_shipment_notice": "سيصل طلبك على دفعات متعددة",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "سيصل طلبك على دفعات بقيمة %{quantity}",
+        "split_shipping_more_shipping_options": "خيارات شحن إضافية",
+        "split_shipping_shipment_number": "الشحنة رقم %{number}",
+        "split_shipping_merchandise_quantity_label_inline_primary": "الكمية: %{quantity}",
+        "split_shipping_option_free": "ًالشحن مجانا",
+        "split_shipping_option_lowest_price": "أقل سعر",
+        "split_shipping_option_fastest": "الأسرع",
+        "split_shipping_option_recommended": "مُستَحسَن",
+        "split_shipping_option_custom": "مخصص",
+        "add_shipping_address": "أضف عنوان الشحن",
+        "choose_new_address": "اختر عنوانًا جديدًا"
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "معلومات إضافية",
+          "shipping_credential_kr": "رمز التعريف الشخصي",
+          "shipping_credential_cn": "رقم هوية المقيم",
+          "tax_credential_it": "الكوديس فيسكال (اختياري)",
+          "tax_email_it": "PEC (اختياري)",
+          "tax_credential_cl": "شبق",
+          "shipping_credential_cl": "شبق",
+          "tax_credential_co": "بطاقة الهوية/رقم ضريبة القيمة المضافة",
+          "tax_credential_type_co": "نوع بطاقة الهوية",
+          "shipping_credential_co": "بطاقة الهوية/رقم ضريبة القيمة المضافة",
+          "shipping_credential_type_co": "نوع بطاقة الهوية",
+          "tax_credential_cr": "رقم التعريف/RUT",
+          "shipping_credential_cr": "رقم التعريف/RUT",
+          "tax_credential_my": "رقم التعريف الضريبي/رقم التسجيل",
+          "shipping_credential_my": "رقم التعريف الضريبي/رقم التسجيل",
+          "tax_credential_type_mx": "النظام المالي",
+          "tax_credential_use_mx": "استخدام CFDI",
+          "shipping_credential_tw": "رقم الهوية الوطنية / ضريبة القيمة المضافة"
+        }
+      },
+      "payment": {
+        "network_card_payment_options": "اختر شبكة بطاقات",
+        "network_card_persistence_description": "سيتم حفظ الشبكة المختارة مع طريقة الدفع الخاصة بك للمعاملات المستقبلية.",
+        "amazon_payments_label": "أمازون باي",
+        "amazon_payments_login_hint": "سيُطلب منك تسجيل الدخول باستخدام حسابك على أمازون.",
+        "amazon_payments_logout": "تسجيل الخروج من أمازون باي",
+        "amazon_payments_failed_mfa_challenge": "لم يتم استخدام طريقة الدفع المختارة. يرجى اختيار طريقة دفع أخرى أو الاتصال بالبنك أو جهة إصدار بطاقتك.",
+        "amazon_payments_abandoned_mfa_challenge": "لم يتم إتمام عملية الدفع. حاول استخدام طريقة دفع أخرى أو اتصل بالبنك أو جهة إصدار بطاقتك.",
+        "amazon_payments_could_not_enqueue_authorize": "حدثت مشكلة أثناء معالجة دفعتك. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+        "title": "قسط",
+        "amount_left_to_pay_label": "موعد الدفع:",
+        "discount_button_action_label": "استخدم رمز الخصم",
+        "discount_codes_removed_summary": {
+          "one": "تمت إزالة رمز الخصم %{count}",
+          "other": "تمت إزالة %{count} من أكواد الخصم"
+        },
+        "discount_codes_modified_summary": {
+          "one": "تم تعديل رمز الخصم %{count}",
+          "other": "تم تعديل %{count} من أكواد الخصم"
+        },
+        "discount_codes_removed_or_modified_summary": {
+          "one": "تمت إزالة أو تعديل رمز الخصم %{count}",
+          "other": "تمت إزالة أو تعديل %{count} من أكواد الخصم"
+        },
+        "discount_show_more_warnings": {
+          "one": "عرض المزيد من %{count}",
+          "other": "عرض المزيد من %{count}"
+        },
+        "gift_card_code_label": "رمز بطاقة الهدايا",
+        "apply_gift_card_button_label": "يتقدم",
+        "gift_card_balance_label": "توازن:",
+        "supported_card_brands_more_label": "والمزيد…",
+        "detected_card_brand": "تم الكشف عن نوع البطاقة: {brand}",
+        "credit_card_vaulting_sign_in_banner_title": "احتفظ ببطاقتك الائتمانية",
+        "credit_card_vaulting_sign_in_banner_info": "قم بتسجيل الدخول أو إنشاء حساب لحفظ بطاقتك الائتمانية لاستخدامها في عمليات الشراء المستقبلية.",
+        "credit_card_vaulting_sign_in_banner_button_label": "تسجيل الدخول",
+        "ftd_vault_credit_card_label": "احفظ هذه البطاقة الائتمانية في حسابي لإتمام عملية الدفع بشكل أسرع.",
+        "card_number_label": "رقم البطاقة",
+        "card_number_placeholder": "رقم البطاقة",
+        "card_pay_with": "ادفع باستخدام:",
+        "card_security_notice": "جميع المعاملات آمنة ومشفرة.",
+        "card_security_vault_notice": "نحتاج إلى بياناتك لإتمام عمليات الدفع المستقبلية. جميع المعاملات آمنة ومشفّرة.",
+        "card_information_notice": "جميع المعاملات آمنة ومشفرة. لا يتم تخزين معلومات بطاقات الائتمان مطلقاً.",
+        "name_on_card_label": "الاسم على البطاقة",
+        "name_on_card_placeholder": "الاسم على البطاقة",
+        "order_edit_banner_subtitle": "تم تحديث طلبك {{order_number}} . راجع هذه التغييرات، ثم ادفع لتأكيد طلبك.",
+        "order_edit_banner_items_added": {
+          "one": "تمت الإضافة",
+          "other": "تمت إضافة %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "تمت إزالته",
+          "with_quantities": "تمت إزالة {{delta}} من {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "تم إرجاع {{quantity}}",
+          "with_quantities": "تم إرجاع {{delta}} من {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "تمت إزالته من قائمة الإرجاع",
+          "with_quantities": "تمت إزالة {{delta}} من الإرجاع"
+        },
+        "order_edit_banner_single_item_added": "تمت الإضافة",
+        "order_edit_banner_multiple_items_added": "تمت إضافة {{amount}}",
+        "order_edit_banner_single_item_removed": "تمت إزالته",
+        "order_edit_banner_multiple_items_removed": "تمت إزالة {{amount}}",
+        "order_edit_banner_single_item_returned": "عاد",
+        "order_edit_banner_multiple_items_returned": "تم إرجاع {{amount}}",
+        "order_edit_banner_single_item_return_line_item_removed": "تمت إزالته من قائمة الإرجاع",
+        "order_edit_banner_multiple_items_return_line_item_removed": "تم حذف {{amount}} من المبلغ المُسترد",
+        "order_edit_banner_updated_order_label": "طلب محدث",
+        "gift_card_wrapper": {
+          "heading": "بطاقة هدايا",
+          "apply_gift_card_label": "استخدم بطاقة هدية",
+          "apply_another_gift_card_label": "استخدم بطاقة هدايا أخرى",
+          "gift_card_label": "بطاقة هدايا %{identifier}",
+          "payment_tag": "بطاقة هدايا",
+          "add_label": "أضف بطاقة هدية",
+          "manage_label": "إدارة بطاقات الهدايا"
+        },
+        "gift_card_store_credit": {
+          "add_label": "أضف بطاقة هدية أو رصيدًا في المتجر",
+          "manage_label": "إدارة بطاقات الهدايا أو رصيد المتجر"
+        },
+        "gift_card_checkbox_label": "استخدم بطاقة الهدايا",
+        "custom_onsite_payment_method_modal": {
+          "title": "تأكيد الدفع المخصص في الموقع"
+        },
+        "markets_pro_disclaimer_label": "بتقديم طلبك، فإنك توافق على الشراء من Global-e بصفتها التاجر المسجل، وفقًا لشروط وأحكام Global-e %{markets_pro_terms} و %{privacy_policy}، ومشاركة معلوماتك مع %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "الشروط والأحكام",
+        "markets_pro_disclaimer_privacy_policy": "سياسة الخصوصية",
+        "markets_pro_disclaimer_terms_and_conditions_title": "شروط وأحكام التاجر المسجل",
+        "markets_pro_disclaimer_privacy_policy_title": "سياسة خصوصية التاجر المسجل",
+        "purchase_order_number": {
+          "title": "رقم أمر الشراء",
+          "label": "رقم أمر الشراء (اختياري)"
+        },
+        "alternative_payment_currency_total_notice": "ملاحظة: سيتم خصم مبلغ %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "ملاحظة: المبلغ الإجمالي المحول هو %{amount_due}.",
+        "waiting_on_taxes_message": "إذا لم يتم حساب ضرائبك خلال الثواني القليلة القادمة، فقم بتحديث الصفحة.",
+        "waiting_on_taxes_notice": "حساب الضرائب",
+        "payment_method": "طريقة الدفع",
+        "payment_method_rollup_accessibility_label": "خيارات طرق الدفع",
+        "expired_payment_method": "انتهت صلاحية طريقة الدفع المختارة",
+        "payment_method_update_failed": "فشل تحديث طريقة الدفع.",
+        "payment_method_incompatible_with_payment_terms": "طريقة الدفع غير متوافقة مع شروط الدفع.",
+        "proposed_gateway_unavailable": "بوابة الدفع المقترحة غير متاحة",
+        "pay_in_installments_split_pay_short": "4 دفعات بقيمة %{المبلغ}",
+        "gift_cards_unavailable": "لم يعد بالإمكان استخدام بطاقة الهدية الخاصة بك لهذا الطلب، وقد تم حذفها.",
+        "payment_flexibility_terms_id_mismatch": "شروط مرونة الدفع، عدم تطابق الهوية",
+        "payment_option": {
+          "accessibility_label": "اختر طريقة الدفع"
+        },
+        "bank_account_type": {
+          "checking": "التحقق",
+          "savings": "المدخرات"
+        },
+        "new_bank_account_disclaimer": "بإتمام طلبك، فإنك تفوض %{shop_name} بخصم المبلغ الموضح في الحساب أدناه عبر نظام المقاصة الآلية (ACH) وفي الوقت المحدد.",
+        "bank_account_disclaimer": "قد تستغرق عمليات الدفع عبر نظام المقاصة الآلية (ACH) ما يصل إلى 4 أيام عمل للمعالجة.",
+        "bank_account_choose": "اختر حسابًا لإتمام عملية الشراء بأمان",
+        "bank_account_connect_another": "ربط حساب مصرفي آخر",
+        "bank_account_connect": "ربط الحساب المصرفي",
+        "bank_account_missing": "يجب ربط الحساب البنكي",
+        "bank_account_generic_error": "تعذر إضافة الحساب البنكي. حاول مرة أخرى لاحقاً.",
+        "separate_payments_label": "مشترياتك من أكثر من متجر. سيتم تحصيل المبلغ منك عبر %{separate_payments_link}.",
+        "separate_payments_text": "دفعات منفصلة",
+        "payments": "المدفوعات",
+        "add_payment_method": "إضافة طريقة دفع",
+        "choose_new_payment_method": "اختر طريقة دفع جديدة"
+      },
+      "billing": {
+        "billing_address_title": "مشروع قانون ل",
+        "billing_address_rollup_accessibility_label": "بيل إلى خيارات",
+        "same_as_shipping": "نفس عنوان الشحن",
+        "add_address": "استخدم عنوانًا مختلفًا",
+        "edit": "يحرر",
+        "delete": "يمسح",
+        "address_more": "إجراءات إضافية لهذا العنوان",
+        "address_edit": "تعديل العنوان",
+        "address_delete": "حذف العنوان",
+        "address_confirm": "هل أنت متأكد من رغبتك في حذف هذا العنوان من حسابك؟",
+        "address_form": {
+          "add_address": "إضافة عنوان",
+          "save": "يحفظ",
+          "cancel": "يلغي"
+        }
+      },
+      "company_location": {
+        "location_title": "موقع الشركة",
+        "location_rollup_accessibility_label": "خيارات موقع الشركة"
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "الرصيد الحالي %{المبلغ}",
+        "credit_card_expires_on_notice": "تنتهي صلاحيتها في %{الشهر}/%{السنة}",
+        "express_payment_gateway_label": "يعبر",
+        "manual_payment_gateway_label": "يدوي",
+        "billing_address_title": "عنوان الفواتير",
+        "free_label": "حر"
+      },
+      "field_errors": {
+        "handle_phone_invalid": "أدخل رقم هاتف صحيح",
+        "handle_email_invalid": "أدخل بريدًا إلكترونيًا صحيحًا",
+        "email_invalid": "أدخل بريدًا إلكترونيًا صحيحًا",
+        "email_or_phone_blank": "أدخل بريدًا إلكترونيًا أو رقم هاتف",
+        "email_or_phone_invalid": "أدخل بريدًا إلكترونيًا أو رقم هاتف جوال صحيحًا",
+        "address_first_name_blank": "أدخل الاسم الأول",
+        "address_first_name_too_long": "الاسم الأول طويل جدًا (الحد الأقصى 255 حرفًا)",
+        "address_first_name_contains_emojis": "لا يمكن أن يحتوي الاسم الأول على رموز تعبيرية",
+        "address_first_name_contains_html_tags": "لا يمكن أن يحتوي الاسم الأول على وسوم HTML.",
+        "address_first_name_contains_url": "لا يمكن أن يحتوي الاسم الأول على عنوان URL",
+        "address_first_name_contains_mathematical_symbols": "لا يجوز أن يحتوي الاسم الأول على رموز رياضية",
+        "address_last_name_blank": "أدخل اسم العائلة",
+        "address_last_name_too_long": "اسم العائلة طويل جدًا (الحد الأقصى 255 حرفًا)",
+        "address_last_name_contains_emojis": "لا يمكن أن يحتوي اسم العائلة على رموز تعبيرية",
+        "address_last_name_contains_html_tags": "لا يمكن أن يحتوي اسم العائلة على وسوم HTML."
+      }
+    }
+  }
+}
