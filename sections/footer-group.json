@@ -1,38 +1,46 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "name": "t:sections.footer.name",
-    "type": "footer",
-    "sections": {
-        "footer": {
-            "type": "footer",
-            "settings": {
-                "color_scheme": "scheme-1",
-                "footer_description": "Elgawhra, Egyptian company is distinguished by providing the best types of coffee, chocolate, nuts and snacks",
-                "social_insta": "",
-                "social_face": "",
-                "social_whats": "+201554459196",
-                "links_heading": "Internal links",
-                "link_home_text": "Home",
-                "link_catalog_text": "Catalog",
-                "link_contact_text": "Contact",
-                "policies_heading": "Store policies",
-                "link_return_text": "Return Policy",
-                "link_return": "",
-                "link_delivery_text": "Delivery policy",
-                "link_delivery": "",
-                "link_support_text": "Support",
-                "link_support": "",
-                "link_terms_text": "Terms and Conditions",
-                "link_terms": "",
-                "contact_heading": "Call us",
-                "contact_phone": "+201554459196",
-                "contact_email": "ahmedalzatary716@gmail.com",
-                "copyright_text": "Elgawhra",
-                "padding_top": 48,
-                "padding_bottom": 48
-            }
-        }
-    },
-    "order": [
-        "footer"
-    ]
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "footer_description": "Elgawhra, Egyptian company is distinguished by providing the best types of coffee, chocolate, nuts and snacks",
+        "social_insta": "",
+        "social_face": "",
+        "social_whats": "+201554459196",
+        "links_heading": "Internal links",
+        "link_home_text": "Home",
+        "link_catalog_text": "Catalog",
+        "link_contact_text": "Contact",
+        "policies_heading": "Store policies",
+        "link_return_text": "Return Policy",
+        "link_return": "",
+        "link_delivery_text": "Delivery policy",
+        "link_delivery": "",
+        "link_support_text": "Support",
+        "link_support": "",
+        "link_terms_text": "Terms and Conditions",
+        "link_terms": "",
+        "contact_heading": "Call us",
+        "contact_phone": "+201554459196",
+        "contact_email": "ahmedalzatary716@gmail.com",
+        "copyright_text": "Elgawhra",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
 }
