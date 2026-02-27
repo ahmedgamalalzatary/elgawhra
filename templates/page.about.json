@@ -132,7 +132,6 @@
     },
     "order": [
         "main",
-        "about_direction",
         "about_intro",
         "about_story",
         "about_values"
