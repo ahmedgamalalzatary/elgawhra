@@ -3372,7 +3372,9 @@
   "general": {
     "slider": {
       "of": "ل",
-      "name": "شريط التمرير"
+      "name": "شريط التمرير",
+      "next_slide": "انزلق إلى اليمين",
+      "previous_slide": "انزلق لليسار"
     },
     "password_page": {
       "login_form_error": "كلمة مرور خاطئة!",
@@ -3389,36 +3391,103 @@
     },
     "search": {
       "search": "يبحث"
+    },
+    "share": {
+      "success_message": "تم نسخ الرابط إلى الحافظة"
     }
   },
   "accessibility": {
     "unit_price_separator": "لكل",
-    "skip_to_text": "انتقل إلى المحتوى"
+    "skip_to_text": "انتقل إلى المحتوى",
+    "skip_to_product_info": "انتقل إلى معلومات المنتج",
+    "close": "يغلق",
+    "vendor": "بائع:",
+    "error": "خطأ",
+    "refresh_page": "يؤدي اختيار أحد الخيارات إلى تحديث الصفحة بالكامل.",
+    "link_messages": {
+      "new_window": "يفتح في نافذة جديدة.",
+      "external": "يفتح موقعًا إلكترونيًا خارجيًا."
+    },
+    "loading": "تحميل...",
+    "total_reviews": "إجمالي التقييمات",
+    "star_reviews_info": "{{ rating_value }} من أصل {{ rating_max }} نجمة",
+    "collapsible_content_title": "محتوى قابل للطي",
+    "complementary_products": "منتجات تكميلية"
   },
   "products": {
     "product": {
       "sku": "رمز المنتج",
       "volume_pricing": {
-        "minimum": "{{ quantity }} +"
+        "minimum": "{{ quantity }} +",
+        "title": "التسعير حسب الكمية",
+        "note": "أسعار خاصة للكميات الكبيرة",
+        "price_at_each_html": "بسعر {{ price }} / للوحدة"
       },
       "taxes_included": "الضرائب مشمولة.",
       "choose_product_options": "اختر الخيارات لـ {{ product_name }}",
       "media": {
         "load_image": "قم بتحميل الصورة {{ index }} في عرض المعرض",
         "load_model": "قم بتحميل النموذج ثلاثي الأبعاد {{ index }} في عرض المعرض",
-        "load_video": "تشغيل الفيديو {{ index }} في عرض المعرض"
+        "load_video": "تشغيل الفيديو {{ index }} في عرض المعرض",
+        "gallery_viewer": "عارض الصور",
+        "image_available": "الصورة {{ index }} متاحة الآن في عرض المعرض",
+        "open_media": "افتح الوسائط {{ index }} في نافذة منبثقة",
+        "play_model": "تشغيل عارض ثلاثي الأبعاد",
+        "play_video": "تشغيل الفيديو"
       },
       "pickup_availability": {
         "pick_up_available_at_html": "الاستلام متاح في <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "الاستلام غير متاح حاليًا في <span class=\"color-foreground\">{{ location_name }}</span>"
+        "pick_up_unavailable_at_html": "الاستلام غير متاح حاليًا في <span class=\"color-foreground\">{{ location_name }}</span>",
+        "view_store_info": "عرض معلومات المتجر",
+        "check_other_stores": "تحقق من التوفر في المتاجر الأخرى",
+        "pick_up_available": "الاستلام متاح",
+        "unavailable": "تعذر تحميل معلومات توفر الاستلام",
+        "refresh": "ينعش"
       },
       "vendor": "بائع",
       "inventory_in_stock": "في الأوراق المالية",
       "inventory_out_of_stock_continue_selling": "في الأوراق المالية",
       "quantity": {
-        "label": "كمية"
+        "label": "كمية",
+        "input_label": "الكمية المطلوبة لـ {{ product }}",
+        "increase": "زيادة الكمية لـ {{ product }}",
+        "decrease": "خفض كمية {{ product }}",
+        "minimum_of": "الحد الأدنى لـ {{ quantity }}",
+        "maximum_of": "الحد الأقصى لـ {{ quantity }}",
+        "multiples_of": "زيادات من {{ quantity }}",
+        "min_of": "الحد الأدنى {{ quantity }}",
+        "max_of": "الحد الأقصى {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> في سلة التسوق",
+        "in_cart_aria_label": "الكمية ( {{ quantity }} في سلة التسوق)",
+        "note": "عرض قواعد الكمية"
       },
-      "sold_out": "نفذ"
+      "sold_out": "نفذ",
+      "add_to_cart": "أضف إلى السلة",
+      "choose_options": "اختر الخيارات",
+      "description": "وصف",
+      "inventory_in_stock_show_count": "{{ quantity }} متوفر في المخزون",
+      "inventory_low_stock": "مخزون منخفض",
+      "inventory_low_stock_show_count": "الكمية المتبقية: {{ quantity }}",
+      "inventory_out_of_stock": "إنتهى من المخزن",
+      "on_sale": "أُوكَازيُون",
+      "product_variants": "أنواع المنتجات",
+      "price": {
+        "from_price_html": "ابتداءً من {{ price }}",
+        "regular_price": "السعر العادي",
+        "sale_price": "سعر البيع",
+        "unit_price": "سعر الوحدة"
+      },
+      "share": "شارك هذا المنتج",
+      "unavailable": "غير متاح",
+      "value_unavailable": "{{ option_value }} - غير متوفر",
+      "variant_sold_out_or_unavailable": "نفدت الكمية أو غير متوفرة",
+      "video_exit_message": "{{ title }} يفتح فيديو ملء الشاشة في نفس النافذة.",
+      "view_full_details": "عرض التفاصيل الكاملة",
+      "xr_button": "عرض في مساحتك",
+      "xr_button_label": "اعرض في مساحتك، ثم حمّل العنصر في نافذة الواقع المعزز",
+      "duties_included": "الواجبات المشمولة.",
+      "duties_and_taxes_included": "الرسوم والضرائب مشمولة.",
+      "shipping_policy_html": "يتم احتساب <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">تكلفة الشحن</a> عند إتمام عملية الشراء."
     },
     "facets": {
       "to": "ل",
@@ -3472,7 +3541,21 @@
   "blogs": {
     "article": {
       "comment_form_title": "اترك تعليقًا",
-      "success_moderated": "تم نشر تعليقك بنجاح. سنقوم بنشره بعد قليل، حيث أن مدونتنا تخضع للمراجعة."
+      "success_moderated": "تم نشر تعليقك بنجاح. سنقوم بنشره بعد قليل، حيث أن مدونتنا تخضع للمراجعة.",
+      "blog": "مدونة",
+      "read_more_title": "اقرأ المزيد: {{ title }}",
+      "comments": {
+        "one": "{{ count }} تعليق",
+        "other": "{{ count }} تعليقات"
+      },
+      "moderated": "يرجى ملاحظة أن التعليقات تحتاج إلى الموافقة قبل نشرها.",
+      "name": "اسم",
+      "email": "بريد إلكتروني",
+      "message": "تعليق",
+      "post": "أضف تعليقًا",
+      "back_to_blog": "العودة إلى المدونة",
+      "share": "شارك هذا المقال",
+      "success": "تم نشر تعليقك بنجاح! شكرًا لك!"
     }
   },
   "localization": {
@@ -3490,5 +3573,14 @@
       "no_results": "لم يتم العثور على نتائج للبحث عن \" {{ terms }} \". يرجى التحقق من التهجئة أو استخدام كلمة أو عبارة مختلفة.",
       "products": "منتجات"
     }
+  },
+  "newsletter": {
+    "label": "بريد إلكتروني",
+    "success": "شكراً لاشتراكك",
+    "button_label": "يشترك"
+  },
+  "onboarding": {
+    "product_title": "مثال على عنوان المنتج",
+    "collection_title": "اسم مجموعتك"
   }
 }
