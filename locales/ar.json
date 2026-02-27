@@ -1365,11 +1365,59 @@
           "months": {
             "may": "يمكن",
             "june": "يونيو",
-            "july": "يوليو"
+            "july": "يوليو",
+            "january": "يناير",
+            "february": "فبراير",
+            "march": "يمشي",
+            "april": "أبريل",
+            "august": "أغسطس",
+            "september": "سبتمبر",
+            "october": "أكتوبر",
+            "november": "نوفمبر",
+            "december": "ديسمبر"
+          },
+          "weekdays": {
+            "monday": "الاثنين",
+            "tuesday": "يوم الثلاثاء",
+            "wednesday": "الأربعاء",
+            "thursday": "يوم الخميس",
+            "friday": "جمعة",
+            "saturday": "السبت",
+            "sunday": "الأحد"
           }
         },
         "datepicker": {
-          "show_previous_month": "عرض الشهر السابق، {{month}} {{year}}"
+          "show_previous_month": "عرض الشهر السابق، {{month}} {{year}}",
+          "show_next_month": "اعرض الشهر القادم، {{month}} {{year}}",
+          "range_start": "بداية المدى",
+          "in_range": "ضمن النطاق",
+          "range_end": "نهاية المدى"
+        },
+        "autocomplete_powered_by_google": "مدعوم من {{brandName}}",
+        "submit": "يُقدِّم",
+        "processing": "يعالج…",
+        "stepper": {
+          "increase": "زيادة {{type}}",
+          "decrease": "انخفاض {{type}}",
+          "minimum_reached": "تم الوصول إلى الحد الأدنى لـ {{value}}",
+          "maximum_reached": "تم الوصول إلى الحد الأقصى لـ {{value}}"
+        },
+        "remove_chip": "إزالة العنصر",
+        "remove_item": "إزالة %{label}",
+        "remove_tag": "إزالة العلامة",
+        "map": {
+          "cluster_title": {
+            "one": "مجموعة من {{number}} علامة",
+            "other": "مجموعة من {{number}} علامة"
+          }
+        },
+        "sheet": {
+          "expand": "يوسع"
+        },
+        "dropzone": {
+          "add_file": "إضافة ملف",
+          "invalid_file_type": "نوع الملف غير مدعوم",
+          "dragged_over": "قم بإسقاط الملف لتحميله"
         }
       },
       "payment_gateway": {
@@ -1675,7 +1723,51 @@
         "city_label": "مدينة",
         "optional_block_label": "كتلة (اختياري)",
         "optional_phone_label": "الهاتف (اختياري)",
-        "different_shipping_address_text": "استخدم عنوانًا لمرة واحدة لهذا الطلب"
+        "different_shipping_address_text": "استخدم عنوانًا لمرة واحدة لهذا الطلب",
+        "title": "معلومة",
+        "address_title": "عنوان",
+        "shipping_used_as_billing_notice": "سيتم استخدام هذا العنوان أيضًا كعنوان إرسال الفواتير لهذا الطلب.",
+        "delivery_option_title": "طريقة التوصيل",
+        "contact_method_title": "اتصال",
+        "email_label": "بريد إلكتروني",
+        "email_rollup_accessibility_label": "خيارات البريد الإلكتروني",
+        "email_placeholder": "بريد إلكتروني",
+        "email_or_phone_label": "البريد الإلكتروني أو رقم الهاتف المحمول",
+        "email_or_phone_placeholder": "البريد الإلكتروني أو رقم الهاتف المحمول",
+        "stored_addresses_label": "العناوين المحفوظة",
+        "available_addresses_label": "العناوين المتاحة",
+        "new_address_label": "استخدم عنوانًا جديدًا",
+        "first_name_label": "الاسم الأول",
+        "optional_first_name_label": "الاسم الأول (اختياري)",
+        "last_name_label": "اسم العائلة",
+        "company_label": "شركة",
+        "storefront_link": "موقع التاجر الإلكتروني",
+        "company_attention_label": "الشركة/الاهتمام",
+        "optional_company_attention_label": "الشركة/الانتباه (اختياري)",
+        "optional_company_label": "الشركة (اختياري)",
+        "address1_label": "عنوان",
+        "street_name_label": "شارع",
+        "street_number_label": "رقم المبنى",
+        "optional_street_number_label": "رقم المبنى (اختياري)",
+        "address2_label": "شقة، جناح، إلخ.",
+        "optional_address2_label": "شقة، جناح، إلخ. (اختياري)",
+        "neighborhood_label": "حيّ",
+        "optional_neighborhood_label": "الحي (اختياري)",
+        "barangay_label": "بارانغاي",
+        "optional_barangay_label": "بارانغاي (اختياري)",
+        "colony_label": "مستعمرة",
+        "optional_colony_label": "مستعمرة (اختياري)",
+        "commune_label": "كوميون",
+        "optional_commune_label": "التواصل (اختياري)",
+        "district_label": "يصرف",
+        "optional_district_label": "المنطقة (اختياري)",
+        "optional_ward_label": "الجناح (اختياري)",
+        "block_label": "حاجز",
+        "optional_area_label": "المنطقة (اختياري)",
+        "suburb_label": "ضاحية",
+        "country_label": "البلد/المنطقة",
+        "country_code": "رمز الدولة/المنطقة",
+        "province_label": "مقاطعة"
       },
       "delivery_options": {
         "free_total_label": "حر",
@@ -1968,7 +2060,8 @@
         }
       },
       "payment_collection": {
-        "paid": "تم إرسال هذه الدفعة بالفعل. تفضل بزيارة صفحة الطلب للاطلاع على التفاصيل."
+        "paid": "تم إرسال هذه الدفعة بالفعل. تفضل بزيارة صفحة الطلب للاطلاع على التفاصيل.",
+        "cancelled": "لم يعد هذا الدفع مطلوبًا. تفضل بزيارة صفحة الطلب للاطلاع على التفاصيل."
       },
       "change_cart_localization": {
         "verify_shipping_address": "تم تحديث بلدك/منطقتك. أدخل عنوان الشحن الخاص بك لمتابعة عملية الدفع."
@@ -1990,6 +2083,17 @@
       },
       "memberships": {
         "items_split_across_locations_unsupported": "خدمة التوصيل السريع غير متاحة لطلبك. تم تحديث خيارات الشحن الخاصة بك."
+      },
+      "embed": {
+        "header": {
+          "review_order": "راجع طلبك"
+        },
+        "shipping": {
+          "shipping_options": "اطلع على جميع خيارات الشحن"
+        },
+        "payment": {
+          "payment_options": "اطلع على جميع خيارات الدفع"
+        }
       }
     },
     "pagination": {
