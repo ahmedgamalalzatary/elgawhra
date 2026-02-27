@@ -2768,7 +2768,8 @@
     },
     "subscriptions": {
       "buyer_consent_product": "هذا المنتج عبارة عن عملية شراء متكررة أو مؤجلة. بمتابعتي، أوافق على سياسة الإلغاء %{cancellationPolicyLink} وأُصرّح لكم بخصم المبلغ من وسيلة الدفع الخاصة بي بالأسعار والتكرار والتواريخ المذكورة في هذه الصفحة حتى يتم تنفيذ طلبي أو أقوم بإلغائه، إن كان ذلك مسموحًا به.",
-      "buyer_consent_cart": "أحد المنتجات أو أكثر في سلة التسوق الخاصة بك عبارة عن عملية شراء متكررة أو مؤجلة. بمتابعتك، أوافق على سياسة الإلغاء %{cancellationPolicyLink} وأُصرّح لك بخصم المبلغ من وسيلة الدفع الخاصة بي بالأسعار والتكرار والتواريخ الموضحة في هذه الصفحة حتى يتم تنفيذ طلبي أو أقوم بإلغائه، إذا كان ذلك مسموحًا به."
+      "buyer_consent_cart": "أحد المنتجات أو أكثر في سلة التسوق الخاصة بك عبارة عن عملية شراء متكررة أو مؤجلة. بمتابعتك، أوافق على سياسة الإلغاء %{cancellationPolicyLink} وأُصرّح لك بخصم المبلغ من وسيلة الدفع الخاصة بي بالأسعار والتكرار والتواريخ الموضحة في هذه الصفحة حتى يتم تنفيذ طلبي أو أقوم بإلغائه، إذا كان ذلك مسموحًا به.",
+      "cancellation_policy": "سياسة الإلغاء"
     },
     "cart": {
       "discounts_with_count": "تم تطبيق خصومات بقيمة %{count}"
@@ -2780,10 +2781,28 @@
       }
     },
     "challenge": {
-      "submit_button_text": "يُقدِّم"
+      "submit_button_text": "يُقدِّم",
+      "message": "للمتابعة، أخبرنا أنك لست روبوتًا.",
+      "error": "إجابتك غير صحيحة، يرجى المحاولة مرة أخرى."
     },
     "checkpoint": {
-      "submit_button_text": "يُقدِّم"
+      "submit_button_text": "يُقدِّم",
+      "message": "قم بحل اختبار الكابتشا للمتابعة",
+      "error": "فشل التحقق من صحة رمز التحقق (CAPTCHA)"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "جاهز عادةً خلال ساعة واحدة",
+        "two_hours": "جاهز عادةً خلال ساعتين",
+        "four_hours": "جاهز عادةً خلال 4 ساعات",
+        "twenty_four_hours": "جاهز عادةً خلال 24 ساعة",
+        "two_to_four_days": "جاهز عادةً خلال 2-4 أيام",
+        "five_or_more_days": "جاهز عادةً خلال 5 أيام أو أكثر",
+        "zero_to_two_hours": "جاهز عادةً خلال ساعتين",
+        "two_to_four_hours": "جاهز عادةً خلال 4 ساعات",
+        "immediately": "جاهز للاستلام الآن",
+        "next_day": "جاهز للاستلام في اليوم التالي"
+      }
     }
   },
   "customer_accounts": {
@@ -3173,10 +3192,24 @@
         "edit": "يحرر",
         "save": "يحفظ",
         "errors": {
-          "name_cannot_contain_html_tags": "لا يمكن أن يحتوي {{fieldName}} على وسوم HTML"
+          "name_cannot_contain_html_tags": "لا يمكن أن يحتوي {{fieldName}} على وسوم HTML",
+          "name_too_long": "{{fieldName}} طويل جدًا (الحد الأقصى هو 255 حرفًا)",
+          "name_cannot_contain_url": "لا يمكن أن يحتوي {{fieldName}} على عنوان URL",
+          "email_cant_be_blank": "لا يمكن أن يكون البريد الإلكتروني فارغًا",
+          "invalid_email_format": "أدخل بريدًا إلكترونيًا صحيحًا"
         },
         "cancel": "يلغي",
-        "last_name": "اسم العائلة"
+        "last_name": "اسم العائلة",
+        "cancel_accessibility_label": "إلغاء تعديل الملف الشخصي",
+        "edit_accessibility_label": "تعديل الملف الشخصي",
+        "email_help_text": "لا يمكن تعديل البريد الإلكتروني",
+        "editable_email_help_text": "يُستخدم هذا البريد الإلكتروني لتسجيل الدخول وتحديثات الطلبات.",
+        "first_name": "الاسم الأول",
+        "email": "بريد إلكتروني",
+        "no_name_provided_accessibility_label": "لم يتم إضافة أي اسم",
+        "phone_number_help_text": "لا يمكن تعديل رقم الهاتف",
+        "save_accessibility_label": "حفظ الملف الشخصي",
+        "title": "حساب تعريفي"
       },
       "add_button": "يضيف",
       "people": {
@@ -3187,8 +3220,17 @@
       },
       "verify_new_email_modal": {
         "verify_button": "يؤكد",
-        "cancel_button": "يلغي"
-      }
+        "cancel_button": "يلغي",
+        "title": "تأكيد البريد الإلكتروني",
+        "description": "أدخل الرمز المرسل إلى {{email}}",
+        "one_time_password_label": "رمز مكون من 6 أرقام",
+        "email_resend_button": "أعد إرسال الرمز",
+        "email_resend_button_accessibility_label": "أعد إرسال رمز التحقق",
+        "verify_button_accessibility_label": "تحقق من كلمة المرور لمرة واحدة",
+        "cancel_button_accessibility_label": "إلغاء تعديل البريد الإلكتروني"
+      },
+      "loading_accessibility_message": "جارٍ تحميل معلومات الحساب",
+      "loading_finished_accessibility_message": "تم تحميل معلومات الحساب"
     },
     "orders": {
       "order_list": {
@@ -3687,7 +3729,13 @@
       "document_title": "{{sectionName}} - {{shopName}} - الحساب",
       "location_switcher_toast_message": "تم تغيير الموقع إلى {{locationName}}",
       "account_menu": {
-        "label": "حساب"
+        "label": "حساب",
+        "hide_accessibility_label": "إخفاء قائمة الحساب",
+        "show_accessibility_label": "عرض قائمة الحساب",
+        "nav_accessibility_label": "التنقل في الحساب",
+        "open_menu_accessibility_label": "تصفح الحساب المفتوح",
+        "close_menu_accessibility_label": "إغلاق التنقل في الحساب",
+        "loading_message": "جارٍ تحميل التنقل في الحساب"
       },
       "delete_confirmation": {
         "cancel": "يلغي",
@@ -3695,7 +3743,30 @@
       },
       "orders_link_label": "طلبات",
       "search": "يبحث",
-      "policy_try_again": "حاول ثانية"
+      "policy_try_again": "حاول ثانية",
+      "action_menu_accessibility_label": "المزيد من الإجراءات",
+      "close_menu_accessibility_label": "إغلاق قائمة التنقل الرئيسية",
+      "contact_link": "معلومات الاتصال",
+      "dismiss_toast": "رفض",
+      "go_to_store_link": "اذهب إلى المتجر",
+      "loading_message": "تحميل",
+      "loading_policy_content_accessibility_label": "تحميل محتوى السياسة",
+      "policy_load_error": "تعذر تحميل {{policyName}}",
+      "log_out_link": "تسجيل الخروج",
+      "logout_overlay_label": "تسجيل الخروج...",
+      "nav_label_accessibility_label": "التنقل الرئيسي",
+      "navigation_accessibility_message": "لقد انتقلت إلى {{sectionName}}",
+      "open_menu_accessibility_label": "افتح قائمة التنقل الرئيسية",
+      "shop_logo_accessibility_label": "شعار {{shopName}}",
+      "subscriptions_link_label": "الاشتراكات",
+      "settings_link": "إعدادات",
+      "country_switcher_toast_message": "تم تغيير البلد إلى {{countryName}}",
+      "switch_country": "تغيير البلد",
+      "no_countries_found": "لم يتم العثور على أي دول",
+      "switch_location": "موقع التبديل",
+      "no_locations_found": "لم يتم العثور على مواقع",
+      "view_details": "عرض التفاصيل",
+      "skip_to_content": "انتقل إلى المحتوى"
     },
     "errors": {
       "order_not_found": {
@@ -3772,6 +3843,23 @@
         "message": "محاولات كثيرة جداً",
         "description": "يرجى المحاولة مرة أخرى بعد بضع دقائق"
       }
+    },
+    "date": {
+      "humanize": {
+        "lessThanOneHourAgo": {
+          "one": "{{count}} دقيقة مضت",
+          "other": "{{count}} دقيقة مضت"
+        },
+        "lessThanOneMinuteAgo": "الآن",
+        "yesterday": "أمس في الساعة {{time}}",
+        "today": "اليوم في {{time}}",
+        "tomorrow": "غدًا في الساعة {{time}}"
+      }
+    },
+    "announcement_bar": {
+      "expand_label": "توسيع شريط الإعلانات",
+      "collapse_label": "شريط إعلانات الانهيار",
+      "close_label": "إغلاق شريط الإعلانات"
     }
   },
   "sections": {
