@@ -4119,7 +4119,34 @@
       "filter_and_sort": "تصفية وفرز",
       "filter_selected_accessibility": "{{ type }} ( {{ count }} عامل تصفية تم تحديدها)",
       "filter_button": "فلتر",
-      "sort_by_label": "الترتيب حسب:"
+      "sort_by_label": "الترتيب حسب:",
+      "filter_and_operator_subtitle": "مطابقة الكل",
+      "apply": "يتقدم",
+      "clear": "واضح",
+      "clear_all": "إزالة الكل",
+      "from": "من",
+      "filter_by_label": "فلتر:",
+      "filters_selected": {
+        "one": "{{ count }} تم تحديده",
+        "other": "{{ count }} تم تحديده"
+      },
+      "show_more": "عرض المزيد",
+      "show_less": "عرض أقل",
+      "max_price": "أعلى سعر هو {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} من {{ count }} منتج",
+        "other": "{{ product_count }} من {{ count }} منتجًا"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} منتج",
+        "other": "{{ count }} منتجًا"
+      },
+      "reset": "إعادة ضبط",
+      "sort_button": "نوع",
+      "clear_filter": "قم بإزالة الفلتر"
+    },
+    "modal": {
+      "label": "معرض الوسائط"
     }
   },
   "customer": {
@@ -4128,7 +4155,12 @@
       "cancel": "يلغي",
       "submit": "يُقدِّم",
       "guest_continue": "يكمل",
-      "password": "كلمة المرور"
+      "password": "كلمة المرور",
+      "create_account": "إنشاء حساب",
+      "email": "بريد إلكتروني",
+      "forgot_password": "نسيت كلمة السر؟",
+      "guest_title": "تابع كضيف",
+      "title": "تسجيل الدخول"
     },
     "order": {
       "tax": "ضريبة",
@@ -4143,13 +4175,33 @@
       "subtotal": "المجموع الفرعي"
     },
     "account": {
-      "details": "تفاصيل الحساب"
+      "details": "تفاصيل الحساب",
+      "title": "حساب",
+      "view_addresses": "عرض العناوين",
+      "return": "العودة إلى تفاصيل الحساب"
     },
     "addresses": {
       "zip": "الرمز البريدي",
       "cancel": "يلغي",
       "delete": "يمسح",
-      "province": "مقاطعة"
+      "province": "مقاطعة",
+      "title": "العناوين",
+      "default": "تقصير",
+      "add_new": "أضف عنوانًا جديدًا",
+      "edit_address": "تعديل العنوان",
+      "first_name": "الاسم الأول",
+      "last_name": "اسم العائلة",
+      "company": "شركة",
+      "address1": "العنوان 1",
+      "address2": "العنوان 2",
+      "city": "مدينة",
+      "country": "البلد/المنطقة",
+      "phone": "هاتف",
+      "set_default": "قم بتعيينه كعنوان افتراضي",
+      "add": "إضافة عنوان",
+      "update": "تحديث العنوان",
+      "edit": "يحرر",
+      "delete_confirm": "هل أنت متأكد من رغبتك في حذف هذا العنوان؟"
     },
     "log_in": "تسجيل الدخول",
     "register": {
@@ -4157,11 +4209,18 @@
       "password": "كلمة المرور"
     },
     "activate_account": {
-      "password": "كلمة المرور"
+      "password": "كلمة المرور",
+      "title": "تفعيل الحساب",
+      "subtext": "أنشئ كلمة مرور لتفعيل حسابك.",
+      "password_confirm": "تأكيد كلمة المرور",
+      "submit": "تفعيل الحساب",
+      "cancel": "رفض الدعوة"
     },
     "reset_password": {
       "password": "كلمة المرور"
-    }
+    },
+    "account_fallback": "حساب",
+    "log_out": "تسجيل الخروج"
   },
   "blogs": {
     "article": {
@@ -4186,7 +4245,11 @@
   "localization": {
     "update_language": "تحديث اللغة",
     "search": "يبحث",
-    "language_label": "لغة"
+    "language_label": "لغة",
+    "country_label": "البلد/المنطقة",
+    "update_country": "تحديث البلد/المنطقة",
+    "popular_countries_regions": "الدول/المناطق الشهيرة",
+    "country_results_count": "تم العثور على {{ count }} دولة/منطقة"
   },
   "recipient": {
     "form": {
@@ -4196,7 +4259,49 @@
   "templates": {
     "search": {
       "no_results": "لم يتم العثور على نتائج للبحث عن \" {{ terms }} \". يرجى التحقق من التهجئة أو استخدام كلمة أو عبارة مختلفة.",
-      "products": "منتجات"
+      "products": "منتجات",
+      "page": "صفحة",
+      "results_pages_with_count": {
+        "one": "{{ count }} صفحة",
+        "other": "{{ count }} صفحة"
+      },
+      "results_suggestions_with_count": {
+        "one": "{{ count }} اقتراح",
+        "other": "{{ count }} اقتراحًا"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} منتج",
+        "other": "{{ count }} منتجًا"
+      },
+      "results_with_count": {
+        "other": "{{ count }} نتيجة"
+      },
+      "results_with_count_and_term": {
+        "one": "تم العثور على {{ count }} نتيجة للبحث عن \" {{ terms }} \"",
+        "other": "تم العثور على {{ count }} نتيجة للبحث عن \" {{ terms }} \""
+      },
+      "title": "نتائج البحث",
+      "search_for": "ابحث عن \" {{ terms }} \"",
+      "suggestions": "اقتراحات",
+      "pages": "الصفحات"
+    },
+    "cart": {
+      "cart": "عربة التسوق"
+    },
+    "contact": {
+      "form": {
+        "title": "نموذج الاتصال",
+        "name": "اسم",
+        "email": "بريد إلكتروني",
+        "phone": "رقم التليفون",
+        "comment": "تعليق",
+        "send": "يرسل",
+        "post_success": "نشكركم على تواصلكم معنا. سنعاود الاتصال بكم في أقرب وقت ممكن.",
+        "error_heading": "يرجى تعديل ما يلي:"
+      }
+    },
+    "404": {
+      "title": "الصفحة غير موجودة"
     }
   },
   "newsletter": {
