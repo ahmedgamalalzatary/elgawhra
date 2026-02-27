@@ -2971,10 +2971,18 @@
       "back_button": "خلف",
       "address_deleted_notification": "تم حذف العنوان",
       "default_address": {
-        "title": "العنوان الافتراضي"
+        "title": "العنوان الافتراضي",
+        "title_accessibility_label": "العنوان الافتراضي: {{address}}"
       },
       "cancel_deletion_button": "يلغي",
-      "delete_button": "يمسح"
+      "delete_button": "يمسح",
+      "add_button": "إضافة عنوان",
+      "add_button_accessibility_label": "إضافة عنوان",
+      "back_button_accessibility_label": "العودة إلى تحرير العنوان {{address}}",
+      "add_address_banner": "أضف العناوين لاستخدامها عند إتمام عملية الشراء",
+      "no_addresses_banner": "لم تتم إضافة أي عناوين",
+      "cancel_adding_address_accessibility_label": "إلغاء إضافة العنوان",
+      "cancel_deletion_button_accessibility_label": "إلغاء حذف {{address}}"
     },
     "address_form": {
       "attention": "انتباه",
@@ -3319,7 +3327,10 @@
         "address": "عنوان الشحن",
         "address_map_marker": "عنوان الشحن",
         "method": "طريقة الشحن",
-        "summary": "شحن"
+        "summary": "شحن",
+        "free_shipping_discount": "ًالشحن مجانا",
+        "one_time": "شحن لمرة واحدة",
+        "subscription": "شحن الاشتراكات"
       },
       "tip": "نصيحة",
       "billing_address": "عنوان الفواتير",
@@ -3328,23 +3339,37 @@
       },
       "marketing_section_title": "أخبار وعروض",
       "returns": {
-        "tracking_number": "عدد تتبع:"
+        "tracking_number": "عدد تتبع:",
+        "expand_events_label": "عرض التفاصيل",
+        "hide_events_label": "إخفاء التفاصيل",
+        "ineligible_return_message": "لا يمكن إرجاع أي من المنتجات في هذا الطلب.",
+        "ineligible_return_message_when_returned": "لا يمكن إرجاع أي منتجات إضافية في هذا الطلب.",
+        "print_shipping_label": "اطبع ملصق الشحن",
+        "return_and_refund_modal_header": "سياسة الاسترداد",
+        "exchange_header": "تبادل الأشياء",
+        "exchange_subheader": "ستتم إضافة المنتجات البديلة إلى الطلب بمجرد اكتمال عملية الإرجاع."
       },
       "pickup": {
         "pickup_location": "موقع الاستلام",
-        "pickup": "يلتقط"
+        "pickup": "يلتقط",
+        "pickup_point": "نقطة الاستلام"
       },
       "pagination": {
         "load_more_accessibility_label": "تحميل المزيد من العناصر",
-        "load_more": "تحميل المزيد"
+        "load_more": "تحميل المزيد",
+        "loading_accessibility_label": "تحميل العناصر"
       },
       "fees": {
-        "return_shipping_fee": "شحن الإرجاع"
+        "return_shipping_fee": "شحن الإرجاع",
+        "restocking_fee": "رسوم إعادة التخزين"
       },
       "adjusted_payment": "الدفعة المعدلة",
       "login_card": {
         "resend_link_and_login": "لعرض تفاصيل طلبك، قم بتسجيل الدخول أو أرسل رابطًا جديدًا إلى البريد الإلكتروني أو رقم الهاتف المستخدم عند إتمام عملية الشراء.",
-        "resend_link_only": "للاطلاع على تفاصيل طلبك، أرسل رابطًا جديدًا إلى البريد الإلكتروني أو رقم الهاتف المستخدم عند إتمام عملية الشراء."
+        "resend_link_only": "للاطلاع على تفاصيل طلبك، أرسل رابطًا جديدًا إلى البريد الإلكتروني أو رقم الهاتف المستخدم عند إتمام عملية الشراء.",
+        "log_in": "تسجيل الدخول",
+        "resend_link": "أرسل رابطًا جديدًا",
+        "link_expired": "انتهت صلاحية الرابط"
       },
       "ok_duties_tooltip": "يتم شحن هذا الطلب من دولة أخرى، لذلك تمت إضافة الرسوم الجمركية إلى إجمالي طلبك.",
       "error_duties_tooltip": "يتم شحن هذا الطلب من دولة أخرى، لذا قد يتم فرض رسوم وضرائب عند التسليم.",
@@ -3363,12 +3388,61 @@
       "marketing_resend_email_success": "تم إرسال الرابط",
       "subtotal": "المجموع الفرعي",
       "subtotal_label_with_quantity": {
-        "one": "المجموع الفرعي"
+        "one": "المجموع الفرعي",
+        "other": "المجموع الفرعي · {{count}} عنصرًا"
       },
       "edit_summary": {
-        "returned": "عاد"
+        "returned": "عاد",
+        "added": "تمت الإضافة",
+        "added_with_quantity": "تمت إضافة {{quantity}}",
+        "removed": "تمت إزالته",
+        "removed_with_quantity": "تمت إزالة {{quantity}}",
+        "updated_at": "تم تحديث طلبك بتاريخ {{date}}",
+        "returned_with_quantities": "تم إرجاع {{delta}} من {{total}}",
+        "removed_with_quantities": "تمت إزالة {{delta}} من {{total}}",
+        "return_line_item_removed": "تمت إزالته من قائمة الإرجاع",
+        "return_line_item_removed_with_quantities": "تمت إزالة {{delta}} من الإرجاع"
       },
-      "link_sent": "تم إرسال الرابط"
+      "link_sent": "تم إرسال الرابط",
+      "marketing_description": "ستتلقى رسائل تسويقية عبر البريد الإلكتروني. يمكنك إلغاء الاشتراك في أي وقت.",
+      "marketing_checkbox_label": "راسلني عبر البريد الإلكتروني لإطلاعي على الأخبار والعروض.",
+      "marketing_checkmark_label": "أنت مشترك في خدمة تلقي الأخبار والعروض عبر البريد الإلكتروني",
+      "marketing_resend_email": "أعد إرسال البريد الإلكتروني",
+      "show_items": "عرض",
+      "total_savings": "إجمالي الوفورات",
+      "show_order_summary": "عرض ملخص الطلب",
+      "hide_order_summary": "إخفاء ملخص الطلب",
+      "subtitle": "تم التأكيد {{date}}",
+      "summary_list_title_accessibility_label": "طلب المنتجات",
+      "summary_title": "ملخص الطلب",
+      "summary_totals_title_accessibility_label": "إجمالي الطلبات",
+      "shop_order_tracking": {
+        "download_shop_to_track": "قم بتنزيل تطبيق المتجر لتتبع الشحنة",
+        "track_order_with_shop": "تتبع طلبك مع المتجر",
+        "title_header": "امسح ضوئيًا باستخدام هاتفك",
+        "real_time_delivery_updates": "سيرسل لك المتجر تحديثات فورية عن عملية التسليم بمجرد شحن طلبك."
+      },
+      "shop_pay": {
+        "order_completed_with": "تم إتمام الطلب بنجاح.",
+        "learn_more": "يتعلم أكثر"
+      },
+      "taxes": "الضرائب",
+      "taxes_included": "يشمل ذلك {{amount}} في الضرائب",
+      "duties_and_taxes_included": "يشمل السعر الإجمالي الرسوم والضرائب. لا توجد رسوم إضافية على التوصيل.",
+      "title": "اطلب {{name}}",
+      "total": "المجموع",
+      "unit_price": "{{price}} /للوحدة",
+      "login_to_view_all_order_details": "سجّل الدخول لعرض جميع تفاصيل الطلب.",
+      "log_in": "تسجيل الدخول",
+      "log_in_to_a_different_account": "قم بتسجيل الدخول إلى حساب آخر",
+      "vat_invoices": {
+        "title": "فواتير ضريبة القيمة المضافة"
+      },
+      "cash_rounding": "تقريب النقود",
+      "adjusted_total": "المجموع المعدل",
+      "due_on_date": "تاريخ الاستحقاق {{date}}",
+      "due_on_fulfillment": "مستحق الدفع عند الإنجاز",
+      "due_on_receipt": "مستحق الدفع عند الاستلام"
     },
     "payment_methods": {
       "back_button": "خلف",
