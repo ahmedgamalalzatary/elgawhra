@@ -3,12 +3,138 @@
         "main": {
             "type": "main-page",
             "settings": {
-                "padding_top": 36,
+                "padding_top": 24,
+                "padding_bottom": 12
+            }
+        },
+        "about_intro": {
+            "type": "rich-text",
+            "blocks": {
+                "about_intro_caption": {
+                    "type": "caption",
+                    "settings": {
+                        "caption": "El Gawhra",
+                        "text_style": "caption-with-letter-spacing",
+                        "text_size": "medium"
+                    }
+                },
+                "about_intro_heading": {
+                    "type": "heading",
+                    "settings": {
+                        "heading": "Crafting timeless jewelry for everyday elegance",
+                        "heading_size": "h1"
+                    }
+                },
+                "about_intro_text": {
+                    "type": "text",
+                    "settings": {
+                        "text": "<p>Welcome to El Gawhra. We blend modern design with traditional craftsmanship to create pieces that celebrate your story.</p>"
+                    }
+                }
+            },
+            "block_order": [
+                "about_intro_caption",
+                "about_intro_heading",
+                "about_intro_text"
+            ],
+            "settings": {
+                "desktop_content_position": "center",
+                "content_alignment": "center",
+                "color_scheme": "scheme-1",
+                "full_width": true,
+                "padding_top": 24,
+                "padding_bottom": 24
+            }
+        },
+        "about_story": {
+            "type": "rich-text",
+            "blocks": {
+                "about_story_heading": {
+                    "type": "heading",
+                    "settings": {
+                        "heading": "Our Story",
+                        "heading_size": "h2"
+                    }
+                },
+                "about_story_text": {
+                    "type": "text",
+                    "settings": {
+                        "text": "<p>Founded in Egypt, El Gawhra was built on one simple belief: jewelry should feel personal. From design to finishing, every detail is chosen with care to deliver quality, comfort, and character.</p><p>Use this section as placeholder text and replace it with your real brand story, milestones, and values.</p>"
+                    }
+                }
+            },
+            "block_order": [
+                "about_story_heading",
+                "about_story_text"
+            ],
+            "settings": {
+                "desktop_content_position": "left",
+                "content_alignment": "left",
+                "color_scheme": "scheme-1",
+                "full_width": false,
+                "padding_top": 12,
+                "padding_bottom": 12
+            }
+        },
+        "about_values": {
+            "type": "multicolumn",
+            "blocks": {
+                "value_1": {
+                    "type": "column",
+                    "settings": {
+                        "title": "Quality First",
+                        "text": "<p>Premium materials, thoughtful finishing, and durable design in every piece.</p>",
+                        "link_label": "",
+                        "link": ""
+                    }
+                },
+                "value_2": {
+                    "type": "column",
+                    "settings": {
+                        "title": "Designed With Care",
+                        "text": "<p>Balanced forms and versatile styles made to fit daily life and special moments.</p>",
+                        "link_label": "",
+                        "link": ""
+                    }
+                },
+                "value_3": {
+                    "type": "column",
+                    "settings": {
+                        "title": "Customer Promise",
+                        "text": "<p>Reliable support, secure shopping, and a smooth experience from start to finish.</p>",
+                        "link_label": "",
+                        "link": ""
+                    }
+                }
+            },
+            "block_order": [
+                "value_1",
+                "value_2",
+                "value_3"
+            ],
+            "settings": {
+                "title": "Why choose El Gawhra",
+                "heading_size": "h2",
+                "image_width": "full",
+                "image_ratio": "adapt",
+                "button_label": "",
+                "button_link": "",
+                "columns_desktop": 3,
+                "column_alignment": "left",
+                "background_style": "none",
+                "color_scheme": "scheme-1",
+                "columns_mobile": "1",
+                "swipe_on_mobile": true,
+                "padding_top": 24,
                 "padding_bottom": 36
             }
         }
     },
     "order": [
-        "main"
+        "main",
+        "about_direction",
+        "about_intro",
+        "about_story",
+        "about_values"
     ]
 }
