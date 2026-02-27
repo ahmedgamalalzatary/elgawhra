@@ -2080,10 +2080,13 @@
       "local_pickup": {
         "or": "أو",
         "pickup_unavailable_banner_body": {
-          "search_elsewhere": "ابحث في مكان آخر"
+          "search_elsewhere": "ابحث في مكان آخر",
+          "ship_items": "قم بشحن أغراضك",
+          "ship_items_or_search_elsewhere": "%{ship_items} أو %{search_elsewhere}"
         },
         "location_information_far_away": {
-          "one": "يوجد موقع %{count} مع العنصر الخاص بك"
+          "one": "يوجد موقع %{count} مع العنصر الخاص بك",
+          "other": "يوجد %{count} موقعًا تحتوي على منتجك"
         },
         "location_nearby_short": {
           "one": "%{count} موقع قريب يحتوي على العنصر الخاص بك",
@@ -2091,9 +2094,12 @@
         },
         "paginator": {
           "label": {
-            "other": "من %{first} إلى %{last} من %{count} متجرًا"
+            "other": "من %{first} إلى %{last} من %{count} متجرًا",
+            "one": "%{first} - %{last} من %{count} متجر"
           },
-          "next": "الصفحة التالية"
+          "next": "الصفحة التالية",
+          "accessibility_label": "ترقيم صفحات الاستلام المحلي",
+          "previous": "الصفحة السابقة"
         },
         "pickup_unavailable_banner_title_with_country": {
           "one": "لا توجد مواقع في %{country} تحتوي على منتجك",
@@ -2104,10 +2110,51 @@
             "one": "أقرب موقع يحتوي على سلعتك يبعد أكثر من %{distance} عن %{location}",
             "other": "أقرب موقع يحتوي على أغراضك يبعد أكثر من %{distance} عن %{location}"
           },
-          "title_with_specific_location": "أقرب موقع يحتوي على غرضك يبعد أكثر من %{distance} عن %{location}"
+          "title_with_specific_location": "أقرب موقع يحتوي على غرضك يبعد أكثر من %{distance} عن %{location}",
+          "title": "أقرب المواقع تبعد أكثر من %{distance}",
+          "description": "حدد موقعًا أو %{ship_to_address_link}",
+          "ship_to_address_link": "عنوان الشحن",
+          "change_location_link": "غيّر موقعك"
         },
         "location_address_search_label": "عنوان",
-        "cancel": "يلغي"
+        "cancel": "يلغي",
+        "location_address_search_placeholder": "%{postal_code_label} أو العنوان",
+        "location_closest": "أقرب موقع يتوفر فيه المنتج الخاص بك",
+        "location_information": {
+          "one": "يوجد موقع %{count} يحتوي على مخزون بالقرب منك",
+          "other": "يوجد %{count} موقعًا تحتوي على مخزون بالقرب منك"
+        },
+        "location_nearby": {
+          "one": "يوجد %{count} موقع قريب يحتوي على العنصر الخاص بك",
+          "other": "يوجد %{count} موقعًا قريبًا يتوفر فيها المنتج الخاص بك"
+        },
+        "location_far_away": {
+          "one": "موقع %{count} مع العنصر الخاص بك",
+          "other": "%{count} موقعًا تحتوي على منتجك"
+        },
+        "toggle_location": "تغيير الموقع",
+        "toggle_more_locations": {
+          "one": "%{count} موقع إضافي",
+          "other": "عدد المواقع الإضافية %{count}"
+        },
+        "toggle_multiple_locations": "%{count}+ مواقع إضافية",
+        "your_location": "موقعك",
+        "search_button": "ابحث عن المتاجر",
+        "no_stores_found": "لم يتم العثور على متاجر",
+        "selected_pickup_option_no_longer_available": {
+          "title": "الموقع الذي اخترته سابقاً لم يعد متاحاً",
+          "description": "حدد موقعًا جديدًا أو %{ship_to_address_link}",
+          "ship_to_address_link": "عنوان الشحن"
+        },
+        "could_not_resolve_address": "لم يتم العثور على عنوانك. حاول مرة أخرى أو استخدم عنوانًا مختلفًا.",
+        "reveal_more_label": {
+          "one": "عرض %{count} موقعًا إضافيًا",
+          "other": "عرض %{count} موقعًا إضافيًا"
+        },
+        "pickup_unavailable_banner_title": {
+          "one": "لا توجد مواقع تحتوي على منتجك",
+          "other": "لا توجد مواقع لمنتجاتك"
+        }
       },
       "units": {
         "milligram": "ملغ",
@@ -2192,10 +2239,13 @@
         "payment_method_not_available_with_review_requirement": "طريقة الدفع التي اخترتها لم تعد متاحة لأن الدفع سيصبح مستحقاً بمجرد تأكيد طلبك.",
         "subscription_changed": "لقد طرأ تغيير على أحد اشتراكاتك.",
         "generic_processing_error": {
-          "title": "حدثت مشكلة أثناء معالجة طلبك"
+          "title": "حدثت مشكلة أثناء معالجة طلبك",
+          "body": "لم يتم خصم أي مبلغ منك. حاول مرة أخرى أو استخدم طريقة دفع مختلفة."
         },
         "contact_information": {
-          "header": "لتحديث معلوماتك، {{emailLink}} ."
+          "header": "لتحديث معلوماتك، {{emailLink}} .",
+          "title": "معلومات الاتصال غير صالحة",
+          "email_link": "اتصل بنا"
         },
         "all_violations_content": "اتصل بنا أو راسلنا {{emailLink}} لتحديث هذه المعلومات وإكمال طلبك:",
         "calculating_shipping": "لا يزال حساب تكلفة الشحن جارياً. حاول مرة أخرى بعد بضع ثوانٍ. لم يتم خصم أي مبلغ منك.",
@@ -2211,7 +2261,10 @@
         "shipping_address_incomplete_title": "عنوان الشحن غير مكتمل"
       },
       "split_delivery": {
-        "items_for_pickup": "الأغراض المراد استلامها"
+        "items_for_pickup": "الأغراض المراد استلامها",
+        "pickup_all_items": "استلم جميع الأغراض",
+        "delivery_method": "طريقة التوصيل المجزأ",
+        "delivery_method_menu": "قائمة خيارات التوصيل المجزأ"
       },
       "wallets": {
         "errors": {
@@ -2223,7 +2276,8 @@
           "unavailable": {
             "instructions": "حدثت مشكلة في {{walletName}} . يرجى العودة إلى المتجر للمحاولة مرة أخرى أو إتمام عملية الشراء بطريقة أخرى.",
             "unavailable_for_country": "{{walletName}} غير متوفر في {{countryName}} . اختر طريقة دفع أخرى لإتمام عملية الشراء",
-            "description": "{{walletName}} غير متوفر. استخدم طريقة دفع أخرى أو حاول مرة أخرى لاحقاً."
+            "description": "{{walletName}} غير متوفر. استخدم طريقة دفع أخرى أو حاول مرة أخرى لاحقاً.",
+            "title": "{{walletName}} غير متوفر"
           },
           "unavailable_terminal": {
             "instructions": "{{walletName}} غير متوفر حاليًا لطلبك. لمتابعة عملية الشراء، اختر طريقة دفع أخرى."
@@ -2247,7 +2301,17 @@
         "recovery_notice": "هناك مشكلة في تفاصيل طلبك. يرجى تحديث معلوماتك لإتمام عملية الدفع.",
         "scrim": {
           "cancel": "يلغي"
-        }
+        },
+        "return_to_store": "العودة إلى المتجر",
+        "return_to_checkout": "العودة إلى صفحة الدفع",
+        "redirect_hint": "سيُطلب منك تسجيل الدخول باستخدام {{walletName}} .",
+        "logged_in": "متصل بـ {{email}}",
+        "shipping_line_label": "شحن",
+        "payment_in_progress_title": "عملية الدفع جارية",
+        "payment_in_progress_body": "جارٍ معالجة دفعتك. سيتم إكمال طلبك قريبًا.",
+        "call_to_action": "ادفع باستخدام {{walletName}}",
+        "place_order": "قم بتقديم الطلب",
+        "redirection_notice": "سيتم تحويلك إلى {{walletName}} لإتمام عملية الشراء"
       },
       "remote_merchandise_only": {
         "remote_only_notice": "تُباع هذه المنتجات وتُشحن من متاجر أخرى. يُرجى إتمام عملية الشراء من كل متجر على حدة."
@@ -2283,7 +2347,9 @@
       },
       "b2b_errors": {
         "lost_b2b_purchasing_permissions": "لم يعد لديك إذن لتقديم طلبات بين الشركات. انقر على %{logout_url} لتقديم طلب شخصي بدلاً من ذلك.",
-        "lost_permissions_subtitle": "لم يعد لديك إذن لتقديم طلبات بين الشركات. سجّل الخروج لتقديم طلب شخصي."
+        "lost_permissions_subtitle": "لم يعد لديك إذن لتقديم طلبات بين الشركات. سجّل الخروج لتقديم طلب شخصي.",
+        "log_out_link_text": "تسجيل الخروج",
+        "lost_permissions_title": "لا توجد أذونات للموقع"
       },
       "offsite_payment_failed": {
         "payment_not_processed_text": "حاول مسح رمز الاستجابة السريعة مرة أخرى. إذا استمرت المشكلة، فأبلغ موظفينا وجرّب طريقة دفع أخرى."
@@ -2377,14 +2443,25 @@
       },
       "review_address_modal": {
         "subtitle": {
-          "other": "سيتم شحن هذا الطلب إلى العنوان الذي قدمه {{merchant}} . اختر عنوان الشحن."
-        }
+          "other": "سيتم شحن هذا الطلب إلى العنوان الذي قدمه {{merchant}} . اختر عنوان الشحن.",
+          "one": "سيتم شحن هذا الطلب إلى العنوان المقدم من قبل {{merchant}} ."
+        },
+        "title": "عنوان المراجعة",
+        "subtitle_no_match": "هذا العنوان لا يتطابق مع أي من عناوينك المحفوظة.",
+        "subtitle_must_use": "سيتم شحن طلبك إلى هذا العنوان.",
+        "continue": "تابع باستخدام هذا العنوان",
+        "use_saved_address": "استخدم عنوانًا مختلفًا",
+        "return_to_cart": "العودة إلى سلة التسوق"
       },
       "shop_pay_external": {
         "errors": {
           "try_again_later": "تحقق من اتصالك بالإنترنت أو أغلق هذه النافذة وحاول مرة أخرى بعد لحظات.",
-          "checkout_has_expired": "انتهت صلاحية عملية الدفع الخاصة بك. أغلق هذه النافذة وحاول إتمام عملية الدفع مرة أخرى من {{shopName}} ."
-        }
+          "checkout_has_expired": "انتهت صلاحية عملية الدفع الخاصة بك. أغلق هذه النافذة وحاول إتمام عملية الدفع مرة أخرى من {{shopName}} .",
+          "problem_loading": "هناك مشكلة في تحميل صفحة الدفع"
+        },
+        "title": "تسوق، ادفع عند الخروج",
+        "return_to_store": "العودة إلى {{shopName}}",
+        "return_to_store_simple": "العودة إلى المتجر"
       },
       "memberships": {
         "items_split_across_locations_unsupported": "خدمة التوصيل السريع غير متاحة لطلبك. تم تحديث خيارات الشحن الخاصة بك."
@@ -2408,11 +2485,13 @@
       },
       "marketplaces": {
         "legal_notice": {
-          "legal_text": "مراجعة"
+          "legal_text": "مراجعة",
+          "link_label": "{{partnerDisplayName}} الشروط والأحكام"
         }
       },
       "clipboard": {
-        "copied": "تم النسخ"
+        "copied": "تم النسخ",
+        "failed_to_copy": "فشل النسخ"
       },
       "customer_payment_methods": {
         "page_title": "طرق الدفع",
@@ -2428,6 +2507,15 @@
       },
       "artifact_errors": {
         "artifact_dissatisfaction_without_violation": "حدثت مشكلة أثناء معالجة طلبك. حاول مرة أخرى بعد بضع دقائق."
+      },
+      "online_store_chat": {
+        "title": "هل لديك أسئلة؟ تواصل معنا عبر الدردشة"
+      },
+      "captcha": {
+        "title": "أكمل اختبار التحقق (CAPTCHA) للمتابعة",
+        "errors": {
+          "not_solved": "أكمل اختبار التحقق (CAPTCHA) للمتابعة"
+        }
       }
     },
     "pagination": {
@@ -3030,14 +3118,24 @@
           "refund": {
             "title": "تم استرداد المبلغ"
           }
-        }
+        },
+        "subtitle": "تم الإرسال {{date}}",
+        "title": "اطلب {{name}}"
       },
       "purchase_order_number": {
         "save": "يحفظ",
         "discard_changes_modal_title": "هل تريد تجاهل التغييرات؟",
         "title": "رقم أمر الشراء {{poNumber}}",
         "cancel": "يلغي",
-        "modal_po_number_input_label": "رقم أمر الشراء"
+        "modal_po_number_input_label": "رقم أمر الشراء",
+        "add_accessibility_label": "أضف رقم أمر الشراء",
+        "add_modal_title": "أضف رقم أمر الشراء",
+        "close_modal_accessibility_label": "إغلاق نافذة رقم أمر الشراء",
+        "discard": "ينبذ",
+        "edit_accessibility_label": "تعديل رقم أمر الشراء",
+        "edit_modal_title": "تعديل رقم أمر الشراء",
+        "empty_state": "لا يوجد رقم أمر شراء",
+        "modal_po_number_input_max_length_error": "يبلغ الحد الأقصى لعدد الأحرف في أرقام أوامر الشراء {{maxLength}} حرفًا."
       },
       "addresses": {
         "billing_address_card_title": "عنوان الفواتير",
@@ -3047,6 +3145,10 @@
         "payment_delete": {
           "description_with_replacement": "سيؤدي حذف طريقة الدفع هذه إلى التأثير على المدفوعات المسبقة لهذا الموقع. استبدلها بطريقة دفع بديلة لمواصلة تلقي الطلبات القادمة.",
           "description_without_replacement": "لن تكون طريقة الدفع هذه متاحة بعد الآن للمشتريات المستقبلية من هذا الموقع."
+        },
+        "payment_details": {
+          "order_label": "اطلب {{name}}",
+          "draft_label": "طلب مسودة {{name}}"
         }
       },
       "orders": {
@@ -3295,8 +3397,14 @@
           "expirable_balance_info": "سينتهي صلاحية جزء من رصيدك في تاريخ لاحق",
           "expirable_amount_label": "إجمالي المبلغ القابل للانتهاء",
           "expirable_amounts_info": "يتم تطبيق المبالغ التي تنتهي صلاحيتها قبل ذلك أولاً عند الدفع",
-          "expired_amounts_button": "عرض المبالغ المنتهية الصلاحية"
-        }
+          "expired_amounts_button": "عرض المبالغ المنتهية الصلاحية",
+          "title": "رصيد متجر قابل للانتهاء",
+          "balance_label": "توازن"
+        },
+        "label": "رصيد المتجر",
+        "accesibility_label": "رصيد المتجر - {{formattedBalance}}",
+        "expirable_amounts_button": "عرض المبالغ القابلة للانتهاء",
+        "expirable_amounts_label": "المبالغ القابلة للانتهاء"
       },
       "payment_details": {
         "edit_payment_method_button": "يحرر",
@@ -3424,18 +3532,27 @@
       "expiration_warning_button_accessibility_label": "عرض تحذير انتهاء الصلاحية لـ {{paymentMethodName}} التي تنتهي بـ {{lastDigits}}",
       "google_pay": {
         "errors": {
-          "generic": "حدثت مشكلة في خدمة Google Pay. حاول مرة أخرى أو استخدم طريقة دفع مختلفة."
-        }
+          "generic": "حدثت مشكلة في خدمة Google Pay. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+          "missing_billing_address": "يتطلب Google Pay عنوانًا للفواتير. يرجى إضافة عنوان إلى حسابك."
+        },
+        "iframe_title_accessibility_label": "أضف طريقة دفع Google Pay",
+        "loading_accessibility_message": "جارٍ تحميل Google Pay",
+        "loading": "جارٍ تحميل Google Pay"
       },
       "pay_pal": {
         "errors": {
           "generic": "حدثت مشكلة في باي بال. حاول مرة أخرى أو استخدم طريقة دفع مختلفة."
-        }
+        },
+        "iframe_title_accessibility_label": "أضف طريقة دفع باي بال",
+        "loading_accessibility_message": "تحميل حساب PayPal"
       },
       "apple_pay": {
         "errors": {
-          "generic": "حدثت مشكلة في خدمة Apple Pay. حاول مرة أخرى أو استخدم طريقة دفع مختلفة."
-        }
+          "generic": "حدثت مشكلة في خدمة Apple Pay. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+          "not_available": "خدمة Apple Pay غير متوفرة على هذا الجهاز.",
+          "missing_billing_address": "يتطلب Apple Pay عنوانًا للفواتير. يرجى إضافة عنوان إلى حسابك."
+        },
+        "loading": "جارٍ تحميل Apple Pay"
       },
       "three_d_secure": {
         "verification_failed": "لم يتم التحقق من عملية الدفع. حاول مرة أخرى أو استخدم طريقة دفع مختلفة."
@@ -3454,7 +3571,30 @@
       "add_success": {
         "title": "تمت إضافة طريقة الدفع",
         "done_button": "تابع التسوق"
-      }
+      },
+      "replacement_payment_method_title": "طريقة دفع بديلة",
+      "add_payment_method_button": "إضافة طريقة دفع",
+      "bank_account": {
+        "loading_accessibility_message": "زر الحساب المصرفي قيد التحميل",
+        "iframe_title_accessibility_label": "فتح حساب بنكي",
+        "display_name": "الحساب المصرفي",
+        "generic_error": "تعذر إضافة الحساب البنكي. حاول مرة أخرى لاحقاً."
+      },
+      "add_payment_method_banner": "أضف طريقة دفع لتسريع عملية الدفع أو الخدمات المعتمدة مسبقًا",
+      "no_payment_methods_banner": "لم تتم إضافة أي طرق دفع",
+      "edit_payment_method_button_accessibility_label": "عدّل {{paymentMethodName}} الذي ينتهي بـ {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "تعديل {{paymentMethodName}}",
+      "delete_payment_method_button_accessibility_label": "حذف {{paymentMethodName}}",
+      "back_button_accessibility_label": "العودة إلى {{paymentMethodStepTitle}}",
+      "default": "تقصير",
+      "expires_soon": "ستنتهي صلاحية هذه البطاقة قريباً",
+      "expired": "هذه البطاقة منتهية الصلاحية",
+      "expired_badge_label": "منتهي الصلاحية",
+      "card_update_consent": "سيتم حفظ طريقة الدفع هذه لاستخدامها في عمليات الشراء المستقبلية.",
+      "digital_wallet_title": "محفظة رقمية",
+      "credit_or_debit_card_title": "بطاقة ائتمان أو بطاقة خصم",
+      "credit_card_title": "بطاقة إئتمان",
+      "additional_payment_methods": "طرق دفع إضافية"
     },
     "payment_method_brands": {
       "visa": "فيزا",
@@ -3485,7 +3625,8 @@
     },
     "errors": {
       "order_not_found": {
-        "title": "لم يتم العثور على الطلب"
+        "title": "لم يتم العثور على الطلب",
+        "description": "هذا الطلب غير موجود أو ليس لديك إذن لعرضه."
       },
       "failed_address_creation": {
         "description": "حدثت مشكلة أثناء إنشاء عنوانك. حاول تحديث هذه الصفحة أو تحقق من اتصالك بالإنترنت."
@@ -3502,11 +3643,61 @@
       "no_access_to_locations": {
         "description": "ليس لديك إمكانية الوصول إلى أي مواقع"
       },
-      "already_upgraded": "تم بالفعل ترقية حسابات العملاء."
+      "already_upgraded": "تم بالفعل ترقية حسابات العملاء.",
+      "address_deletion_error": {
+        "description": "حدثت مشكلة أثناء حذف هذا العنوان. حاول مرة أخرى أو قم بتحديث الصفحة."
+      },
+      "addresses_loading_issue": {
+        "description": "حدث خطأ في الاتصال. تحقق من اتصالك بالإنترنت وحاول مرة أخرى."
+      },
+      "banner_title": {
+        "one": "يوجد خطأ {{count}}",
+        "other": "يوجد {{count}} خطأ"
+      },
+      "load_address_form_error": {
+        "title": "تعذر تحميل نموذج العنوان",
+        "description": "تعذر تحميل نموذج العنوان.",
+        "refresh_button": "تحديث الصفحة"
+      },
+      "load_orders_error": {
+        "title": "تعذر تحميل الطلبات",
+        "description": "حاول مرة أخرى أو عد لاحقاً.",
+        "retry_button": "إعادة المحاولة"
+      },
+      "load_paypal_error": {
+        "description": "هناك مشكلة في تحميل حساب PayPal. يرجى المحاولة مرة أخرى."
+      },
+      "logout_everywhere": {
+        "description": "حدث خطأ ما أثناء تسجيل الخروج. يرجى المحاولة مرة أخرى."
+      },
+      "not_found": {
+        "description": "تحقق من عنوان الموقع الإلكتروني أو حاول مرة أخرى بعد بضع دقائق.",
+        "title": "هناك مشكلة في تحميل هذه الصفحة"
+      },
+      "retry_action_label": "إعادة المحاولة",
+      "resend_link": {
+        "too_many_requests": "عدد الطلبات كبير جدًا. حاول مرة أخرى لاحقًا.",
+        "generic": "طلب فاشل"
+      },
+      "load_extension_error": {
+        "title": "خطأ",
+        "description": "قم بتحديث هذه الصفحة أو حاول مرة أخرى بعد بضع دقائق.",
+        "refresh_button": "تحديث الصفحة"
+      },
+      "failed_to_upgrade": "فشل تحديث إعدادات حساب العميل.",
+      "not_upgraded": "لا يتم ترقية حسابات العملاء.",
+      "failed_to_revert": "فشل في استعادة إعدادات حساب العميل.",
+      "revert_window_expired": "انتهت فترة التراجع."
     },
     "enable_javascript": "لعرض حسابك، قم بتمكين جافا سكريبت في إعدادات متصفحك أو قم بتسجيل الدخول باستخدام متصفح آخر.",
     "callback": {
       "try_again": "حاول ثانية"
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "محاولات كثيرة جداً",
+        "description": "يرجى المحاولة مرة أخرى بعد بضع دقائق"
+      }
     }
   },
   "sections": {
