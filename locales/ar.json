@@ -1853,9 +1853,15 @@
             "other": "%{pickup_point_index} من %{count} نقطة"
           },
           "selected_page": {
-            "other": "من %{first} إلى %{last} من %{count} نقطة"
+            "other": "من %{first} إلى %{last} من %{count} نقطة",
+            "one": "%{first} - %{last} من %{count} نقطة"
           },
-          "next_accessibility_label": "الصفحة التالية"
+          "next_accessibility_label": "الصفحة التالية",
+          "previous_accessibility_label": "الصفحة السابقة",
+          "header": {
+            "one": "عرض النقاط من %{first} إلى %{last} من أصل %{count} نقطة",
+            "other": "عرض %{first} - %{last} من %{count} نقطة"
+          }
         },
         "number_of_pickup_points_near_location": {
           "one": "%{count} نقطة استلام بالقرب من موقعك",
@@ -1864,13 +1870,24 @@
         "geolocation": {
           "errors": {
             "permission_denied": "لم نتمكن من تحديد موقعك. حاول مرة أخرى.",
-            "unsuported_by_browser": "لا يدعم متصفحك تحديد الموقع الجغرافي. حاول مرة أخرى أو استخدم متصفحًا آخر."
-          }
+            "unsuported_by_browser": "لا يدعم متصفحك تحديد الموقع الجغرافي. حاول مرة أخرى أو استخدم متصفحًا آخر.",
+            "permission_not_allowed": "اسمح بمشاركة موقعك."
+          },
+          "shared_location_button": "استخدم موقعي"
         },
         "location_is_currently_closed": "مغلق",
         "search_button": "يبحث",
         "address_label": "عنوان",
-        "open_twenty_four_hours": "مفتوح 24/7"
+        "open_twenty_four_hours": "مفتوح 24/7",
+        "business_hours": "ساعات العمل",
+        "no_business_hours": "لا توجد ساعات عمل متاحة",
+        "title": "نقطة الاستلام",
+        "selector_tabs": "محدد نقطة الالتقاط",
+        "could_not_resolve_address": "لم يتم العثور على عنوانك. حاول مرة أخرى أو استخدم عنوانًا مختلفًا.",
+        "no_pickup_points_near_you": "لم يتم العثور على نقاط استلام بالقرب من العنوان المحدد",
+        "no_pickup_points_found": "لم يتم العثور على نقاط استلام",
+        "change": "تغيير الموقع",
+        "waiting_on_pickup_point_location_notice": "البحث عن نقاط الالتقاء..."
       },
       "local_pickup": {
         "or": "أو",
@@ -1967,11 +1984,18 @@
         "pay_now": "ادفع الآن"
       },
       "no_address_location": {
-        "email_us_button_label": "أرسل لنا بريدًا إلكترونيًا"
+        "email_us_button_label": "أرسل لنا بريدًا إلكترونيًا",
+        "title": "موقع بدون عنوان",
+        "header": "ليس لديك عنوان شحن لهذا الموقع",
+        "alt_header": "عنوان الشحن مفقود",
+        "message": "اتصل بنا لإضافة عنوان لهذا الموقع لإتمام عملية الدفع."
       },
       "notice_banner": {
         "individual_violations_title": {
-          "DeliveryViolations": "عنوان الشحن"
+          "DeliveryViolations": "عنوان الشحن",
+          "PaymentViolations": "عنوان الفواتير",
+          "OtherViolations": "معلومات الطلب",
+          "UnhandledViolations": "معلومات الطلب"
         },
         "company_location_changed_product_removed": "تم تحديث سلة التسوق الخاصة بك لأن بعض المنتجات غير متوفرة في هذا الموقع. يرجى مراجعة طلبك قبل إرساله.",
         "payment_method_not_available_with_payment_terms": "طريقة الدفع التي اخترتها لم تعد متاحة لأن دفع هذا الطلب أصبح الآن وفقًا لشروط {{paymentTerms}}",
@@ -1987,7 +2011,16 @@
         },
         "all_violations_content": "اتصل بنا أو راسلنا {{emailLink}} لتحديث هذه المعلومات وإكمال طلبك:",
         "calculating_shipping": "لا يزال حساب تكلفة الشحن جارياً. حاول مرة أخرى بعد بضع ثوانٍ. لم يتم خصم أي مبلغ منك.",
-        "calculating_taxes": "لا تزال عملية حساب الضرائب جارية. حاول مرة أخرى بعد بضع ثوانٍ. لم يتم تحصيل أي رسوم منك."
+        "calculating_taxes": "لا تزال عملية حساب الضرائب جارية. حاول مرة أخرى بعد بضع ثوانٍ. لم يتم تحصيل أي رسوم منك.",
+        "return_to_cart_link_text": "العودة إلى سلة التسوق",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} لتحديث الكميات",
+        "company_location_changed": "تم تحديث سلة التسوق الخاصة بك. يرجى مراجعة طلبك قبل إرساله.",
+        "violations_title": "{{violation}} مفقود أو غير صالح",
+        "all_violations_email_link": "بريد إلكتروني",
+        "editable_shipping_address_violations_message_title": "أضف هذه المعلومات لإكمال طلبك:",
+        "editable_shipping_address_violations_message_footer": "لتحديث عنوان هذا الموقع بشكل دائم، {{emailLink}} .",
+        "editable_shipping_address_violations_email_link": "اتصل بنا",
+        "shipping_address_incomplete_title": "عنوان الشحن غير مكتمل"
       },
       "split_delivery": {
         "items_for_pickup": "الأغراض المراد استلامها"
@@ -2054,7 +2087,8 @@
       },
       "order_errors": {
         "network_failure": "لم يتم إرسال طلبك بسبب خطأ في الشبكة. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
-        "creation_failure": "حدثت مشكلة أثناء إنشاء طلبك. حاول مرة أخرى، أو تواصل معنا لمزيد من التفاصيل."
+        "creation_failure": "حدثت مشكلة أثناء إنشاء طلبك. حاول مرة أخرى، أو تواصل معنا لمزيد من التفاصيل.",
+        "inventory_reservation_failure": "بعض المنتجات لم تعد متوفرة."
       },
       "discount_errors": {
         "generic_error": "لم يتم معالجة طلبك لأن رمز الخصم الخاص بك لم يعد متاحًا. راجع إجمالي طلبك وحاول مرة أخرى."
@@ -2084,26 +2118,55 @@
       "throttle": {
         "inventory": {
           "sold_out": {
-            "storefront_body": "ارجع إلى المتجر لمواصلة التسوق"
+            "storefront_body": "ارجع إلى المتجر لمواصلة التسوق",
+            "heading": "نفدت الكمية في سلة التسوق الخاصة بك",
+            "no_storefront_body": "للأسف، المنتج الذي ترغب في شرائه لم يعد متوفراً.",
+            "link": "العودة إلى المتجر"
           },
           "partial_inventory_banner": "بعض المنتجات الموجودة في سلة التسوق الخاصة بك نفدت من المخزون ولن تكون متاحة للشراء عند إتمام عملية الدفع."
         },
         "estimated_wait_time": {
           "less_than_one": "مدة الانتظار المتوقعة: أقل من دقيقة",
           "one": "مدة الانتظار المقدرة: {{count}} دقيقة",
-          "other": "مدة الانتظار المقدرة: {{count}} دقيقة"
+          "other": "مدة الانتظار المقدرة: {{count}} دقيقة",
+          "calculating": "حساب وقت الانتظار المقدر"
         },
         "cart_summary_heading": "سلة التسوق الخاصة بك",
         "merchandise": {
-          "available": "متاح"
+          "available": "متاح",
+          "sold_out": "نفذ"
+        },
+        "too_many_attempts": {
+          "message": "محاولات كثيرة جداً",
+          "description": "حاول مرة أخرى بعد بضع دقائق"
+        },
+        "line_to_check_out": "أنت الآن في صف الدفع",
+        "title": "طابور",
+        "time_to_checkout_title": "حان وقت التسوق - {{shopName}}",
+        "last_checked": "(آخر فحص: {{time}} )",
+        "footer": {
+          "heading": "لا تقم بتحديث هذه الصفحة، سيتم تحديثها تلقائيًا.",
+          "body": "لن يتم حجز المنتجات الموجودة في سلة التسوق الخاصة بك إلا بعد إتمام عملية الدفع."
         }
       },
       "error_page": {
         "terminal": {
-          "title": "حدثت مشكلة في عملية الدفع"
+          "title": "حدثت مشكلة في عملية الدفع",
+          "message": "قم بتحديث هذه الصفحة أو حاول مرة أخرى بعد بضع دقائق",
+          "action": {
+            "cta": "تحديث الصفحة"
+          },
+          "request_id": "معرّف الطلب: {{requestId}}"
         },
         "embed_errors": {
-          "cart_completed": "تم إتمام عملية الدفع هذه بالفعل"
+          "cart_completed": "تم إتمام عملية الدفع هذه بالفعل",
+          "storefront_password_required": "هذا المتجر محمي بكلمة مرور",
+          "customer_account_required": "يلزم وجود حساب عميل لإتمام عملية الدفع",
+          "invalid_cart": "لم تعد سلة التسوق صالحة",
+          "not_authorized": "فشلت عملية التحقق من الهوية. تحقق من بيانات اعتماد التطبيق الخاصة بك",
+          "killswitch_enabled": "عملية الدفع غير متاحة مؤقتًا",
+          "policy_violation": "تعذر إتمام عملية الدفع بسبب قيود إعدادات السياسة",
+          "unrecoverable_failure": "تعذر تحميل صفحة الدفع. حاول مرة أخرى"
         }
       },
       "one": {
@@ -2162,6 +2225,21 @@
       },
       "clipboard": {
         "copied": "تم النسخ"
+      },
+      "customer_payment_methods": {
+        "page_title": "طرق الدفع",
+        "title": "طرق الدفع",
+        "update_card_button_label": "تحديث البطاقة",
+        "delete_customer_mandate": {
+          "generic_error": "حدثت مشكلة أثناء معالجة طلبك.",
+          "success_message": "تم حذف طريقة الدفع الخاصة بك بنجاح"
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "حدثت مشكلة أثناء معالجة طلبك. يرجى الاتصال بصاحب المتجر."
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "حدثت مشكلة أثناء معالجة طلبك. حاول مرة أخرى بعد بضع دقائق."
       }
     },
     "pagination": {
