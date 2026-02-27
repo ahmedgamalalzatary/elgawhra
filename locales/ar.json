@@ -2933,7 +2933,23 @@
       "december": "ديسمبر",
       "wednesday": "الأربعاء",
       "thursday": "يوم الخميس",
-      "saturday": "السبت"
+      "saturday": "السبت",
+      "clear": "واضح",
+      "clipboardFailedToCopy": "فشل النسخ",
+      "closeNotification": "يغلق",
+      "closeModal": "يغلق",
+      "processing": "يعالج…",
+      "increase": "زيادة {{type}}",
+      "decrease": "انخفاض {{type}}",
+      "minimumReached": "تم الوصول إلى الحد الأدنى لـ {{value}}",
+      "maximumReached": "تم الوصول إلى الحد الأقصى لـ {{value}}",
+      "january": "يناير",
+      "march": "يمشي",
+      "april": "أبريل",
+      "june": "يونيو",
+      "july": "يوليو",
+      "october": "أكتوبر",
+      "tuesday": "يوم الثلاثاء"
     },
     "profile_preview_bar": {
       "customize_button": "تخصيص",
@@ -3735,14 +3751,43 @@
         "button_title": "يضيف",
         "billing_address": {
           "title": "عنوان الفواتير",
-          "choose_billing_address_from_list_button_accessibility_label": "اختر عنوانًا للفواتير من القائمة"
+          "choose_billing_address_from_list_button_accessibility_label": "اختر عنوانًا للفواتير من القائمة",
+          "add_billing_address_button": "إضافة جديد",
+          "add_billing_address_button_accessibility_label": "إضافة عنوان فوترة جديد",
+          "choose_billing_address_from_list_button": "اختر من القائمة",
+          "missing_billing_address_error_message": "يرجى تحديد عنوان الفوترة",
+          "default_checkbox": "قم بتعيينها كطريقة الدفع الافتراضية"
         },
         "subscription_contracts": {
           "product_details": "تفاصيل المنتج",
           "title": "استخدم طريقة الدفع هذه للطلبات المتكررة",
-          "load_more": "تحميل المزيد"
+          "load_more": "تحميل المزيد",
+          "more_items": {
+            "one": "{{count}} منتج إضافي",
+            "other": "{{count}} منتجًا إضافيًا"
+          },
+          "product_count": {
+            "one": "{{count}} منتج",
+            "other": "{{count}} منتجًا"
+          }
         },
-        "replace_mode_warning": "سيؤثر حذف طريقة الدفع هذه على الاشتراكات أو الطلبات المسبقة. استبدلها بطريقة دفع بديلة لمواصلة تلقي الطلبات القادمة."
+        "replace_mode_warning": "سيؤثر حذف طريقة الدفع هذه على الاشتراكات أو الطلبات المسبقة. استبدلها بطريقة دفع بديلة لمواصلة تلقي الطلبات القادمة.",
+        "title": "إضافة طريقة دفع",
+        "payment_method_added_confirmation": "تمت إضافة طريقة الدفع",
+        "missing_customer_error": "حدث خطأ ما. يرجى المحاولة مرة أخرى أو الاتصال بالدعم الفني.",
+        "choose_from_list": "اختر من القائمة",
+        "add_new_button": "إضافة جديد",
+        "updating_contracts": {
+          "one": "جارٍ تحديث عقد اشتراك {{count}} ...",
+          "other": "جارٍ تحديث {{count}} عقد اشتراك..."
+        },
+        "contracts_updated": {
+          "one": "تم تحديث عقد اشتراك {{count}} بنجاح",
+          "other": "تم تحديث {{count}} عقد اشتراك بنجاح"
+        },
+        "contracts_update_failed": "فشل تحديث بعض عقود الاشتراك",
+        "subscription_contracts_updated": "تم تحديث {{succeeded}} من {{total}} اشتراكات",
+        "invalid_wallet_type_error": "نوع المحفظة غير صالح."
       },
       "title": "طرق الدفع",
       "update_payment_method": {
@@ -3796,7 +3841,8 @@
         },
         "unavailable": {
           "text": "الدفع ببطاقات الائتمان والخصم غير متاح حاليًا.",
-          "link_text": "قم بتحديث هذه الصفحة"
+          "link_text": "قم بتحديث هذه الصفحة",
+          "suffix": "أو حاول مرة أخرى لاحقاً."
         }
       },
       "payment_delete": {
@@ -3814,7 +3860,13 @@
         "replace_method_with_new_method_description": "سيتم حذف {{currentPaymentMethodName}} واستبداله بـ {{newPaymentMethodName}} .",
         "error_when_deleting": "نعتذر، ولكن حدث خطأ ما ولم نتمكن من حذف طريقة الدفع هذه. يرجى المحاولة مرة أخرى لاحقًا أو تحديث الصفحة.",
         "deleted_successfully": "تم حذف طريقة الدفع بنجاح.",
-        "delete_and_replace_button_accessibility_label": "احذف {{currentPaymentMethodName}} واستبدله بـ {{newPaymentMethodName}} ."
+        "delete_and_replace_button_accessibility_label": "احذف {{currentPaymentMethodName}} واستبدله بـ {{newPaymentMethodName}} .",
+        "title": "حذف طريقة الدفع",
+        "description_without_replacement": "لن تكون طريقة الدفع هذه متاحة للمشتريات المستقبلية.",
+        "payment_method_selector_placeholder": "اختر طريقة دفع بديلة (اختياري)",
+        "payment_method_selector_no_alternative_payment": "لا توجد طريقة بديلة",
+        "delete_and_replace_button": "حذف واستبدال",
+        "loading_available_payment_methods_accessibility_label": "جارٍ تحميل طرق الدفع المتاحة"
       },
       "expiration_warning_button_accessibility_label": "عرض تحذير انتهاء الصلاحية لـ {{paymentMethodName}} التي تنتهي بـ {{lastDigits}}",
       "google_pay": {
@@ -3891,7 +3943,17 @@
       "hipercard": "بطاقة هيبركارد",
       "unionpay": "يونيون باي",
       "shoppay": "تسوق وادفع",
-      "applepay": "أبل باي"
+      "applepay": "أبل باي",
+      "mastercard": "ماستر كارد",
+      "americanexpress": "أمريكان إكسبريس",
+      "dinersclub": "داينرز كلوب",
+      "visaelectron": "فيزا إلكترون",
+      "maestro": "مايسترو",
+      "dankort": "دانكورت",
+      "laser": "الليزر",
+      "googlepay": "جوجل باي",
+      "storecredit": "رصيد المتجر",
+      "bogus": "مزيف"
     },
     "navigation_and_structure": {
       "try_new_search": "جرب بحثًا جديدًا",
@@ -4031,6 +4093,9 @@
       "expand_label": "توسيع شريط الإعلانات",
       "collapse_label": "شريط إعلانات الانهيار",
       "close_label": "إغلاق شريط الإعلانات"
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "تفضيلات ملفات تعريف الارتباط"
     }
   },
   "sections": {
@@ -4250,7 +4315,8 @@
       "email": "بريد إلكتروني",
       "forgot_password": "نسيت كلمة السر؟",
       "guest_title": "تابع كضيف",
-      "title": "تسجيل الدخول"
+      "title": "تسجيل الدخول",
+      "sign_in": "تسجيل الدخول"
     },
     "order": {
       "tax": "ضريبة",
@@ -4262,7 +4328,21 @@
       "shipping": "شحن",
       "quantity": "كمية",
       "total_refunded": "تم استرداد المبلغ",
-      "subtotal": "المجموع الفرعي"
+      "subtotal": "المجموع الفرعي",
+      "title": "اطلب {{ name }}",
+      "date_html": "تم النشر في {{ date }}",
+      "cancelled_html": "تم إلغاء الطلب بتاريخ {{ date }}",
+      "cancelled_reason": "السبب: {{ reason }}",
+      "payment_status": "حالة الدفع",
+      "shipping_address": "عنوان الشحن",
+      "fulfillment_status": "حالة الإنجاز",
+      "product": "منتج",
+      "price": "سعر",
+      "total": "المجموع",
+      "fulfilled_at_html": "تم التنفيذ {{ date }}",
+      "track_shipment": "تتبع الشحنة",
+      "tracking_url": "رابط التتبع",
+      "tracking_company": "الناقل"
     },
     "account": {
       "details": "تفاصيل الحساب",
@@ -4296,7 +4376,11 @@
     "log_in": "تسجيل الدخول",
     "register": {
       "submit": "يخلق",
-      "password": "كلمة المرور"
+      "password": "كلمة المرور",
+      "title": "إنشاء حساب",
+      "first_name": "الاسم الأول",
+      "last_name": "اسم العائلة",
+      "email": "بريد إلكتروني"
     },
     "activate_account": {
       "password": "كلمة المرور",
@@ -4307,10 +4391,29 @@
       "cancel": "رفض الدعوة"
     },
     "reset_password": {
-      "password": "كلمة المرور"
+      "password": "كلمة المرور",
+      "title": "إعادة تعيين كلمة مرور الحساب",
+      "subtext": "أدخل كلمة مرور جديدة",
+      "password_confirm": "تأكيد كلمة المرور",
+      "submit": "إعادة تعيين كلمة المرور"
     },
     "account_fallback": "حساب",
-    "log_out": "تسجيل الخروج"
+    "log_out": "تسجيل الخروج",
+    "orders": {
+      "title": "سجل الطلبات",
+      "order_number": "طلب",
+      "order_number_link": "رقم الطلب {{ number }}",
+      "date": "تاريخ",
+      "payment_status": "حالة الدفع",
+      "fulfillment_status": "حالة الإنجاز",
+      "total": "المجموع",
+      "none": "لم تقم بتقديم أي طلبات حتى الآن."
+    },
+    "recover_password": {
+      "title": "أعد تعيين كلمة المرور الخاصة بك",
+      "subtext": "سنرسل إليك بريدًا إلكترونيًا لإعادة تعيين كلمة مرورك",
+      "success": "لقد أرسلنا إليك بريدًا إلكترونيًا يحتوي على رابط لتحديث كلمة مرورك."
+    }
   },
   "blogs": {
     "article": {
@@ -4343,7 +4446,18 @@
   },
   "recipient": {
     "form": {
-      "email_label": "البريد الإلكتروني للمستلم"
+      "email_label": "البريد الإلكتروني للمستلم",
+      "checkbox": "أريد إرسال هذا كهدية",
+      "expanded": "تم توسيع نموذج استلام بطاقة الهدية",
+      "collapsed": "نموذج استلام بطاقة الهدية مطوي",
+      "email_label_optional_for_no_js_behavior": "البريد الإلكتروني للمستلم (اختياري)",
+      "email": "بريد إلكتروني",
+      "name_label": "اسم المستلم (اختياري)",
+      "name": "اسم",
+      "message_label": "رسالة (اختيارية)",
+      "message": "رسالة",
+      "max_characters": "{{ max_chars }} حرفًا كحد أقصى",
+      "send_on_label": "إرسال (اختياري)"
     }
   },
   "templates": {
@@ -4402,5 +4516,20 @@
   "onboarding": {
     "product_title": "مثال على عنوان المنتج",
     "collection_title": "اسم مجموعتك"
+  },
+  "gift_cards": {
+    "issued": {
+      "how_to_use_gift_card": "استخدم رمز بطاقة الهدية عبر الإنترنت أو رمز الاستجابة السريعة (QR) في المتجر",
+      "title": "إليك رصيد بطاقة الهدايا الخاصة بك {{ value }} لمتجر {{ shop }} !",
+      "subtext": "بطاقة هديتك",
+      "gift_card_code": "رمز بطاقة الهدايا",
+      "shop_link": "تفضل بزيارة المتجر الإلكتروني",
+      "add_to_apple_wallet": "أضف إلى محفظة Apple",
+      "qr_image_alt": "رمز الاستجابة السريعة — امسحه ضوئيًا لاسترداد بطاقة الهدية",
+      "copy_code": "انسخ رمز بطاقة الهدية",
+      "expiration_date": "تاريخ الانتهاء {{ expires_on }}",
+      "copy_code_success": "تم نسخ الكود بنجاح",
+      "expired": "منتهي الصلاحية"
+    }
   }
 }
