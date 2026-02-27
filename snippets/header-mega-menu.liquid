@@ -6,6 +6,12 @@
 {% endcomment %}
 
 <nav class="header__inline-menu">
+  {%- assign has_about_link = false -%}
+  {%- for menu_link in section.settings.menu.links -%}
+    {%- if menu_link.url == '/pages/about' -%}
+      {%- assign has_about_link = true -%}
+    {%- endif -%}
+  {%- endfor -%}
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
       <li>
@@ -98,5 +104,16 @@
         {%- endif -%}
       </li>
     {%- endfor -%}
+    {%- unless has_about_link -%}
+      <li>
+        <a
+          id="HeaderMenu-about"
+          href="/pages/about"
+          class="header__menu-item list-menu__item link link--text focus-inset"
+        >
+          <span>About</span>
+        </a>
+      </li>
+    {%- endunless -%}
   </ul>
 </nav>

@@ -6,6 +6,12 @@
 {% endcomment %}
 
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
+  {%- assign has_about_link = false -%}
+  {%- for menu_link in section.settings.menu.links -%}
+    {%- if menu_link.url == '/pages/about' -%}
+      {%- assign has_about_link = true -%}
+    {%- endif -%}
+  {%- endfor -%}
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
       class="header__icon header__icon--menu header__icon--summary link focus-inset"
@@ -223,6 +229,17 @@
                 </li>
               {%- endif -%}
             {%- endfor -%}
+            {%- unless has_about_link -%}
+              <li>
+                <a
+                  id="HeaderDrawer-about"
+                  href="/pages/about"
+                  class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
+                >
+                  About
+                </a>
+              </li>
+            {%- endunless -%}
           </ul>
         </nav>
           <div class="menu-drawer__utility-links">
