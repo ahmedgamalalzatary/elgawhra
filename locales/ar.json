@@ -41,7 +41,8 @@
         "back": "خلف",
         "address_form": {
           "save": "يحفظ",
-          "one_time_address_subtitle": "استخدم عنوانًا لمرة واحدة لهذا الطلب"
+          "one_time_address_subtitle": "استخدم عنوانًا لمرة واحدة لهذا الطلب",
+          "cancel": "يلغي"
         },
         "delivery": "موعد التسليم}",
         "subscription_delivery_description": {
@@ -97,7 +98,12 @@
           "default": "خدمة التوصيل السريع غير متاحة لطلبك. تم تحديث خيارات الشحن الخاصة بك."
         },
         "third_party_address_error": "حدث خطأ أثناء تحميل قائمة اختيار العنوان. أدخل عنوانك يدويًا أدناه.",
-        "third_party_payment_error": "حدث خطأ أثناء تحميل خيارات الدفع. يرجى استخدام طريقة دفع أخرى."
+        "third_party_payment_error": "حدث خطأ أثناء تحميل خيارات الدفع. يرجى استخدام طريقة دفع أخرى.",
+        "duties_and_taxes_options": {
+          "ddp_title": "ادفع الآن"
+        },
+        "shipping_address_title": "سافر على متن سفينة لِـ",
+        "delete": "يمسح"
       },
       "localized_fields": {
         "additional_information": {
@@ -1032,6 +1038,9 @@
           "change_shipping_method_link_label": "تغيير طريقة الشحن",
           "change_purchase_order_number_label": "تغيير رقم أمر الشراء",
           "company_location": "موقع الشركة"
+        },
+        "item_header": {
+          "section": "قسم"
         }
       },
       "taxes": {
@@ -1436,7 +1445,8 @@
         "generic_payment_terms": "أنت ملتزم بشروط {{translatedName}} . سيستحق دفع المبلغ في {{dueDate}} .",
         "login_prompt": {
           "no_access": {
-            "message": "{{logIn}} إلى حساب لديه حق الوصول إلى هذا الموقع لإضافة أو استخدام طرق الدفع المحفوظة."
+            "message": "{{logIn}} إلى حساب لديه حق الوصول إلى هذا الموقع لإضافة أو استخدام طرق الدفع المحفوظة.",
+            "link": "تسجيل الدخول"
           }
         },
         "direct_payment_terms": "أنت توافق على شروط {{translatedName}} . سيتم خصم المبلغ من بطاقتك في {{dueDate}} ."
@@ -1583,7 +1593,9 @@
         },
         "out_of_stock_in_context_label": "هذا المنتج غير متوفر في بلدك/منطقتك.",
         "page_title": "مشاكل المخزون",
-        "remove_from_cart_button_label": "إزالة من سلة التسوق"
+        "remove_from_cart_button_label": "إزالة من سلة التسوق",
+        "reduced_label": "مخفض",
+        "remove": "يزيل"
       },
       "contextual_availability": {
         "title": {
@@ -1715,7 +1727,11 @@
         "gift_card_ending": "بطاقة هدايا تنتهي بـ %{last_characters}",
         "discount_already_applied": "تم تطبيق خصم على هذا الطلب. لا يمكنك إضافة خصم آخر.",
         "estimated_taxes_finalization_tooltip_content": "سيتم تأكيد الضريبة النهائية والإجمالي عبر البريد الإلكتروني أو الرسائل النصية بعد تقديم طلبك.",
-        "discount_and_gift_card_savings_notice": "بعد خصم %{discount_amount} في الخصومات و %{gift_card_amount} في بطاقات الهدايا"
+        "discount_and_gift_card_savings_notice": "بعد خصم %{discount_amount} في الخصومات و %{gift_card_amount} في بطاقات الهدايا",
+        "applied_free_shipping_discount_label": "مُطبَّق",
+        "deposit_label": "إيداع",
+        "product_change_label": "يتغير",
+        "duties_label": "الواجبات"
       },
       "contact": {
         "ward_label": "وارد",
@@ -1767,7 +1783,9 @@
         "suburb_label": "ضاحية",
         "country_label": "البلد/المنطقة",
         "country_code": "رمز الدولة/المنطقة",
-        "province_label": "مقاطعة"
+        "province_label": "مقاطعة",
+        "emirate_label": "إمارة",
+        "emirate_placeholder": "إمارة"
       },
       "delivery_options": {
         "free_total_label": "حر",
@@ -1776,14 +1794,17 @@
         "pick_up_locations": "مواقع الاستلام",
         "pickup_point_map_title": "خريطة نقاط الاستلام",
         "subscription_pickup_information": "سيتم تطبيق طريقة التوصيل هذه على جميع العناصر في هذا الطلب وعلى جميع الطلبات المستقبلية لهذا الاشتراك.",
-        "company_location_no_address_banner": "سيتم تقديم الطلبات التي يتم شحنها إلى مواقع بدون عنوان للمراجعة."
+        "company_location_no_address_banner": "سيتم تقديم الطلبات التي يتم شحنها إلى مواقع بدون عنوان للمراجعة.",
+        "pick_up": "يلتقط"
       },
       "alternative_payment_method_banner": {
         "or": "أو",
         "express_checkout": "إتمام عملية الدفع السريع"
       },
       "tips": {
-        "no_tip_label": "لا أحد"
+        "no_tip_label": "لا أحد",
+        "title": "أضف بقشيشًا",
+        "add_tip": "أضف بقشيشًا"
       },
       "subscriptions": {
         "recurring_total_intervals": {
@@ -1833,7 +1854,10 @@
             "permission_denied": "لم نتمكن من تحديد موقعك. حاول مرة أخرى.",
             "unsuported_by_browser": "لا يدعم متصفحك تحديد الموقع الجغرافي. حاول مرة أخرى أو استخدم متصفحًا آخر."
           }
-        }
+        },
+        "location_is_currently_closed": "مغلق",
+        "search_button": "يبحث",
+        "address_label": "عنوان"
       },
       "local_pickup": {
         "or": "أو",
@@ -1862,7 +1886,9 @@
             "other": "أقرب موقع يحتوي على أغراضك يبعد أكثر من %{distance} عن %{location}"
           },
           "title_with_specific_location": "أقرب موقع يحتوي على غرضك يبعد أكثر من %{distance} عن %{location}"
-        }
+        },
+        "location_address_search_label": "عنوان",
+        "cancel": "يلغي"
       },
       "units": {
         "milligram": "ملغ",
@@ -1886,7 +1912,9 @@
       "customer_account": {
         "have_an_account_label": "هل لديك حساب؟",
         "invalid_address": "العنوان المُختار غير صالح. %{update_address_link} أو اختر عنوانًا مختلفًا.",
-        "incomplete_address": "العنوان المحدد غير مكتمل. %{update_address_link} أو اختر عنوانًا مختلفًا."
+        "incomplete_address": "العنوان المحدد غير مكتمل. %{update_address_link} أو اختر عنوانًا مختلفًا.",
+        "sign_in_link_label": "تسجيل الدخول",
+        "rollup_label": "حساب"
       },
       "processing": {
         "page_title": "معالجة الطلب",
@@ -1909,15 +1937,20 @@
         }
       },
       "shop_policies": {
-        "terms_of_service": "شروط الخدمة"
+        "terms_of_service": "شروط الخدمة",
+        "policy_label": "سياسة",
+        "contact_information": "اتصال",
+        "cookie_preferences": "ملفات تعريف الارتباط"
       },
       "order_payment_collection": {
         "changes_summary": {
-          "subtracted": "تمت إزالة %{count}"
+          "subtracted": "تمت إزالة %{count}",
+          "removed": "تمت إزالته"
         },
         "custom_line_item_description": "المبلغ المطلوب دفعه مقابل الطلب رقم %{order_name}",
         "additional_payment_requested": "يلزم سداد مبلغ %{total_outstanding}",
-        "checkout_review_and_pay": "تم تحديث طلبك %{order_name}. راجع هذه التغييرات، ثم ادفع لتأكيد طلبك."
+        "checkout_review_and_pay": "تم تحديث طلبك %{order_name}. راجع هذه التغييرات، ثم ادفع لتأكيد طلبك.",
+        "pay_now": "ادفع الآن"
       },
       "no_address_location": {
         "email_us_button_label": "أرسل لنا بريدًا إلكترونيًا"
@@ -1976,7 +2009,10 @@
           "select_different_shipping_address_to_resolve_errors": "عنوان الشحن الخاص بك غير صالح. اختر عنوانًا مختلفًا أو استخدم عنوانًا جديدًا.",
           "processing_error_checkout_as_guest": "حدثت مشكلة أثناء معالجة دفعتك. حاول مرة أخرى أو {{checkout_as_guest_link}} ."
         },
-        "recovery_notice": "هناك مشكلة في تفاصيل طلبك. يرجى تحديث معلوماتك لإتمام عملية الدفع."
+        "recovery_notice": "هناك مشكلة في تفاصيل طلبك. يرجى تحديث معلوماتك لإتمام عملية الدفع.",
+        "scrim": {
+          "cancel": "يلغي"
+        }
       },
       "remote_merchandise_only": {
         "remote_only_notice": "تُباع هذه المنتجات وتُشحن من متاجر أخرى. يُرجى إتمام عملية الشراء من كل متجر على حدة."
@@ -2094,6 +2130,19 @@
         "payment": {
           "payment_options": "اطلع على جميع خيارات الدفع"
         }
+      },
+      "post_purchase": {
+        "components": {
+          "submit": "يُقدِّم"
+        }
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "مراجعة"
+        }
+      },
+      "clipboard": {
+        "copied": "تم النسخ"
       }
     },
     "pagination": {
@@ -2282,7 +2331,8 @@
         },
         "transaction_status": {
           "success": "نجاح",
-          "pending": "قيد الانتظار"
+          "pending": "قيد الانتظار",
+          "failure": "فشل"
         },
         "cancel_reason": {
           "declined": "تم رفض الدفع",
@@ -2309,7 +2359,9 @@
       }
     },
     "page_titles": {
-      "blog_or_article_with_error": "خطأ - %{title}"
+      "blog_or_article_with_error": "خطأ - %{title}",
+      "account": "حساب",
+      "search": "يبحث"
     },
     "email_marketing": {
       "open_tracking": {
@@ -2348,6 +2400,12 @@
     },
     "search": {
       "error": "حدثت مشكلة أثناء تحميل نتائج البحث. يرجى تحديث الصفحة أو المحاولة مرة أخرى لاحقاً."
+    },
+    "challenge": {
+      "submit_button_text": "يُقدِّم"
+    },
+    "checkpoint": {
+      "submit_button_text": "يُقدِّم"
     }
   },
   "customer_accounts": {
@@ -2383,7 +2441,13 @@
       "addFile": "إضافة ملف",
       "dropzoneInvalidFileType": "نوع الملف غير مدعوم",
       "dropzoneDraggedOver": "قم بإسقاط الملف لتحميله",
-      "may": "يمكن"
+      "may": "يمكن",
+      "clipboardCopied": "تم النسخ",
+      "submit": "يُقدِّم",
+      "august": "أغسطس",
+      "monday": "الاثنين",
+      "friday": "جمعة",
+      "sunday": "الأحد"
     },
     "profile_preview_bar": {
       "customize_button": "تخصيص",
@@ -2522,7 +2586,9 @@
       "address_deleted_notification": "تم حذف العنوان",
       "default_address": {
         "title": "العنوان الافتراضي"
-      }
+      },
+      "cancel_deletion_button": "يلغي",
+      "delete_button": "يمسح"
     },
     "address_form": {
       "attention": "انتباه",
@@ -2626,7 +2692,8 @@
         "selection_confirmation_button": "اختر الموقع",
         "try_new_search": "جرب بحثًا جديدًا",
         "no_location_description": "لم يعد لديك إذن لتقديم طلبات لشركة {{company}} . لا يزال بإمكانك تقديم طلبات شخصية.",
-        "list_loading_address_accessibility_message": "عنوان التحميل لـ {{locationName}}"
+        "list_loading_address_accessibility_message": "عنوان التحميل لـ {{locationName}}",
+        "selection_cancel_button": "يلغي"
       },
       "draft_order_details": {
         "payment_status": {
@@ -2666,7 +2733,8 @@
       "purchase_order_number": {
         "save": "يحفظ",
         "discard_changes_modal_title": "هل تريد تجاهل التغييرات؟",
-        "title": "رقم أمر الشراء {{poNumber}}"
+        "title": "رقم أمر الشراء {{poNumber}}",
+        "cancel": "يلغي"
       },
       "addresses": {
         "billing_address_card_title": "عنوان الفواتير",
@@ -2677,6 +2745,9 @@
           "description_with_replacement": "سيؤدي حذف طريقة الدفع هذه إلى التأثير على المدفوعات المسبقة لهذا الموقع. استبدلها بطريقة دفع بديلة لمواصلة تلقي الطلبات القادمة.",
           "description_without_replacement": "لن تكون طريقة الدفع هذه متاحة بعد الآن للمشتريات المستقبلية من هذا الموقع."
         }
+      },
+      "orders": {
+        "order_list_column_headers_status": "حالة"
       }
     },
     "account_information": {
@@ -2685,13 +2756,18 @@
         "save": "يحفظ",
         "errors": {
           "name_cannot_contain_html_tags": "لا يمكن أن يحتوي {{fieldName}} على وسوم HTML"
-        }
+        },
+        "cancel": "يلغي"
       },
       "add_button": "يضيف",
       "people": {
         "pagination": {
           "load_more_accessibility_label": "حمل المزيد من الناس"
         }
+      },
+      "verify_new_email_modal": {
+        "verify_button": "يؤكد",
+        "cancel_button": "يلغي"
       }
     },
     "orders": {
@@ -2732,7 +2808,13 @@
         "sort_hide_options_accessibility_label": "إخفاء خيارات الفرز للطلبات المؤكدة.",
         "sort_show_options_accessibility_label": "عرض خيارات الفرز للطلبات المؤكدة.",
         "show_order_actions_accessibility_label": "عرض إجراءات الطلب للطلب {{name}}",
-        "four_images_accessibility_label": "يشمل الطلب {{lineItemName1}} و {{lineItemName2}} و {{lineItemName3}} و {{lineItemName4}}"
+        "four_images_accessibility_label": "يشمل الطلب {{lineItemName1}} و {{lineItemName2}} و {{lineItemName3}} و {{lineItemName4}}",
+        "filter_title": "فلتر",
+        "filter": {
+          "date": {
+            "custom": "مخصص"
+          }
+        }
       },
       "order_status": {
         "ready_for_pickup_label": "جاهز للاستلام",
@@ -2779,7 +2861,9 @@
             }
           }
         }
-      }
+      },
+      "list_title": "طلبات",
+      "manage": "يدير"
     },
     "order_details": {
       "view_controls": {
@@ -2797,6 +2881,9 @@
         },
         "manual_payment_methods": {
           "manual": "يدوي - {{formattedTransactionAmount}}"
+        },
+        "payment_type": {
+          "manual": "يدوي"
         }
       },
       "shipping": {
@@ -2815,7 +2902,8 @@
         "tracking_number": "عدد تتبع:"
       },
       "pickup": {
-        "pickup_location": "موقع الاستلام"
+        "pickup_location": "موقع الاستلام",
+        "pickup": "يلتقط"
       },
       "pagination": {
         "load_more_accessibility_label": "تحميل المزيد من العناصر"
@@ -2835,7 +2923,8 @@
       "payment_confirmation": {
         "full_payment_received": "شكراً لك! تم استلام دفعتك {{amount}} ، وقد تم سداد هذا الطلب بالكامل."
       },
-      "logged_in_account_no_permission_to_order": "أنت مسجل دخولك باسم {{email}} . لا يملك هذا الحساب صلاحية إدارة هذا الطلب."
+      "logged_in_account_no_permission_to_order": "أنت مسجل دخولك باسم {{email}} . لا يملك هذا الحساب صلاحية إدارة هذا الطلب.",
+      "duties": "الواجبات"
     },
     "payment_methods": {
       "back_button": "خلف",
@@ -2850,7 +2939,8 @@
             "payment_failure": "فشل الدفع",
             "payment_returned": "تم إرجاع المبلغ المدفوع",
             "tax_finalization": "إتمام إجراءات الضرائب"
-          }
+          },
+          "amount_label": "كمية"
         }
       },
       "payment_details": {
@@ -2860,7 +2950,8 @@
       },
       "edit_payment_method": {
         "save_payment_method_button": "يحفظ",
-        "billing_address": "عنوان الفواتير"
+        "billing_address": "عنوان الفواتير",
+        "cancel_edit_payment_method_button": "يلغي"
       },
       "add_payment_method": {
         "button_title": "يضيف",
@@ -2879,7 +2970,8 @@
         "billing_address": "عنوان الفواتير",
         "disclaimer": "سيتم حفظ طريقة الدفع هذه للمشتريات المستقبلية ويمكن استخدامها لأي عملية شراء متكررة أو مؤجلة.",
         "loading_resources": "جارٍ تحميل الاشتراكات والطلبات القادمة",
-        "resources_list_accessibility_label": "المنتجات التي يتم الاشتراك فيها والمنتجات التي لا تزال قيد الطلب والتي تستخدم طريقة الدفع هذه"
+        "resources_list_accessibility_label": "المنتجات التي يتم الاشتراك فيها والمنتجات التي لا تزال قيد الطلب والتي تستخدم طريقة الدفع هذه",
+        "button_title": "تحديث"
       },
       "add_payment_method_dropdown": {
         "bank_account_consent": "بإضافة طريقة دفع، فإنك تفوض بطاقتك أو حسابك المصرفي بخصم المبلغ من المشتريات المستقبلية التي توافق عليها، إلى حين قيامك بالإلغاء."
@@ -2925,18 +3017,29 @@
       },
       "three_d_secure": {
         "verification_failed": "لم يتم التحقق من عملية الدفع. حاول مرة أخرى أو استخدم طريقة دفع مختلفة."
-      }
+      },
+      "delete_payment_method_button": "يمسح"
     },
     "payment_method_brands": {
       "visa": "فيزا",
-      "elo": "إيلو"
+      "elo": "إيلو",
+      "paypal": "باي بال"
     },
     "navigation_and_structure": {
       "try_new_search": "جرب بحثًا جديدًا",
       "company_location": "موقع الشركة",
       "contact_email_subject": "الاتصال من متجر {{shopName}} عبر الإنترنت",
       "document_title": "{{sectionName}} - {{shopName}} - الحساب",
-      "location_switcher_toast_message": "تم تغيير الموقع إلى {{locationName}}"
+      "location_switcher_toast_message": "تم تغيير الموقع إلى {{locationName}}",
+      "account_menu": {
+        "label": "حساب"
+      },
+      "delete_confirmation": {
+        "cancel": "يلغي",
+        "delete": "يمسح"
+      },
+      "orders_link_label": "طلبات",
+      "search": "يبحث"
     },
     "errors": {
       "order_not_found": {
@@ -2980,7 +3083,8 @@
       "taxes_at_checkout_shipping_at_checkout_with_policy_html": "يتم احتساب الضرائب والخصومات وتكاليف <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">الشحن</a> عند إتمام عملية الشراء.",
       "login": {
         "paragraph_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\" class=\"link underlined-link\">سجّل الدخول</a> لإتمام عملية الشراء بشكل أسرع."
-      }
+      },
+      "update": "تحديث"
     },
     "footer": {
       "payment": "طرق الدفع"
@@ -2990,7 +3094,8 @@
     },
     "quick_order_list": {
       "min_error": "يبلغ الحد الأدنى لهذا المنتج {{ min }}",
-      "max_error": "يبلغ الحد الأقصى لهذا العنصر {{ max }}"
+      "max_error": "يبلغ الحد الأقصى لهذا العنصر {{ max }}",
+      "cancel": "يلغي"
     },
     "collection_template": {
       "use_fewer_filters_html": "استخدم عددًا أقل من الفلاتر أو <a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">قم بإزالة جميعها</a>"
@@ -2998,11 +3103,21 @@
   },
   "general": {
     "slider": {
-      "of": "ل"
+      "of": "ل",
+      "name": "شريط التمرير"
     },
     "password_page": {
       "login_form_error": "كلمة مرور خاطئة!",
       "admin_link_html": "هل أنت صاحب المتجر؟ <a href=\"/admin\" class=\"link underlined-link\">سجّل دخولك هنا</a>"
+    },
+    "social": {
+      "links": {
+        "tumblr": "تمبلر",
+        "tiktok": "تيك توك"
+      }
+    },
+    "search": {
+      "search": "يبحث"
     }
   },
   "accessibility": {
@@ -3025,29 +3140,40 @@
       "pickup_availability": {
         "pick_up_available_at_html": "الاستلام متاح في <span class=\"color-foreground\">{{ location_name }}</span>",
         "pick_up_unavailable_at_html": "الاستلام غير متاح حاليًا في <span class=\"color-foreground\">{{ location_name }}</span>"
-      }
+      },
+      "vendor": "بائع"
     },
     "facets": {
       "to": "ل",
       "filter_and_sort": "تصفية وفرز",
-      "filter_selected_accessibility": "{{ type }} ( {{ count }} عامل تصفية تم تحديدها)"
+      "filter_selected_accessibility": "{{ type }} ( {{ count }} عامل تصفية تم تحديدها)",
+      "filter_button": "فلتر"
     }
   },
   "customer": {
     "login_page": {
-      "alternate_provider_separator": "أو"
+      "alternate_provider_separator": "أو",
+      "cancel": "يلغي",
+      "submit": "يُقدِّم"
     },
     "order": {
       "tax": "ضريبة",
       "sku": "رمز المنتج",
       "billing_address": "عنوان الفواتير",
-      "tracking_number": "عدد تتبع"
+      "tracking_number": "عدد تتبع",
+      "total_duties": "الواجبات"
     },
     "account": {
       "details": "تفاصيل الحساب"
     },
     "addresses": {
-      "zip": "الرمز البريدي"
+      "zip": "الرمز البريدي",
+      "cancel": "يلغي",
+      "delete": "يمسح"
+    },
+    "log_in": "تسجيل الدخول",
+    "register": {
+      "submit": "يخلق"
     }
   },
   "blogs": {
@@ -3057,7 +3183,8 @@
     }
   },
   "localization": {
-    "update_language": "تحديث اللغة"
+    "update_language": "تحديث اللغة",
+    "search": "يبحث"
   },
   "recipient": {
     "form": {
