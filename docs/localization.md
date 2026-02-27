@@ -237,12 +237,12 @@ These are already rendered in:
 ## **⚡ PRIORITIES**
 
 ### **Day 1 — Foundation:**
-1. ⬜ Shopify dashboard: languages + market setup
-2. ⬜ Add `dir` attribute to `layout/theme.liquid`
+1. ✅ Shopify dashboard: languages + market setup
+2. ✅ Add `dir` attribute to `layout/theme.liquid`
 3. ⬜ Convert `assets/base.css` to CSS logical properties
-4. ⬜ Enable Dawn's built-in language switcher (header, mobile menu, footer)
+4. ✅ Enable Dawn's built-in language switcher (header, mobile menu, footer)
 5. ⬜ Hide country picker (Egypt only)
-6. ⬜ Auto-translate all content via Translate & Adapt
+6. ✅ Auto-translate all content via Translate & Adapt (in progress review/refinement)
 
 ### **Day 2 — RTL Polish:**
 1. ⬜ Create `assets/rtl.css` for edge cases
@@ -250,6 +250,9 @@ These are already rendered in:
 3. ⬜ Directional icon mirroring (arrows, chevrons, carets)
 4. ⬜ Slideshow direction fix
 5. ⬜ Convert remaining `component-*.css` files to logical properties
+
+Current progress note:
+- 🟡 RTL/LTR overall status is approximately **90% complete** after market/language setup and dynamic `dir` support.
 
 ### **Ongoing:**
 1. ⬜ Translate new content as it's created (Arabic first → English)

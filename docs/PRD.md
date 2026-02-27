@@ -99,21 +99,21 @@
 
 | Feature | Status | Details |
 |---------|--------|---------|
-| **Search** | ✅ Built into Dawn | Predictive search with live results in header |
-| **Sorting** | ✅ Built into Dawn | Sort by: featured, price (low→high, high→low), best selling, A-Z, Z-A, date (new→old, old→new) |
-| **Filtering** | ✅ Built into Dawn | Filter by: availability, price range, product type, vendor, tags — filters depend on product data |
+| **Search** | ✅ Done | Dawn predictive search is working (configured in theme/admin) |
+| **Sorting** | ✅ Done | Dawn native sorting is working (configured in theme editor) |
+| **Filtering** | ✅ Done | Dawn native filtering is working (configured in theme editor) |
 
-> Sorting and filtering are Dawn's native `facets.liquid` system. Filter options will auto-populate based on product data once products are added.
+> Search, sorting, and filtering are confirmed working using Dawn's native systems (`predictive-search` and `facets.liquid`).
 
 ### Language & RTL Support
 
 | Feature | Status | Details |
 |---------|--------|---------|
-| **Arabic (RTL)** | ⬜ Planned | Primary language at `/`, full RTL layout |
-| **English (LTR)** | ⬜ Planned | Secondary language at `/en`, standard LTR layout |
-| **Language switcher** | ⬜ Planned | Dawn's built-in switcher in header, mobile menu, and footer |
-| **Translation** | ⬜ Planned | Shopify Translate & Adapt app, Arabic is source |
-| **`dir="rtl"` attribute** | ⬜ Planned | Dynamic direction on `<html>` tag based on locale |
+| **Arabic (RTL)** | 🟡 In progress (~90%) | Primary language at `/`, RTL behavior mostly working with remaining polish |
+| **English (LTR)** | 🟡 In progress (~90%) | Secondary language at `/en`, LTR behavior mostly working with remaining polish |
+| **Language switcher** | ✅ Done | Dawn switcher enabled in header/mobile and functional |
+| **Translation** | 🟡 In progress | Shopify Translate & Adapt active; most storefront text translated |
+| **`dir="rtl"` attribute** | ✅ Done | Dynamic direction on `<html>` based on locale |
 
 > See `docs/localization.md` for the full RTL implementation plan.
 

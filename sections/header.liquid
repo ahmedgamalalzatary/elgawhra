@@ -158,6 +158,25 @@
       pointer-events: none;
       transition: opacity var(--duration-default) ease, transform var(--duration-default) ease, visibility var(--duration-default) ease;
     }
+
+    /* Match language selector style with header navigation */
+    .header__icons .desktop-localization-wrapper .localization-form__select,
+    .header__icons .desktop-localization-wrapper .localization-selector.link {
+      color: white;
+      font-size: 1.8rem;
+      text-transform: capitalize;
+      transition: all 0.6s ease;
+    }
+
+    .header__icons .desktop-localization-wrapper .localization-form__select:hover,
+    .header__icons .desktop-localization-wrapper .localization-selector.link:hover {
+      color: var(--active-color);
+      text-decoration: none;
+    }
+
+    .header__icons .desktop-localization-wrapper .icon-caret {
+      color: white;
+    }
 </style>
 
 {%- style -%}

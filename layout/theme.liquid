@@ -1,5 +1,13 @@
 <!doctype html>
-<html class="js" lang="{{ request.locale.iso_code }}">
+{%- assign is_rtl = false -%}
+{%- if request.locale.iso_code == 'ar' -%}
+  {%- assign is_rtl = true -%}
+{%- endif -%}
+<html
+  class="js"
+  lang="{{ request.locale.iso_code }}"
+  dir="{% if is_rtl %}rtl{% else %}ltr{% endif %}"
+>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
