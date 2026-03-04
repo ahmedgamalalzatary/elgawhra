@@ -23,4 +23,5 @@ SESSION_MASTER_SUMMARY.md
 
 
 .gemini/
+.agents
 gha-creds-*.json
