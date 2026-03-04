@@ -25,20 +25,20 @@
           "settings": {
             "caption": "El Gawhra",
             "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
+            "text_size": "large"
           }
         },
         "about_intro_heading": {
           "type": "heading",
           "settings": {
-            "heading": "Crafting timeless jewelry for everyday elegance",
+            "heading": "Premium Roasted Nuts & Snacks",
             "heading_size": "h1"
           }
         },
         "about_intro_text": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to El Gawhra. We blend modern design with traditional craftsmanship to create pieces that celebrate your story.</p>"
+            "text": "<p>Welcome to El Gawhra. We carefully source and roast the finest nuts and savory snacks to bring authentic flavor and perfect crunch to your everyday moments</p>"
           }
         }
       },
@@ -63,13 +63,13 @@
           "type": "heading",
           "settings": {
             "heading": "Our Story",
-            "heading_size": "h2"
+            "heading_size": "h1"
           }
         },
         "about_story_text": {
           "type": "text",
           "settings": {
-            "text": "<p>Founded in Egypt, El Gawhra was built on one simple belief: jewelry should feel personal. From design to finishing, every detail is chosen with care to deliver quality, comfort, and character.</p><p>Use this section as placeholder text and replace it with your real brand story, milestones, and values.</p>"
+            "text": "<p>Founded in Egypt, El Gawhra was built on a simple passion: delivering the freshest, highest-quality roasted goods. From premium pistachios and almonds to a wide variety of savory appetizers, we take pride in our authentic roasting process. Every batch is prepared with care to ensure the perfect taste and quality in every bite</p>"
           }
         }
       },
@@ -92,8 +92,8 @@
         "value_1": {
           "type": "column",
           "settings": {
-            "title": "Quality First",
-            "text": "<p>Premium materials, thoughtful finishing, and durable design in every piece.</p>",
+            "title": "Freshness Guaranteed",
+            "text": "<p>We roast in controlled batches to ensure premium crunch, rich aroma, and maximum flavor in every order</p>",
             "link_label": "",
             "link": ""
           }
@@ -101,8 +101,8 @@
         "value_2": {
           "type": "column",
           "settings": {
-            "title": "Designed With Care",
-            "text": "<p>Balanced forms and versatile styles made to fit daily life and special moments.</p>",
+            "title": "Hand-Picked Selection",
+            "text": "<p>Only the finest pistachios, almonds, and snacks make it to our shelves, carefully selected for top quality</p>",
             "link_label": "",
             "link": ""
           }
@@ -111,7 +111,7 @@
           "type": "column",
           "settings": {
             "title": "Customer Promise",
-            "text": "<p>Reliable support, secure shopping, and a smooth experience from start to finish.</p>",
+            "text": "<p>Reliable support, secure shopping, and a smooth experience from browsing to delivery</p>",
             "link_label": "",
             "link": ""
           }
