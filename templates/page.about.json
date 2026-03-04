@@ -58,25 +58,6 @@
     },
     "about_story": {
       "type": "rich-text",
-      "blocks": {
-        "about_story_heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Story",
-            "heading_size": "h1"
-          }
-        },
-        "about_story_text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Founded in Egypt, El Gawhra was built on a simple passion: delivering the freshest, highest-quality roasted goods. From premium pistachios and almonds to a wide variety of savory appetizers, we take pride in our authentic roasting process. Every batch is prepared with care to ensure the perfect taste and quality in every bite</p>"
-          }
-        }
-      },
-      "block_order": [
-        "about_story_heading",
-        "about_story_text"
-      ],
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
