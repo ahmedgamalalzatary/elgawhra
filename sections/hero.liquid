@@ -1,0 +1,362 @@
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign overlay_opacity = section.settings.overlay_opacity | divided_by: 100.0
+  assign height_class = section.settings.image_height | default: 'large'
+  assign position = section.settings.content_position | default: 'middle-center'
+  assign alignment = section.settings.content_alignment | default: 'center'
+  assign mobile_alignment = section.settings.mobile_content_alignment | default: 'center'
+-%}
+
+<style>
+  .hero-{{ section.id }} .hero__media::after {
+    opacity: {{ overlay_opacity }};
+  }
+</style>
+
+<div
+  class="hero hero--{{ height_class }} hero--align-{{ alignment }} hero--align-mobile-{{ mobile_alignment }} hero-{{ section.id }}"
+>
+  {%- comment -%} Background image {%- endcomment -%}
+  <div class="hero__media">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'eager',
+          fetchpriority: 'high',
+          sizes: '100vw',
+          widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+          class: 'hero__image'
+      }}
+    {%- else -%}
+      {{ 'lifestyle-2' | placeholder_svg_tag: 'hero__placeholder' }}
+    {%- endif -%}
+  </div>
+
+  {%- comment -%} Film grain texture {%- endcomment -%}
+  <div class="hero__grain" aria-hidden="true"></div>
+
+  {%- comment -%} Content overlay {%- endcomment -%}
+  <div class="hero__content hero__content--{{ position }}">
+    <div class="hero__text-wrapper">
+
+      {%- comment -%} Decorative accent {%- endcomment -%}
+      <div class="hero__accent" aria-hidden="true">
+        <span class="hero__accent-line"></span>
+        <span class="hero__accent-diamond"></span>
+        <span class="hero__accent-line"></span>
+      </div>
+
+      {%- if section.settings.heading != blank -%}
+        <h1
+          class="hero__heading {{ section.settings.heading_size }}"
+        >
+          {{ section.settings.heading }}
+        </h1>
+      {%- endif -%}
+
+      {%- if section.settings.subheading != blank -%}
+        <p class="hero__subheading">
+          {{ section.settings.subheading }}
+        </p>
+      {%- endif -%}
+
+      {%- if section.settings.button_label_1 != blank or section.settings.button_label_2 != blank -%}
+        <div class="hero__buttons">
+          {%- if section.settings.button_label_1 != blank -%}
+            <a
+              class="hero__button hero__button--primary"
+              {% if section.settings.button_link_1 != blank %}
+                href="{{ section.settings.button_link_1 }}"
+              {% endif %}
+            >
+              {{ section.settings.button_label_1 | escape }}
+            </a>
+          {%- endif -%}
+
+          {%- if section.settings.button_label_2 != blank -%}
+            <a
+              class="hero__button hero__button--secondary"
+              {% if section.settings.button_link_2 != blank %}
+                href="{{ section.settings.button_link_2 }}"
+              {% endif %}
+            >
+              {{ section.settings.button_label_2 | escape }}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- comment -%} Wave divider {%- endcomment -%}
+  <div class="hero__wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,45 C280,85 520,15 760,45 C1000,75 1200,20 1440,50 L1440,80 L0,80 Z" fill="currentColor"/>
+    </svg>
+  </div>
+</div>
+
+{%- comment -%} Feature highlights bar {%- endcomment -%}
+{%- if section.blocks.size > 0 -%}
+  <div class="hero__features">
+    <div class="hero__features-inner page-width">
+      {%- for block in section.blocks -%}
+        <div
+          class="hero__feature{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {{ block.shopify_attributes }}
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index0 }};"
+          {% endif %}
+        >
+          <div class="hero__feature-icon">
+            {%- case block.settings.icon -%}
+              {%- when 'shipping' -%}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M1 3h15v13H1z"/>
+                  <path d="M16 8h4l3 4v5h-7V8z"/>
+                  <circle cx="5.5" cy="18.5" r="2.5"/>
+                  <circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              {%- when 'quality' -%}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              {%- when 'support' -%}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+              {%- when 'secure' -%}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0110 0v4"/>
+                </svg>
+              {%- when 'fresh' -%}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75"/>
+                </svg>
+              {%- when 'return' -%}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <polyline points="1 4 1 10 7 10"/>
+                  <path d="M3.51 15a9 9 0 102.13-9.36L1 10"/>
+                </svg>
+            {%- endcase -%}
+          </div>
+          <div class="hero__feature-text">
+            {%- if block.settings.title != blank -%}
+              <h3 class="hero__feature-title">{{ block.settings.title }}</h3>
+            {%- endif -%}
+            {%- if block.settings.description != blank -%}
+              <p class="hero__feature-description">{{ block.settings.description }}</p>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Hero banner",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 55,
+      "unit": "%",
+      "label": "Overlay opacity"
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        { "value": "small", "label": "t:sections.image-banner.settings.image_height.options__1.label" },
+        { "value": "medium", "label": "t:sections.image-banner.settings.image_height.options__2.label" },
+        { "value": "large", "label": "t:sections.image-banner.settings.image_height.options__3.label" }
+      ],
+      "default": "large",
+      "label": "t:sections.image-banner.settings.image_height.label"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Elgawhra",
+      "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "t:sections.all.heading_size.options__1.label" },
+        { "value": "h1", "label": "t:sections.all.heading_size.options__2.label" },
+        { "value": "h0", "label": "t:sections.all.heading_size.options__3.label" },
+        { "value": "hxl", "label": "t:sections.all.heading_size.options__4.label" }
+      ],
+      "default": "h0",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "default": "Premium coffee, chocolate, nuts and snacks from Egypt",
+      "label": "Subheading"
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_label_1",
+      "default": "Shop Now",
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_1",
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "default": "Browse Collections",
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "options": [
+        { "value": "top-left", "label": "t:sections.image-banner.settings.desktop_content_position.options__1.label" },
+        { "value": "top-center", "label": "t:sections.image-banner.settings.desktop_content_position.options__2.label" },
+        { "value": "top-right", "label": "t:sections.image-banner.settings.desktop_content_position.options__3.label" },
+        { "value": "middle-left", "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label" },
+        { "value": "middle-center", "label": "t:sections.image-banner.settings.desktop_content_position.options__5.label" },
+        { "value": "middle-right", "label": "t:sections.image-banner.settings.desktop_content_position.options__6.label" },
+        { "value": "bottom-left", "label": "t:sections.image-banner.settings.desktop_content_position.options__7.label" },
+        { "value": "bottom-center", "label": "t:sections.image-banner.settings.desktop_content_position.options__8.label" },
+        { "value": "bottom-right", "label": "t:sections.image-banner.settings.desktop_content_position.options__9.label" }
+      ],
+      "default": "middle-center",
+      "label": "t:sections.image-banner.settings.desktop_content_position.label"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        { "value": "left", "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label" },
+        { "value": "center", "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label" },
+        { "value": "right", "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label" }
+      ],
+      "default": "center",
+      "label": "t:sections.image-banner.settings.desktop_content_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "options": [
+        { "value": "left", "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label" },
+        { "value": "center", "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label" },
+        { "value": "right", "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label" }
+      ],
+      "default": "center",
+      "label": "t:sections.image-banner.settings.mobile_content_alignment.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature highlight",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            { "value": "shipping", "label": "Shipping" },
+            { "value": "quality", "label": "Quality" },
+            { "value": "support", "label": "Support" },
+            { "value": "secure", "label": "Secure" },
+            { "value": "fresh", "label": "Fresh" },
+            { "value": "return", "label": "Return" }
+          ],
+          "default": "shipping",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Free Shipping",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "default": "On orders over 1000 EGP",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero banner",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "shipping",
+            "title": "Free Shipping",
+            "description": "On orders over 1000 EGP"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "quality",
+            "title": "Premium Quality",
+            "description": "Handpicked products"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon": "support",
+            "title": "24/7 Support",
+            "description": "Always here for you"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

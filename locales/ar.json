@@ -2778,7 +2778,7 @@
       },
       "availability": {
         "value": {
-          "in_stock": "في الأوراق المالية",
+          "in_stock": "متاح ف المخزون",
           "out_of_stock": "إنتهى من المخزن"
         }
       }
