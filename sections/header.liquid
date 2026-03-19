@@ -531,23 +531,23 @@
 
 <script>
   // Collections dropdown hover behavior
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const collectionsDetails = document.getElementById('Details-HeaderMenu-Collections');
     if (collectionsDetails) {
       const summary = collectionsDetails.querySelector('summary');
       let closeTimeout;
-      
-      summary.addEventListener('mouseenter', function() {
+
+      summary.addEventListener('mouseenter', function () {
         clearTimeout(closeTimeout);
         collectionsDetails.setAttribute('open', '');
       });
-      
-      collectionsDetails.addEventListener('mouseenter', function() {
+
+      collectionsDetails.addEventListener('mouseenter', function () {
         clearTimeout(closeTimeout);
       });
-      
-      collectionsDetails.addEventListener('mouseleave', function() {
-        closeTimeout = setTimeout(function() {
+
+      collectionsDetails.addEventListener('mouseleave', function () {
+        closeTimeout = setTimeout(function () {
           collectionsDetails.removeAttribute('open');
         }, 200);
       });
