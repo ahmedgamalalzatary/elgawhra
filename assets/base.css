@@ -6,8 +6,10 @@
   --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   --focused-base-outline-offset: 0.3rem;
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-  --primary-bg: #65443E;
-  --header-bg: #65443E;
+  --first-color: #EA6018;
+  --second-color: #FEEAD3;
+  --third-color: #5A3B35;
+  --forth-color: #FDE1C6;
   --primary-section-bg: #F7F8FC;
   --secondary-section-bg: #ffffff;
   --active-color: #F7D0B0;

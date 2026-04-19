@@ -1,20 +1,5 @@
 {
   "sections": {
-    "hero": {
-      "type": "hero-section",
-      "settings": {
-        "badge_text": "Premium Quality",
-        "heading": "Discover The Finest Flavors",
-        "heading_highlight": "Finest",
-        "subheading": "<p>Premium coffee, chocolate, nuts & snacks crafted with passion and delivered fresh to your door.</p>",
-        "button_label_1": "Shop Now",
-        "button_link_1": "shopify:\/\/collections\/all",
-        "button_label_2": "Our Story",
-        "button_link_2": "",
-        "image_tag_text": "100% Natural",
-        "min_height": "large"
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -45,7 +30,6 @@
     }
   },
   "order": [
-    "hero",
     "featured_collection"
   ]
 }

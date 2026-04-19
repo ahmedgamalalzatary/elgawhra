@@ -1,7 +1,7 @@
 /* Footer Styles - All white text - Even Bigger & Bolder */
 
 .footer {
-  background-color: var(--header-bg);
+  background-color: var(--third-color);
   color: #ffffff;
   border-top: none;
 }
@@ -105,7 +105,7 @@
 }
 
 .footer__social-link:hover svg {
-  fill: var(--header-bg);
+  fill: var(--third-color);
 }
 
 /* Footer Heading - All white */
@@ -140,10 +140,11 @@
   transition: opacity 0.6s ease;
 }
 
-.footer__link:hover, .footer__link li:hover {
+.footer__link:hover,
+.footer__link li:hover {
   opacity: 0.8;
   text-decoration: underline;
-  color:#8FB9FA;
+  color: #8FB9FA;
 }
 
 /* Contact Section - All white */
