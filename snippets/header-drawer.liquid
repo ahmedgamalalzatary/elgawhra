@@ -6,7 +6,7 @@
 {% endcomment %}
 
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
-  {%- assign about_page = pages['about'] -%}
+  {%- assign about_page = pages.about -%}
   {%- assign about_link_url = about_page.url | default: '/pages/about' -%}
   {%- assign about_link_title = about_page.title | default: 'About' -%}
   {%- assign has_about_link = false -%}
@@ -151,116 +151,119 @@
                         {{ link.title | escape }}
                       {%- endif -%}
                     </a>
-                {%- endif -%}
-              </li>
-              {%- if link.title == 'Catalog' -%}
-                <li>
-                  <details id="Details-menu-drawer-collections">
-                    <summary
-                      id="HeaderDrawer-collections"
-                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
-                    >
-                      Collections
-                      <span class="svg-wrapper">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
-                      </span>
-                      <span class="svg-wrapper">
-                        {{- 'icon-caret.svg' | inline_asset_content -}}
-                      </span>
-                    </summary>
-                    <div
-                      id="link-collections"
-                      class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                      tabindex="-1"
-                    >
-                      <div class="menu-drawer__inner-submenu">
-                        <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                          <span class="svg-wrapper">
-                            {{- 'icon-arrow.svg' | inline_asset_content -}}
-                          </span>
-                          Back to Menu
-                        </button>
-                        <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
-                          {%- assign has_collections = false -%}
-                          {%- for collection in collections -%}
-                            {%- unless collection.handle == 'frontpage' -%}
-                              {%- assign has_collections = true -%}
+                  {%- endif -%}
+                </li>
+                {%- if link.handle == 'catalog'
+                  or link.url == routes.collections_url
+                  or link.url == routes.all_products_collection_url
+                -%}
+                  <li>
+                    <details id="Details-menu-drawer-collections">
+                      <summary
+                        id="HeaderDrawer-collections"
+                        class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
+                      >
+                        {% if request.locale.iso_code == 'ar' %}الاقسام{% else %}Collections{% endif %}
+                        <span class="svg-wrapper">
+                          {{- 'icon-arrow.svg' | inline_asset_content -}}
+                        </span>
+                        <span class="svg-wrapper">
+                          {{- 'icon-caret.svg' | inline_asset_content -}}
+                        </span>
+                      </summary>
+                      <div
+                        id="link-collections"
+                        class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                        tabindex="-1"
+                      >
+                        <div class="menu-drawer__inner-submenu">
+                          <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                            <span class="svg-wrapper">
+                              {{- 'icon-arrow.svg' | inline_asset_content -}}
+                            </span>
+                            Back to Menu
+                          </button>
+                          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                            {%- assign has_collections = false -%}
+                            {%- for collection in collections -%}
+                              {%- unless collection.handle == 'frontpage' -%}
+                                {%- assign has_collections = true -%}
+                                <li>
+                                  <a
+                                    id="HeaderDrawer-collection-{{ collection.handle }}"
+                                    href="{{ collection.url }}"
+                                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                                  >
+                                    {{ collection.title | escape }}
+                                  </a>
+                                </li>
+                              {%- endunless -%}
+                            {%- endfor -%}
+                            {%- unless has_collections -%}
                               <li>
                                 <a
-                                  id="HeaderDrawer-collection-{{ collection.handle }}"
-                                  href="{{ collection.url }}"
+                                  id="HeaderDrawer-collection-placeholder"
+                                  href="/collections/all"
                                   class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
                                 >
-                                  {{ collection.title | escape }}
+                                  All Products
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  id="HeaderDrawer-collection-placeholder-2"
+                                  href="/collections/new-arrivals"
+                                  class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                                >
+                                  New Arrivals
+                                </a>
+                              </li>
+                              <li>
+                                <a
+                                  id="HeaderDrawer-collection-placeholder-3"
+                                  href="/collections/best-sellers"
+                                  class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                                >
+                                  Best Sellers
                                 </a>
                               </li>
                             {%- endunless -%}
-                          {%- endfor -%}
-                          {%- unless has_collections -%}
-                            <li>
-                              <a
-                                id="HeaderDrawer-collection-placeholder"
-                                href="/collections/all"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                All Products
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                id="HeaderDrawer-collection-placeholder-2"
-                                href="/collections/new-arrivals"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                New Arrivals
-                              </a>
-                            </li>
-                            <li>
-                              <a
-                                id="HeaderDrawer-collection-placeholder-3"
-                                href="/collections/best-sellers"
-                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
-                              >
-                                Best Sellers
-                              </a>
-                            </li>
-                          {%- endunless -%}
-                        </ul>
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                  </details>
+                    </details>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+              {%- unless has_about_link -%}
+                <li>
+                  <a
+                    id="HeaderDrawer-about"
+                    href="{{ about_link_url }}"
+                    class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
+                  >
+                    {{ about_link_title | escape }}
+                  </a>
                 </li>
-              {%- endif -%}
-            {%- endfor -%}
-            {%- unless has_about_link -%}
-              <li>
-                <a
-                  id="HeaderDrawer-about"
-                  href="{{ about_link_url }}"
-                  class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
-                >
-                  {{ about_link_title | escape }}
-                </a>
-              </li>
-            {%- endunless -%}
-          </ul>
-        </nav>
-        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <div class="menu-drawer__utility-links">
-            <div class="menu-drawer__localization header-localization">
-              <localization-form>
-                {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
-                  <div>
-                    <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
-                      {{ 'localization.language_label' | t }}
-                    </h2>
-                    {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
-                  </div>
-                {%- endform -%}
-              </localization-form>
+              {%- endunless -%}
+            </ul>
+          </nav>
+          {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+            <div class="menu-drawer__utility-links">
+              <div class="menu-drawer__localization header-localization">
+                <localization-form>
+                  {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
+                    <div>
+                      <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
+                        {{ 'localization.language_label' | t }}
+                      </h2>
+                      {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
+                    </div>
+                  {%- endform -%}
+                </localization-form>
+              </div>
             </div>
-          </div>
-        {%- endif -%}
+          {%- endif -%}
         </div>
       </div>
     </div>

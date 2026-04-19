@@ -6,7 +6,7 @@
 {% endcomment %}
 
 <nav class="header__inline-menu">
-  {%- assign about_page = pages['about'] -%}
+  {%- assign about_page = pages.about -%}
   {%- assign about_link_url = about_page.url | default: '/pages/about' -%}
   {%- assign about_link_title = about_page.title | default: 'About' -%}
   {%- assign has_about_link = false -%}
@@ -115,7 +115,10 @@
           </a>
         {%- endif -%}
       </li>
-      {%- if link.title == 'Catalog' -%}
+      {%- if link.handle == 'catalog'
+        or link.url == routes.collections_url
+        or link.url == routes.all_products_collection_url
+      -%}
         <li>
           <header-menu>
             <details id="Details-HeaderMenu-Collections">
@@ -123,7 +126,9 @@
                 id="HeaderMenu-collections"
                 class="header__menu-item list-menu__item link focus-inset"
               >
-                <span>Collections</span>
+                <span>
+                  {%- if request.locale.iso_code == 'ar' %}الاقسام{% else %}Collections{% endif -%}
+                </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
               <ul
