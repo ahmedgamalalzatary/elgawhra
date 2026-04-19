@@ -2,7 +2,7 @@
 
 .footer {
   background-color: var(--third-color);
-  color: #ffffff;
+  color: var(--forth-color);
   border-top: none;
 }
 
@@ -60,7 +60,7 @@
 .footer__logo-text {
   font-size: 2.64rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--forth-color);
   font-family: var(--font-heading-family);
   text-transform: capitalize;
 }
@@ -72,7 +72,7 @@
   line-height: 1.6;
   margin-bottom: 2rem;
   max-width: 340px;
-  color: #ffffff;
+  color: var(--forth-color);
 }
 
 /* Social Links */
@@ -113,7 +113,7 @@
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #ffffff;
+  color: var(--forth-color);
   font-family: var(--font-heading-family);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -136,7 +136,7 @@
   font-size: 1.76rem;
   font-weight: 500;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--forth-color);
   transition: opacity 0.6s ease;
 }
 
@@ -161,7 +161,7 @@
   font-size: 1.76rem;
   font-weight: 500;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--forth-color);
   transition: opacity 0.3s ease;
 }
 
@@ -192,7 +192,7 @@
 .footer__copyright {
   font-size: 1.65rem;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--forth-color);
   margin: 0;
 }
 
