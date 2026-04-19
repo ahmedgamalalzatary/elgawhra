@@ -20,10 +20,13 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "custom_css": [
+        ".facets-wrapper {margin: 0rem 2rem 2rem 2rem; padding: 1rem 2rem;}"
+      ],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
