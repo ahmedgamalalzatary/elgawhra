@@ -9,7 +9,6 @@
       {% comment %} Column 1: Logo + Description + Socials {% endcomment %}
       <div class="footer__column">
         <div class="footer__logo">
-          {% if section.settings.footer_logo != blank %}
             <img
               src="{{ section.settings.footer_logo | image_url: width: 150 }}"
               alt="{{ shop.name }}"
@@ -17,9 +16,6 @@
               height="auto"
               loading="lazy"
             >
-          {% else %}
-            <span class="footer__logo-text">{{ shop.name }}</span>
-          {% endif %}
         </div>
 
         <div class="footer__description">

@@ -203,4 +203,39 @@
   .footer__socials {
     margin-top: 1rem;
   }
+
+  .footer__grid {
+    justify-items: center;
+  }
+
+  .footer__column {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__links li {
+    text-align: center;
+  }
+
+  .footer__contact {
+    align-items: center;
+  }
+
+  .footer__contact-item {
+    justify-content: center;
+  }
+
+  .footer__copyright {
+    display: flex;
+    justify-content: center;
+  }
 }
