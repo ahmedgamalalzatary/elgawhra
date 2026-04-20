@@ -22,7 +22,16 @@
           {% endif %}
         </div>
 
-        <div class="footer__description rte">{{ section.settings.footer_description }}</div>
+        <div class="footer__description">
+          <img
+            src="{{ 'footerlogo.png' | asset_url }}"
+            alt="El Gawhra Roastery"
+            width="240"
+            height="133"
+            loading="lazy"
+            class="footer__description-image"
+          >
+        </div>
 
         <div class="footer__socials">
           {% if section.settings.social_insta != blank %}
@@ -123,24 +132,20 @@
               </svg>
               <span>{{ section.settings.contact_phone }}</span>
             </a>
+            <div class="footer__copyright">
+              <img
+                src="{{ 'slogan.png' | asset_url }}"
+                alt="50 years of quality"
+                width="260"
+                height="100"
+                loading="lazy"
+                class="footer__copyright-image"
+              >
+            </div>
           {% endif %}
 
-          {% if section.settings.contact_email != blank %}
-            <a href="mailto:{{ section.settings.contact_email }}" class="footer__contact-item">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              <span>{{ section.settings.contact_email }}</span>
-            </a>
-          {% endif %}
         </div>
       </div>
-    </div>
-
-    {% comment %} Bottom Bar {% endcomment %}
-    <div class="footer__bottom">
-      <p class="footer__copyright">&copy; {{ 'now' | date: '%Y' }}, {{ section.settings.copyright_text }}</p>
     </div>
   </div>
 </footer>
@@ -157,12 +162,6 @@
       "type": "image_picker",
       "id": "footer_logo",
       "label": "Footer Logo"
-    },
-    {
-      "type": "richtext",
-      "id": "footer_description",
-      "label": "Description",
-      "default": "<p>Elgawhra, the Syrian-Egyptian company is distinguished by providing the best types of coffee, chocolate, nuts and snacks</p>"
     },
     {
       "type": "header",
@@ -291,23 +290,11 @@
       "type": "text",
       "id": "contact_phone",
       "label": "Phone Number",
-      "default": "+201554459196"
-    },
-    {
-      "type": "text",
-      "id": "contact_email",
-      "label": "Email",
-      "default": "support@syrian-egyptian.com"
+      "default": "+20 10 23435385"
     },
     {
       "type": "header",
       "content": "Copyright"
-    },
-    {
-      "type": "text",
-      "id": "copyright_text",
-      "label": "Copyright Text",
-      "default": "Elgawhra"
     },
     {
       "type": "range",
