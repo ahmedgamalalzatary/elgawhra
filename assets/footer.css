@@ -76,8 +76,8 @@
 }
 
 .footer__description-image {
-  width: 240px;
-  height: 130px;
+  width: 160px;
+  height: 100px;
   display: block;
   object-fit: contain;
 }
