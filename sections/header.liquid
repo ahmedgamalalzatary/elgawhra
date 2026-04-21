@@ -47,11 +47,6 @@
       fill: currentColor;
       stroke: currentColor;
     }
-    @media screen and (max-width: 749px) {
-      .icon-heart {
-        display: none;
-      }
-    }
     .header__menu-item {
       position: relative;
     }
@@ -90,14 +85,6 @@
       }
     {%- endif -%}
 
-    {%- if section.settings.menu_type_desktop != "drawer" -%}
-      @media screen and (min-width: 990px) {
-        header-drawer {
-          display: none;
-        }
-      }
-    {%- endif -%}
-
     .menu-drawer-container {
       display: flex;
     }
@@ -117,13 +104,6 @@
       padding-bottom: 1rem;
       padding-top: 1rem;
       line-height: calc(1 + 0.8 / var(--font-body-scale));
-    }
-
-    @media screen and (min-width: 750px) {
-      .list-menu__item--link {
-        padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
-      }
     }
 
     /* Collections dropdown visibility fix */
@@ -194,6 +174,28 @@
     .header__icons .desktop-localization-wrapper .icon-caret {
       color: var(--second-color);
     }
+
+    /* Responsive rules grouped in one place */
+    @media screen and (max-width: 749px) {
+      .header__icon.header__icon--heart {
+        display: none !important;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      .list-menu__item--link {
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+      }
+    }
+
+    {%- if section.settings.menu_type_desktop != "drawer" -%}
+      @media screen and (min-width: 990px) {
+        header-drawer {
+          display: none;
+        }
+      }
+    {%- endif -%}
 </style>
 
 {%- style -%}

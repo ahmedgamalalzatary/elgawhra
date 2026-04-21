@@ -991,6 +991,10 @@ summary::-webkit-details-marker {
     color: #805E1F;
   }
 
+  .menu-drawer__menu-item {
+    font-weight: var(--font-body-weight-bold);
+  }
+
   .grid--1-col-tablet-down .grid__item {
     width: 100%;
     max-width: 100%;
