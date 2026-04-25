@@ -1,0 +1,300 @@
+{{ 'hero-section.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign cta_url = section.settings.cta_url | default: routes.collections_url
+  assign cta_label = section.settings.cta_label | default: 'Shop Now'
+  assign strip_heading = section.settings.strip_heading | default: 'Our Collections'
+  assign sidebar_heading = section.settings.sidebar_heading | default: 'Sections'
+  assign view_all_label = section.settings.view_all_label | default: 'View All'
+
+  comment
+    Build emoji palette for collection placeholder icons
+    These cycle through collections that have no featured image
+  endcomment
+  assign placeholder_emojis = '🌰,🍪,🫘,🍫,🧆,☕,🍬,🫙' | split: ','
+-%}
+
+<section
+  class="hero-section hero-section--{{ section.id }} shopify-section"
+  id="hero-section-{{ section.id }}"
+  aria-label="{{ section.settings.banner_title | escape }}"
+>
+  <div class="hero-section__inner">
+
+    {%- comment -%} ══════════════════════════════════════════
+      TOP ROW — Banner + Collections sidebar
+    ══════════════════════════════════════════ {%- endcomment -%}
+
+    <div class="hero-top">
+
+      {%- comment -%} ── BANNER ── {%- endcomment -%}
+      <div class="hero-banner">
+        <div class="hero-banner__content">
+
+          {%- if section.settings.eyebrow != blank -%}
+            <span class="hero-banner__eyebrow">
+              {{- section.settings.eyebrow | escape -}}
+            </span>
+          {%- endif -%}
+
+          {%- if section.settings.banner_title != blank -%}
+            <h2 class="hero-banner__title">
+              {%- if section.settings.banner_title_highlight != blank -%}
+                {%- assign parts = section.settings.banner_title | split: section.settings.banner_title_highlight -%}
+                {{- parts[0] -}}
+                <em>{{- section.settings.banner_title_highlight -}}</em>
+                {{- parts[1] -}}
+              {%- else -%}
+                {{- section.settings.banner_title -}}
+              {%- endif -%}
+            </h2>
+          {%- endif -%}
+
+          {%- if section.settings.banner_subtitle != blank -%}
+            <p class="hero-banner__subtitle">
+              {{- section.settings.banner_subtitle -}}
+            </p>
+          {%- endif -%}
+
+          <a
+            href="{{ cta_url }}"
+            class="hero-banner__cta"
+            {% if section.settings.cta_url == blank %}aria-disabled="true"{% endif %}
+          >
+            {{- cta_label | escape -}}
+            <span class="hero-banner__cta-arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+
+        {%- comment -%} Decorative dot grid {%- endcomment -%}
+        <div class="hero-banner__dots" aria-hidden="true">
+          {%- for i in (1..15) -%}
+            <span></span>
+          {%- endfor -%}
+        </div>
+      </div>
+      {%- comment -%} ── END BANNER ── {%- endcomment -%}
+
+      {%- comment -%} ── COLLECTIONS SIDEBAR (desktop only) ── {%- endcomment -%}
+      <aside
+        class="hero-collections-sidebar"
+        aria-label="{{ sidebar_heading | escape }}"
+      >
+        <div class="hero-sidebar__header">
+          <h3 class="hero-sidebar__title">{{- sidebar_heading | escape -}}</h3>
+        </div>
+
+        <ul class="hero-sidebar__list" role="list">
+          {%- assign sidebar_has_collections = false -%}
+          {%- for collection in collections -%}
+            {%- unless collection.handle == 'frontpage' or collection.handle == 'all' -%}
+              {%- assign sidebar_has_collections = true -%}
+              <li class="hero-sidebar__item">
+                <a
+                  href="{{ collection.url }}"
+                  class="hero-sidebar__link"
+                  {% if collection.current %}aria-current="page"{% endif %}
+                >
+                  {{- collection.title | escape -}}
+                  <span class="hero-sidebar__link-arrow" aria-hidden="true">›</span>
+                </a>
+              </li>
+            {%- endunless -%}
+          {%- endfor -%}
+
+          {%- unless sidebar_has_collections -%}
+            {%- comment -%} Fallback: no collections created yet in Shopify admin {%- endcomment -%}
+            <li class="hero-sidebar__item">
+              <a href="{{ routes.collections_url }}" class="hero-sidebar__link">
+                {{- 'onboarding.collection_title' | t -}}
+                <span class="hero-sidebar__link-arrow" aria-hidden="true">›</span>
+              </a>
+            </li>
+          {%- endunless -%}
+        </ul>
+      </aside>
+      {%- comment -%} ── END SIDEBAR ── {%- endcomment -%}
+
+    </div>
+    {%- comment -%} ── END TOP ROW ── {%- endcomment -%}
+
+    {%- comment -%} ══════════════════════════════════════════
+      BOTTOM ROW — Collections strip
+    ══════════════════════════════════════════ {%- endcomment -%}
+
+    <div class="hero-collections-strip">
+
+      <div class="hero-strip__header">
+        {%- if strip_heading != blank -%}
+          <h2 class="hero-strip__title">{{- strip_heading | escape -}}</h2>
+        {%- endif -%}
+        <a href="{{ routes.collections_url }}" class="hero-strip__view-all">
+          {{- view_all_label | escape -}}
+        </a>
+      </div>
+
+      <ul class="hero-strip__grid" role="list" aria-label="{{ strip_heading | escape }}">
+        {%- assign strip_has_collections = false -%}
+        {%- assign strip_index = 0 -%}
+
+        {%- for collection in collections -%}
+          {%- unless collection.handle == 'frontpage' or collection.handle == 'all' -%}
+            {%- assign strip_has_collections = true -%}
+            {%- assign emoji_index = strip_index | modulo: placeholder_emojis.size -%}
+            {%- assign strip_index = strip_index | plus: 1 -%}
+
+            <li
+              class="hero-strip__grid-item"
+              style="--item-index: {{ forloop.index0 }};"
+            >
+              <a
+                href="{{ collection.url }}"
+                class="hero-collection-card"
+                title="{{ collection.title | escape }}"
+              >
+                <div class="hero-collection-card__image-wrap">
+                  {%- if collection.featured_image != blank -%}
+                    <img
+                      class="hero-collection-card__image"
+                      src="{{ collection.featured_image | image_url: width: 400 }}"
+                      alt="{{ collection.featured_image.alt | default: collection.title | escape }}"
+                      width="{{ collection.featured_image.width }}"
+                      height="{{ collection.featured_image.height }}"
+                      loading="lazy"
+                    >
+                  {%- else -%}
+                    <div
+                      class="hero-collection-card__placeholder"
+                      aria-hidden="true"
+                    >
+                      {{- placeholder_emojis[emoji_index] -}}
+                    </div>
+                  {%- endif -%}
+                </div>
+                <span class="hero-collection-card__name">
+                  {{- collection.title | escape -}}
+                </span>
+              </a>
+            </li>
+          {%- endunless -%}
+        {%- endfor -%}
+
+        {%- unless strip_has_collections -%}
+          {%- comment -%} Onboarding placeholder cards {%- endcomment -%}
+          {%- for i in (1..6) -%}
+            {%- assign emoji_index = forloop.index0 | modulo: placeholder_emojis.size -%}
+            <li
+              class="hero-strip__grid-item"
+              style="--item-index: {{ forloop.index0 }};"
+            >
+              <a href="{{ routes.collections_url }}" class="hero-collection-card">
+                <div class="hero-collection-card__image-wrap">
+                  <div class="hero-collection-card__placeholder" aria-hidden="true">
+                    {{- placeholder_emojis[emoji_index] -}}
+                  </div>
+                </div>
+                <span class="hero-collection-card__name">
+                  {{- 'onboarding.collection_title' | t -}}
+                </span>
+              </a>
+            </li>
+          {%- endfor -%}
+        {%- endunless -%}
+      </ul>
+
+    </div>
+    {%- comment -%} ── END BOTTOM ROW ── {%- endcomment -%}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "tag": "section",
+  "class": "section section-hero",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner — Main Content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow tag (small pill above title)",
+      "default": "New Collection"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "banner_title",
+      "label": "Headline",
+      "default": "Premium Roasted <em>Nuts & Snacks</em>"
+    },
+    {
+      "type": "text",
+      "id": "banner_title_highlight",
+      "label": "Highlighted word (rendered in accent color)",
+      "info": "Type a word that appears inside the headline — it will be displayed in the accent color. Leave blank to skip.",
+      "default": "Nuts & Snacks"
+    },
+    {
+      "type": "text",
+      "id": "banner_subtitle",
+      "label": "Subtitle / description",
+      "default": "Crunch into tradition. Freshly roasted every day."
+    },
+    {
+      "type": "header",
+      "content": "Banner — Call to Action"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Collections Sidebar (Desktop)"
+    },
+    {
+      "type": "text",
+      "id": "sidebar_heading",
+      "label": "Sidebar header label",
+      "default": "Sections",
+      "info": "Shown at the top of the desktop collections sidebar."
+    },
+    {
+      "type": "header",
+      "content": "Collections Strip (Bottom Row)"
+    },
+    {
+      "type": "text",
+      "id": "strip_heading",
+      "label": "Strip heading",
+      "default": "Our Collections",
+      "info": "Heading shown above the collections grid strip."
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "label": "View all link label",
+      "default": "View All"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section"
+    }
+  ]
+}
+{% endschema %}
